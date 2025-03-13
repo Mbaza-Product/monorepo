@@ -1,5 +1,18 @@
 # Dev Docker setup
 
+## 1. Clone project
+   git clone git@github.com:Mbaza-Product/monorepo.git
+   git lfs pull
+
+Note: If you don't have git-lfs then you have to install it:
+
+Install Git LFS: If you haven’t installed Git LFS yet, you can do so by running:
+
+On macOS: brew install git-lfs
+On Ubuntu/Debian: sudo apt install git-lfs
+On Windows: Download from Git LFS website.
+
+
 ## 1. Create manully external volumes and networks:
     docker network create infrastructure_default
     docker volume create certs
