@@ -4,6 +4,8 @@ import logging
 SRV_PORT = os.getenv("SRV_PORT", "4573")  # Default asterisk AGI port
 SRV_HOST = os.getenv("SRV_HOST", "0.0.0.0")
 
+USE_DEEPSPEECH = os.getenv("USE_DEEPSPEECH", "False").lower() in ["true", "1", "yes"]
+
 TTS_API_URL = os.getenv("TTS_API_URL", "http://localhost:6901")  # trailing /speak is omitted here
 TTS_API_URL_KIN = os.getenv("TTS_API_URL_KIN", "http://localhost:6903")  # trailing /speak is omitted here
 TTS_API_USERNAME = os.getenv("TTS_API_USERNAME", "mbaza")
