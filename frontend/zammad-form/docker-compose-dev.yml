@@ -1,0 +1,15 @@
+services:
+  frontend-zammad-form:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    restart: no
+    container_name: mbaza-frontend-zammad-form
+    networks:
+      - infrastructure_default
+    profiles:
+      - zammad-form
+
+networks:
+  infrastructure_default: # external network
+    external: true

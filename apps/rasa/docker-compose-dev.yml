@@ -1,0 +1,47 @@
+services:
+  rasa-server:
+    image: rasa/rasa:3.6.20-full
+    restart: on-failure
+    user: "1000:1000"
+    volumes:
+      - ./:/app
+      - ./resources/covid/en/data:/app/data
+      - ./resources/covid/en/actions:/app/actions
+      - ./resources/covid/en/models:/app/models
+      - ./resources/covid/en/domain.yml:/app/domain.yml
+    command: run --enable-api --cors "*" --debug
+    ports:
+      - '5005:5005'
+    networks:
+      - infrastructure_default
+    profiles:
+      - ivr
+      - chat
+      - voicechat
+
+  rasa-actions:
+    restart: on-failure
+    build:
+      context: ./
+      dockerfile: ./Dockerfile.actions
+    environment:
+      - MY_ENV_VAR=http://kba:3000
+    volumes:
+      - ./:/app
+      - ./resources/covid/en/data:/app/data
+      - ./resources/covid/en/actions:/app/actions
+      - ./resources/covid/en/models:/app/models
+      - ./resources/covid/en/domain.yml:/app/domain.yml
+    command: run actions --debug
+    ports:
+      - '5055:5055'
+    networks:
+      - infrastructure_default
+    profiles:
+      - ivr
+      - chat
+      - voicechat
+
+networks:
+  infrastructure_default:
+    external: true

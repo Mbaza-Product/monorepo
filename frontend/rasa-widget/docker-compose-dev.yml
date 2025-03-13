@@ -1,0 +1,16 @@
+services:
+  frontend-rasa-widget:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile.dev
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    networks:
+      - infrastructure_default
+    profiles:
+      - rasa-widget
+
+networks:
+  infrastructure_default:
+    external: true

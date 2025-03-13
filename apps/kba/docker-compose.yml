@@ -1,0 +1,54 @@
+version: "3"
+
+services:
+  kba:
+    image: "loophole250/kba:main"
+    environment:
+      - INTENT_DB_HOST=${INTENT_DB_HOST}
+      - INTENT_DB_PORT=${INTENT_DB_PORT}
+      - INTENT_DB_USERNAME=${INTENT_DB_USERNAME}
+      - INTENT_DB_PASSWORD=${INTENT_DB_PASSWORD}
+      - INTENT_DB_NAME=${INTENT_DB_NAME}
+      - ZAMMAD_DB_HOST=${ZAMMAD_DB_HOST}
+      - ZAMMAD_DB_PORT=${ZAMMAD_DB_PORT}
+      - ZAMMAD_DB_USERNAME=${ZAMMAD_DB_USERNAME}
+      - ZAMMAD_DB_PASSWORD=${ZAMMAD_DB_PASSWORD}
+      - ZAMMAD_DB_NAME=${ZAMMAD_DB_NAME}
+      - PORT=3000
+      - MODE=DEV
+      - RUN_MIGRATIONS=true
+      - DEFAULT_LOCATION=rwanda
+      - ENABLE_SYNC=false
+    ports:
+      - "3000:3000"
+    networks:
+      - infrastructure_default
+
+  zammad_sync_cron:
+    image: "loophole250/kba:main"
+    environment:
+      - INTENT_DB_HOST=${INTENT_DB_HOST}
+      - INTENT_DB_PORT=${INTENT_DB_PORT}
+      - INTENT_DB_USERNAME=${INTENT_DB_USERNAME}  
+      - INTENT_DB_PASSWORD=${INTENT_DB_PASSWORD}
+      - INTENT_DB_NAME=${INTENT_DB_NAME}
+      - ZAMMAD_DB_HOST=${ZAMMAD_DB_HOST}
+      - ZAMMAD_DB_PORT=${ZAMMAD_DB_PORT}
+      - ZAMMAD_DB_USERNAME=${ZAMMAD_DB_USERNAME}
+      - ZAMMAD_DB_PASSWORD=${ZAMMAD_DB_PASSWORD}
+      - ZAMMAD_DB_NAME=${ZAMMAD_DB_NAME}
+      - PORT=${PORT}
+      - MODE=${MODE}
+      - RUN_MIGRATIONS=${RUN_MIGRATIONS}
+      - DEFAULT_LOCATION=${DEFAULT_LOCATION}
+      - ENABLE_SYNC=${ENABLE_SYNC}
+      - SYNC_SCHEDULE=${SYNC_SCHEDULE}
+    ports:
+      - "3001:3000"
+    networks:
+      - infrastructure_default
+  
+
+networks:
+  infrastructure_default:
+    external: true

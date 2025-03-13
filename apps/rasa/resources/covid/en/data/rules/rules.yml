@@ -1,0 +1,62 @@
+version: "3.0"
+
+rules:
+  - rule: check covid statistics
+    steps:
+      - intent: statistics
+      - action: action_check_statistics
+
+  - rule: show covid symptoms
+    steps:
+      - intent: symptoms
+      - action: action_kba_layer
+
+  - rule: show covid prevention measures
+    steps:
+      - intent: prevention
+      - action: action_kba_layer
+
+  - rule: show fines and penalties
+    steps:
+      - intent: fines_penalties
+      - action: action_check_fines_penalties
+
+  - rule: show the covid testing cost
+    steps:
+      - intent: testing_costs
+      - action: action_kba_layer
+
+  - rule: show validity of covid testing
+    steps:
+      - intent: testing_validity
+      - action: action_kba_layer
+
+  - rule: show covid testing centers in kigali or ask for location
+    steps:
+      - intent: testing_centers
+      - action: action_show_testing_centers
+
+  - rule: Respond to vaccination schedule
+    steps:
+      - intent: vaccination_schedule
+      - action: action_kba_layer
+
+  - rule: Respond to vaccination requirements
+    steps:
+      - intent: vaccination_requirement
+      - action: action_kba_layer
+
+  - rule: show testing procedures
+    steps:
+      - intent: testing_procedures
+      - action: action_kba_layer
+
+  - rule: show instructions when user inquire about possiblity of treating covid at home
+    steps:
+      - intent: homebased_care
+      - action: action_kba_layer
+
+  - rule: show instructions to covid patient (being treated at home) on what to do when their condition gets worsen
+    steps:
+      - intent: homebased_care_escalation
+      - action: action_kba_layer

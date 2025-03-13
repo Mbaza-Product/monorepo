@@ -1,0 +1,36 @@
+{
+    "default":{
+        "themes":{
+            "theme1":["blue","yellow"],
+            "theme2":["black", "white"],
+            "theme3":["white","black"]
+        },
+        "name":"Mbaza",
+        "logo":false,
+        "chatbots":[
+            {
+                "name":"covid",
+                "languages":[
+                    {
+                        "lang":"Kiny",
+                        "api": "http://rasa.mbaza.local/webhooks/rest/webhook"
+                    },
+                    {
+                        "lang":"Eng",
+                        "api": "http://rasa.mbaza.local/webhooks/rest/webhook"
+                    }
+                ]
+            },
+            {
+                "name":"bakame",
+                "languages":[
+                    {
+                        "lang":"Kiny",
+                        "api":"http://rasa.mbaza.local/webhooks/rest/webhook"
+                    }
+                ]
+            }
+        ]
+    }
+    
+}

@@ -1,0 +1,40 @@
+services:
+  asterisk:
+    container_name: asterisk
+    restart: unless-stopped
+    image: atalovin/asterisk
+    # network_mode: bridge                    # Only here to help testing
+    cap_add:
+      - sys_ptrace                          # Only here to help testing
+      - net_admin                           # Allow NFT, used by AutoBan
+      - net_raw                             # Allow NFT, used by AutoBan
+    ports:
+      - "5060:5060/udp"                     # SIP UDP port
+      - "5060:5060"                         # SIP TCP port
+      - "5061:5061"                         # SIP TLS port
+      - "10000-10099:10000-10099/udp"       # RTP ports
+    volumes:
+      - ./config/extensions.conf:/etc/asterisk/extensions.conf
+      - ./config/pjsip.conf:/etc/asterisk/pjsip.conf
+      - ./config/sip.conf:/etc/asterisk/sip.conf
+      - ./config/rtp.conf:/etc/asterisk/rtp.conf
+      - ./config/modules.conf:/etc/asterisk/modules.conf
+      - /var/lib/asterisk/sounds:/var/lib/asterisk/sounds
+      - ./lib/sounds/hello.wav:/var/lib/asterisk/sounds/hello.wav
+      - ./lib/sounds/beep.gsm:/var/lib/asterisk/sounds/beep.gsm
+      - ./lib/sounds/welcome_to_mbaza.wav:/var/lib/asterisk/sounds/welcome_to_mbaza.wav
+      - ./lib/sounds/wrong_choice.wav:/var/lib/asterisk/sounds/wrong_choice.wav
+      - ./lib/sounds/bye_english.wav:/var/lib/asterisk/sounds/bye_english.wav
+      - ./lib/sounds/bye_kinyarwanda.wav:/var/lib/asterisk/sounds/bye_kinyarwanda.wav
+      - ./lib/sounds/ask_english.wav:/var/lib/asterisk/sounds/ask_english.wav
+      - ./lib/sounds/ask_kinyarwanda.wav:/var/lib/asterisk/sounds/ask_kinyarwanda.wav
+    environment:
+      AGI_SERVER: agi://mbaza-orchestrator:4573/irv
+    networks:
+      - infrastructure_default
+    profiles:
+      - ivr
+
+networks:
+  infrastructure_default:
+    external: true

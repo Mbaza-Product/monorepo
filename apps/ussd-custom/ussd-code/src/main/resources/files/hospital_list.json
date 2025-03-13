@@ -1,0 +1,34 @@
+{
+    "status": 200,
+    "msg": "Success",
+    "totalrecords": 3,
+    "data": [
+        {
+            "hospitalID": "1",
+            "prov_id": "10",
+            "province": "Kigali City",
+            "district_id": "12",
+            "district": "Gasabo District",
+            "orgUnit": "aR0luFN7Z65",
+            "hosp_name": "Caraes Ndera Hnr"
+        },
+        {
+            "hospitalID": "2",
+            "prov_id": "10",
+            "province": "Kigali City",
+            "district_id": "11",
+            "district": "Nyarugenge District",
+            "orgUnit": "DGwsYZkeo4w",
+            "hosp_name": "CHK(CHUK) HNR"
+        },
+        {
+            "hospitalID": "3",
+            "prov_id": "10",
+            "province": "KIGALI",
+            "district_id": "12",
+            "district": "Gasabo",
+            "orgUnit": "khooBF2xwPH",
+            "hosp_name": "Afrobasket - Petit stade vaccination site"
+        }
+    ]
+}

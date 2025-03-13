@@ -1,0 +1,8 @@
+
+
+include:
+  - local: '/gitlab-ci/.defaults.yml'
+  - local: '/gitlab-ci/.variables.yml'
+  - local: '/gitlab-ci/.rules.yml' 
+  - local: '/gitlab-ci/.templates.yml'
+  - local: '/gitlab-ci/.scripts.yml'

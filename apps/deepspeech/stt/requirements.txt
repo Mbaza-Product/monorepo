@@ -1,0 +1,15 @@
+fastapi==0.89.1
+uvicorn==0.20.0
+python-multipart==0.0.5
+nemo_toolkit[asr]
+huggingface_hub==0.21.0
+pydub==0.25.1
+pyaudioconvert==0.0.5
+pytest==7.2.1
+httpx==0.23.3
+websockets==10.4
+asyncio==3.4.3
+asyncpg==0.30.0
+numpy==1.26.4
+numba==0.61.0
+NEMO==7.0.2

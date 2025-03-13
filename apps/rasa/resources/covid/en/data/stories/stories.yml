@@ -1,0 +1,38 @@
+version: "3.0"
+
+stories:
+  - story: show if a location is under lockdown or not
+    steps:
+      - intent: lockdown_areas
+      - action: action_check_lockdown
+
+  - story: lockdown + ask location + specify location
+    steps:
+      - intent: lockdown_areas
+      - action: action_check_lockdown
+      - intent: specify_location
+        entities:
+          - location: "kigali"
+      - action: action_check_lockdown
+      - intent: specify_location
+        entities:
+          - location: "kigali"
+      - action: action_check_lockdown
+
+  - story: show a location's curfew time
+    steps:
+      - intent: curfew_time
+      - action: action_check_curfew_time
+
+  - story: curfew time + ask location + specify location
+    steps:
+      - intent: curfew_time
+      - action: action_check_curfew_time
+      - intent: specify_location
+        entities:
+          - location: "kigali"
+      - action: action_check_curfew_time
+      - intent: specify_location
+        entities:
+          - location: "kigali"
+      - action: action_check_curfew_time

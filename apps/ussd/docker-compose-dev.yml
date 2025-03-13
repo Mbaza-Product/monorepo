@@ -1,0 +1,35 @@
+services: 
+  ussd:
+    build: ./ussd-code
+    image: ussd-application
+    env_file:
+      - .env
+    container_name: ussd-application
+    networks:
+      - infrastructure_default
+    depends_on:
+      - postgresql
+    volumes:
+      - tomcat-data:/usr/local/tomcat
+    profiles:
+      - ussd
+
+  ussd-middleware:
+    build: ./middleware
+    image: ussd-middleware
+    container_name: ussd-middleware
+    env_file: "./middleware/.env"
+    networks:
+      - infrastructure_default
+    volumes:
+      - ussd-data:/usr/share/
+    profiles:
+      - ussd
+
+volumes:
+  tomcat-data: {}
+  ussd-data:
+
+networks:
+  infrastructure_default: # external network
+    external: true

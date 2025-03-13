@@ -1,0 +1,8 @@
+{
+    "entryPoints": [
+        "./src/"        
+    ],
+    "entryPointStrategy": "Expand",
+    "out": "docs",
+    "excludePrivate": true
+}

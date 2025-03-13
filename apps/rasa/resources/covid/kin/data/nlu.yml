@@ -1,0 +1,1552 @@
+version: "3.0"
+
+nlu:
+- lookup: location
+  examples: |
+    - Bugesera
+    - Gatsibo
+    - Kayonza
+    - Kirehe
+    - Ngoma
+    - Nyagatare
+    - Rwamagana
+    - kigali
+    - Gasabo
+    - Kicukiro
+    - Nyarugenge
+    - Burera
+    - Gakenke
+    - Gicumbi
+    - Musanze
+    - Rulindo
+    - Gisagara
+    - Huye
+    - Kamonyi
+    - Muhanga
+    - Nyamagabe
+    - Nyanza
+    - Nyaruguru
+    - Ruhango
+    - Karongi
+    - Ngororero
+    - Nyabihu
+    - Nyamasheke
+    - Rubavu
+    - Rutsiro
+    - Rusizi
+
+- intent: salutations
+  examples: |
+    - muraho ?
+    - amahoro !
+    - mwiriwe ?
+    - mwaramutse 
+    - salama!
+    - bite
+    - mukomere
+    - bwakeye
+    - Bite
+    - Amakuru
+    - waramutse
+    - waraye
+    - uraho
+    - muraho
+    - mwaramutse
+    - kirigute se
+    - Yooo
+    - Komera cyane
+    - Mukomere
+    - Mwaramukanye Imana
+    - Mumeze mute
+    - Mwiriwe
+    - Muramuke
+    - Murabeho
+    - Kagire Imana
+    - Ndumiwe
+    - bite man
+    - kiri gute
+    - amakuru yawe
+    - umeze neza
+    - Yewe
+    - Bite sha
+    - Bite mwa
+    - Komera komera
+    - Urinde
+    - Twavugana
+    - Reka tuvugane
+    - Umeze ute se?
+    - Uzi kuvuga
+    - Bite se aho
+    - Muraturusha iki?
+    - Nakubaza
+    - Twabababza
+    - Umva
+    - Igisa ngo gute se?
+    - umusa
+    - Eyoooo
+    - Ni iki gishya se?
+    - Muduhishiye iki?
+    - Ni ibiki bijya mbere se?
+    - Weeee
+    - Yewe
+    - Data weeeee
+    - Umva man 
+    - Nagusuhuzaga
+    - Umva sha
+    - Muraho yemwe
+    - Abahano 
+    - Abahano bite
+    - Murakoma
+    - Ese bite ra
+    - Mbwira
+    - Reka nkubaze
+
+- intent: symptoms
+  examples: |
+    - ndumva ndwaye [inkorora](symptom), naba naranduye [kovide](disease)?
+    - ni ibihe  [bimenyetso](symptom) bya  [kovide](disease)?
+    - [umwana](person) wange afite [umuriro mwinshi](symptom), ubwo ntiyaba yaranduye [kovide19](disease)?
+    - ndi muri [kigali](location) none umwana [arandembanye](symptom), ubuse yaba afite icyo [icyorezo](disease)?
+    - ndumva ndi [guhumeka nabi](symptom), naba naranduye [kovide-19](disease)?
+    - ese naba mfite [kovide-19](disease)?
+    - ndi muri [rusizi](location) none umwana [arandembanye](symptom)
+    - [umuvandimwe](person) wange yaba afite [kovide-19](disease)?
+    - [inshuti](person) yange yaba afite [kovide-19](disease)?
+    - ni gute namenya nimba naranduye?
+    - ese naba naranduye?
+    - mfite [umutwe](symptom) n'[umuriro](symptom) ese najya hanze?
+    - ese guhitwa nacyo [nikimenyetso](symptom) cyuko ndwaye [kovide](disease)
+    - ni ibihe [bimenyetso](symptom) bya cya [cyorezo](disease)?
+    - ndakeka naranduye, ni gute namenya nimba ari ukuri?
+    - ese [kovide-19](disease) igira [ibimenyetso](symptom)?
+    - sinzi [ibimenyetso](symptom) bya [covid19](disease)?
+    - [ibimenyetso](symptom) bya [virusi](disease)
+    - [kovide](disease) igaragara ite?
+    - [ibimenyetso](symptom) bya [kovide](disease)?
+    - ni gute [covid](disease) igaragara
+    - mfite [inkorora](symptom), byaba bivuze ko naduye [covid 19](disease)?
+    - mfite [inkorora](symptom), byaba bivuze ko mfite [covid 19](disease)?
+    - [umuvandimwe](person) wange afite [umuriro](symptom), yaba afite [covid19](disease)?
+    - mfite [ibibazo by'ubuhumekero](symptom), ni gute namenya nimba naranduye [kovide](disease)?
+    - mfite [inkorora](symptom) n'[umuriro mwinshi](symptom); byaba bivuzeko nanduye [covid](disease)?
+    - mfite [covid 19](disease)?
+    - inshuti yange ifite [covid19](disease)?
+    - namenya gute nimba nta [covid](disease) mfite?
+    - ese inshuti yange yaba ifite [kovide](disease)?
+    - ni gute namenya nimba ababyeyi bange bataranduye [covid](disease)?
+    - ni gute namenya nimba mwarimu adafite [covid 19](disease)?
+    - ndabwirwa niki nimba ntanduye?
+    - ni ibihe [bimenyetso](symptom) bya [covid](disease)?
+    - ingero z' [ibimenyetso](symptom) bya [kovide](disease)?
+    - naba naranduye ko mbabara mu [gatuza](symptom) no mu [muhogo](symptom)?
+    - ese [covid](disease) niki?
+    - mfite [covid](disease)?
+    - nanduye [kovide](disease)?
+    - ndakeka nanduye [kovide](disease), nabimenya gute?
+    - ndakeka naranduye  [kovide](disease)
+    - ese [covid 19](disease) igira [ibimenyetso](symptom)?
+    - ni ibihe [bimeneytso](symptom) bya [covid](disease)
+    - sinzi niba  [covid](disease) igira [ibiyiranga](symptom)?
+    - ni ibihe [bimenyetso](symptom) by' [indwara](disease) ya  [kovide](disease)?	
+    - ni ibihe [bimenyetso](symptom)?	
+    - mfite imbeho, bivuzeko mfite [indwara](disease) ya [covid 19](disease)?	
+    - umwana wanjye afite [umuriro mwinshi](symptom), yaba afite [indwara](disease) ya  [kovide](disease)?	
+    - ndi [kuguhumeka nabi](symptom), nigute namenya ko mfite [indwara](disease) ya [kovide](disease)? 	
+    - mfite [inkorora](symptom) yoroheje hamwe n'[umuriro](symptom); bisobanuye ko mfite [indwara](disease) ya [covid](disease)?	
+    - mfite [indwara](disease) ya [covid 19](disease)?	
+    - Incuti yanjye yaba ifite [indwara](disease) ya [covid 19](disease)?	
+    - nigute namenya ko nta ndwara ya [covid](disease) mfite?	
+    - nigute namenya ko incuti yanjye ifi [indwara](disease) ya [kovide](disease)?	
+    - nigute namenya ko Papa yanjye afite [indwara](disease) ya [covid](disease)?	
+    - nabwirwa niki niba mwarimu wanjye afite [indwara](disease) ya [covid 19](disease)?	
+    - nigute namenya ko nanduye?	
+    - nibihe [bimenyetso](symptom) bya  [kovide](disease)?	
+    - nibihe bimenyatso bimwe by [kovide](disease)?	
+    - nibihe [bimenyetso](symptom)?	
+    - nibihe [bimenyetso](symptom) bya [kovide](disease)?	
+    - twaranduye?	
+    - mfite uburwayi bwa [covid](disease)?	
+    - naba naranduye [indwara](disease) ya  [kovide](disease)	
+    - nibyirako nanduye [indwara](disease) ya [kovide](disease), ntabyemeza nte?	
+    - [indwara](disease) ya  [kovide](disease) hari [ibimenyetso](symptom) igira?	
+    - nibihe [bimenyetso](symptom) [indwara](disease) ya [kovide](disease) igira?	
+    - nibihe [bimenyetso](symptom) [indwara](disease) ya [covid](disease) ifite?	
+    - hari [ibimenyetso](symptom) ku ndwara ya [covid](disease)?	
+    - nibihe [bimenyetso](symptom)	
+    - [ibimenyetso](symptom) byindwara ya [covid](disease)	
+    - [ibimenyetso](symptom) byindwara ya [covid](disease)	
+    - sinzi [ibimenyetso](symptom) bya [covid](disease)	
+    - harya [ibimenyetso](symptom) bya [covid](disease) ni ibihe	
+    - wanyibutsa [ibimenyetso](symptom) bya [covid](disease)	
+    - ni ibihe [bimenyetso](symptom) bya [covid](disease)	
+    - [covid](disease) [ibimenyetso](symptom)	
+    - gukorora yaba ari [ikimenyetso](symptom) cya [kovide](disease)
+    - muri [huye](location) abantu benshi barwaye [inkorora](symptom) 
+
+
+- intent: statistics
+  examples: |
+    - ni kese zingahe za  [covid-19](disease) muri [kigali](location)?
+    - habonetse abarwayi bangahe ba [kovide](disease) uyu munsi mu [rwanda](location)
+    - mu [rwanda](location) handuye bangahe uyu munsi
+    - ni abantu bangahe bamaze kwandura [kovide](disease) mu [rwanda](location)?
+    - ni uwuhe mubare wabamaze kwandura [virusi](disease) ku [isi](location) yose?
+    - uyu munsi ndetse n'ejo harwaye bangahe?
+    - abanduye ni bangahe
+    - ubwandu bugeze kukihe gipimo
+    - nigute byifashe mumibare ya [covid-19](disease) mu [rwanda](location)
+    - amakuru yibya [covid-19](disease)
+    - [covid-19](disease) ihagaze ite?
+    - imibare imeze ite
+    - mu [Rwanda](location) bimeze bite?
+    - ni abantu bangahe bamaze kwandura [kovide](disease) ku [isi](location)?
+    - ni uwuhe mubare wabamaze kwandura [virusi](disease) ku [isi](location) yose?
+    - ni iyihe mibare y'abamaze kwandura covid mu [isi](GPE)?
+    - ni abantu bangahe bafite ubwandu bwa covid mu [isi](GPE) uyu munsi?
+    - ni umubare ungana iki w'abanduye [covid 19](disease) dufite mu [isi](GPE)?
+    - ni ikihe giteranyo cy'abanduye [covid 19](disease) dufite mu [isi](GPE)?
+    - ibarurishamibare rya [covid 19](disease) mu [isi](GPE)
+    - abamaze kwandura covid mu [isi](GPE).
+    - ni bangahe banduye [covid19](disease) mu [rwanda](location)?
+    - ni bangahe banduye [covid 19](disease) mu [rwanda](location) uyu munsi?
+    - ni uwuhe mubare  wabanduye [covid 19](disease) dufite mu [rwanda](location)?
+    - ni uwuhe mubare  wabanduye [covid 19](disease) dufite mu [rwanda](location) uyu munsi?
+    - ni iyihe mibare ihari ya [covid 19](disease)?
+    - ibarurishamibare rya [covid 19](disease) mu [rwanda](location)
+    - umubare w'abanduye [covid 19](disease) mu [rwanda](location)
+    - ushobora kugira icyo umbyira ku banduye uyu munsi?
+    - imibare ya covid
+    - imibare ya kovide
+    - ni iyihe mibare yabanduye covid uyu munsi ?
+    - imibare yuyu munsi
+    - ni impfu zingahe?
+    - ejo hashije handuye banduye bangahe?
+    - ni uwuhe mubare w'abanduye?
+    - imibare y'abagaragayeho ubwandu
+    - hari amakuru ufite ajyanye n'abanduye?
+    - imibare y'ubwandu bwa covid mu [isi](GPE).
+    - mbese nshobora kubona imibare y'ubwandu bwa covid?
+    - ni iyihe mibare ya covid?
+    - uyu munsi  handuye bangahe?
+    - ni uwuhe mubare w'abanduye?
+    - hamaze kwandura bangahe mu [rwanda](location)?
+    - ni iyihe mibare ihari?
+    - hari abarwayi bangana iki uyu munsi
+    - Nibimenyetso byerekanako urwaye covid nibingahe?
+    - ese nibigo bingahe bipima covid bihari muri kigali?
+    - ese mu [rwanda](location) hari amande yokwishyura angana ate?
+    - ese nabantu bangahe bari kuri lisite yo kwikingiza
+    - ese nabantu bangahe bagumye murugo kubera covid?
+    - ese ngomba kujya kwipimisha inshora zingahe ngo bansangane covid?
+    - ese nabantu bangahe bafite ibimenyetso bikomeye bya [covid](disease)
+    - wambwira umubare wabantu barembye cyane.
+    - ese abantu barwariye kwa muganga nibangahe?
+
+
+- intent: prevention
+  examples: |
+    - nshobora kwirinda gute kwandura [kovide](disease)?
+    - nigute narinda umwana wange kwandura [kovide](disease)?
+    - nigute nshobora kurinda umwana wange  kwandura [kovide](disease) igihe ajyiye ku [ishuri](location)?
+    - mpora mbona imibare y'abarwayi yiyongera aho ntuye, ni gute nakwirinda ?
+    - umuturanyi wange yanduye [kovide](disease), nigute nakwirinda?
+    - mama wange yanduye [kovide](disease), nayirinda gute?
+    - umuvandimwe wange yanduye [kovide](disease), nigute nakwirinda nanjye kuyandura?
+    - niki nakora ngo sinandure [covid 19](disease)?
+    - ni gute nakwizera nimba ntaranduye [covid](disease)?
+    - ni gute ntakwandura [covid19](disease)?
+    - sinshaka kwandura [covid19](disease)?
+    - ni iki nakora kugirango ntafatwa na [covid](disease)?
+    - ese [covid-19](disease) yafatiwe izihe ngamba z'ubwirinzi?
+    - iki cyorezo cya [covid 19](disease) tugomba kukirinda gute?
+    - ni gute narinda umuryango wange kwandura [covid19](disease)?
+    - ndashaka kwirinda kwandura [covid-19](disease)
+    - nkore iki ngo nirinde [covid-19](disease)?
+    - ni izihe ngamba zafashwe ngo tuzishyire mu bikorwa?
+    - amategeko yo kwirinda
+    - ingamba za [covid 19](disease) ndetse nicyo umuntu yakora ngo akomeze kwirinda
+    - ni gute twakwirinda ikwirakikwizwa rya  [covid-19](disease)
+    - ni gute nakwirinda njyewe ubwanjye ndetse na famille yange muri rusange
+    - nigute nakwirinda [covid 19](disease)
+    - haba hari ingamba zikumira ikwirakwizwa rya [covid-19](disease)
+    - ingamba za [covid 19](disease) zaba ari izihe?
+    - ese wambyira zimwe mu ngamba zo kwirinda [covid](disease)?
+    - urugero mu ngamba zo kwirinda ikwirakizwa,haba harimo kwambara agapfukamunwa neza?
+    - sinzi uko nakwirinda [covid 19](disease)
+    - ariko [covid](disease) igira uburyo bwo kuyirinda ra?
+    - kwirinda kwandura  [covid-19](disease) bisaba iki?
+    - ni iki abaturage bakora ngo batandura [covid](disease)?
+    - Nigute nakwirinda kwandura indwara ya [covid-19](disease)?	
+    - niki nakora kugirango mbuze umwana wanjye ugiye mwishuri kurwara indwara ya [covid](disease)?	
+    - Nkomeje kubona umubare wiyongera w'indwara ya [covid](disease) aho ntuye, nigute nakwirinda?	
+    - nigute nakwirinda njye n'umuryango wanjye kwandura kuko numva ko umubare w'abantu bandura indwara ya [covid 19](disease) muri kigali ugenda wiyongera cyane!	
+    - umuturanyi wanjye yanduye [covid-19](disease); Nigute nakwirinda kwandura?	
+    - umuhungu wanjye arasubira mwishuri kuri uyu wa mbere ndashaka kumenya uburyo yakwirinda neza kwandura [covid](disease)?	
+    - nigute nakwemeza ko indwara ya [covid 19](disease) ntaho yankura?	
+    - nigute narinda umuryango wanjye kwandura indwara ya [covid 19](disease)?	
+    - Nigute narwanya indwara ya [covid-19](disease)?	
+    - ingamba zo gukumira koronavirusi	
+    - Uburyo bwo kwirinda ikwirakwizwa rya [covid-19](disease)	
+    - hari ingamba zo gukumira indwara ya [covid-19](disease) zihari ngo mutumenyeshe?	
+    - Ingamba zo gukumira icyorezo cya [covid-19](disease)	
+    - ushobora kumpa inama zo kwirinda indwara ya [covid-19](disease)?	
+    - Sinzi intambwe zo kwirinda icyorezo cya [covid-19](disease)	
+    - Sinzi niba hari inama zo kwirinda gufata indwara ya [covid-19](disease)?	
+    - Hari inama zo kwirinda indwara ya [covid-19](disease)?	
+    - kwirinda kwandura [covid-19](disease), nakora iki?	
+    - Niki nakora kugirango nirinde indwara ya [covid](disease)?
+    - nkeneye kwambara agapfukamunwa ahantu ahariho hose kugira mbe ntakwandura [covid](disease)?
+    - ahantu hakunda kubahari [covid](disease), nahantu hari abantu benshi nkurugerero muma sitade,mu nsengero,muma resitora,ahantu hafunganye.
+    - kwirinda icyorezo cya [covid](disease) harimo kwambara agapfukamunwa igihe cyose.
+    - ese kwambara agapfukamunwa birinda [covid](disease)
+    - ese gukaraba intoki bizamfasha kutandura [covid](disease)?
+    - ese kutajya ahantu hari abantu benshi bizamfasha kutandura [covid](disease)?
+    - Kwambara agapfukamunwa neza igihe cyose, gukaraba intoki, kutabajya hantu hateraniye abantu benshi
+    
+- intent: fines_penalties
+  examples: |
+    - ni ayahe mande yo [kutambara agapfukamunwa](offence-mask)?
+    - nafatiwe mu iduka ryanjye [ntambaye agapfukamunwa](offence-mask) uko bikwiye mamabwira ngo ngomba kwishyura amande. ni angahe itegeko ryagennye?
+    - ucibwa amande angahe iyo utambaye agapfukamunwa?
+    - ndamutse [ntambaye agapfukamunwa](offence-mask) nahanishwa iki? 
+    - byagenda bite ndamutse mfashwe [ntambaye agapfukamunwa](offence-mask)?
+    - nshobora [kutambara agapfukamunwa](offence-mask)?
+    - bigenda bite iyo mbonywe [ntambaye agapfukamunwa](offence-mask)?
+    - ni iki ngomba kwishyura mu gihe naba [ntambaye agapfukamunwa](offence-mask)?
+    - mfite amande mu gihe [ntambaye agapfukamunwa](offence-mask)?
+    - sinzi ingano yayo nakwishyura mu gihe naba mfashwe [ntambaye agapfukamunwa](offence-mask)
+    - ni iki nzishyura kubwo [kutambara agapfukamunwa](offence-mask)
+    - ni ayahe mande yagenwe yo [kudahana intera](offence-distance)?
+    - ni ibihe bihano ndamutse nangize ibwiriza ryo [guhana intera](offence-distance)?
+    - ni ibihe byago byaterwa no kudakurikiza [guhana intera](offence-distance)?
+    - bingendekera bite ku giti cyanjye iyo [ntahanye intera](offence-distance)?
+    - bigenda bite iyo mfashwe [ntahanye intera](offence-distance)?
+    - mbese nshobora kutubahiriza ibwiriza ryo [guhana intera](offence-distance)?
+    - nishyura iki iyo mbonywe [ntahanye intera](offence-distance)?
+    - ni iki nishyura iyo nsanzwe [ntahanye intera](offence-distance)?
+    - ni ubuhwe bwishyu bwo kudakurikiza ibwiriza  ryo [guhana intera](offence-distance)?
+    - ni iki ngombakwishyura ndamutse [ntahanye intera](offence-distance)?
+    - mfite amande mu gihe ntubahirije [guhana intera](offence-distance)?
+    - nshobora kwishyura mu gihe ntubashye [guhanye intera](offence-distance)?
+    - ni ikihe giciro cyo [kudahana intera](offence-distance)?
+    - sinzi ayo ngomba kwishyura ndamutse mfashwe ntubahirije [guhana intera](offence-distance)
+    - ni ayahe mande y'ibirebana n'[amasaha ntarengwa](offence-curfew)?
+    - ni ayahe mande yo kutubahiriza [amasaha ntarengwa](offence-curfew)?
+    - ese najya hanze amasaha yo [gufunga](offence-curfew) yarenze?
+    - ni ibihe bihano byo kutubahiriza [amasaha ntarengwa](offence-curfew)?
+    - nafatirwa ibihe bihano ndamutse ntubahirije [igihe ntarengwa](offence-curfew)?
+    - ni ibihe bihano nahanishwa ndamutse ntubahirije amabwiriza agenga [amasaha ntarengwa](offence-curfew)?
+    - byangiraho izihe ngaruka ku giti cyanjye kudakurikiza [igihe ntarengwa](offence-curfew)?
+    - bigenda bite iyo mfatiwe hanze nyuma y'[amasaha ntarengwa](offence-curfew)?
+    - ni iki nsabwa kwishyura cyo kutubahiriza [amasaha ntarengwa](offence-curfew)?
+    - nshobora kutubahiriza amabwiriza y'[igihe ntarengwa](offence-curfew)?
+    - bigenda bite iyo mbonywe nangije [igihe ntarengwa](offence-curfew)?
+    - bigenda bite iyo nsanzwe nangije [amasaha ntarengwa](offence-curfew)?
+    - ni iki nakwishyura ndamutse mbonywe hanze nyuma y'[amasaha ntarengwa](offence-curfew)?
+    - ni iki nakwishyura ndamutse nsanzwe hanze nyuma y'[amasaha ntarengwa](offence-curfew)?
+    - ndasabwa kwishyura iki cyo kutubahiriza amabwiriza y'[igihe ntarengwa](offence-curfew)?
+    - ni iki ngomba kwishyura ndamutse ntubahirije [igihe ntarengwa](offence-curfew)?
+    - ncibwa amande iyo ntubahirije [igihe ntarengwa](offence-curfew)?
+    - nshobora kwishyuzwa ndamutse ndi hanze mu [masaha ntarengwa](offence-curfew)?
+    - ni ikihe giciro cyo kutubahiriza amabwiriza y'[igihe ntarengwa](offence-curfew)?
+    - sinzi ayo nsabwa kwishyura mu gihe naba mfatiwe hanze nyuma y'[igihe ntarengwa](offence-curfew)
+    - ni ayahe mande yo guhurira mu [matsinda bitemewe](offence-gathering)?
+    - ni ayahe mande yo kwitabira [ihuriro ritemewe](offence-gathering)?
+    - ni ibihe bihano byo [guhura bitemewe](offence-gathering)?
+    - ni ibihe bihano bigenewe abatubahirije ibwiriza ryo [guhura byemewe](offence-gathering)?
+    - ni ibihe bihano nahabwa ndamutse ntubahirije [guhura byemewe](offence-gathering)?
+    - byangiraho izihe ngaruka ku giti cyanjye kutubahiriza ibwiriza ryo [guhura byemewe](offence-gathering)? 
+    - bigenda bite iyo mfatiwe mu [ihuriro ritemewe](offence-gathering)?
+    - nsabwa kwishyura iki ku kutubahiriza amabwiriza yo [guhura byemewe](offence-gathering)?
+    - nshobora kutubahiriza amabwiriza yo [guhura byemewe](offence-gathering)?
+    - bigenda bite iyo mbonywe mu [mahuriro atemewe](offence-gathering)?
+    - bigenda bite iyo nsanzwe mu [nama zitemewe](offence-gathering)?
+    - nishyura iki iyo mbonywe mu [mahuriro atemewe](offence-gathering)?
+    - nishyura iki iyo nsanzwe mu [mahuriro atemewe](offence-gathering)?
+    - ni iki nsabwa kwishyura iyo ndi mu [ihuriro ritemewe](offence-gathering)?
+    - nshobora kwishyuzwa iki iyo ndamutse ntubahirije guhura bikurikije amabwiriza?
+    - ncibwa amande iyo ntubahirije guhura bikurikije amabwiriza?
+    - ese nshobora kwishyura mu gihe ndi hanze mu [masaha ntarengwa](offence-curfew)?
+    - ni ikihe giciro cyo kutubahiriza amabwiriza agenga guhura kwemewe?
+    - sinzi ayo nsabwa kwishyura iyo mfatiwe mu [ihuriro ritemewe](offence-gathering)
+    - ni ayahe mande yo kutubahiriza gahunda ya [gumamu rugo](offence-lockdown)?
+    - ni ayahe mande acibwa uwarenzeku ibwiriza rya gahunda ya [guma mu rugo](offence-lockdown)? 
+    - ni ibihe bihano bigenwe utubahirije [guma mu rugo](offence-lockdown)?
+    - ni ibihe bihano nahabwa ndamutse [ntagumye mu rugo](offence-lockdown)?
+    - ni bihe bihano nahabwa ndamutse ntubahirije ibwiriza rya [guma mu rugo](offence-lockdown)?
+    - nsabwa kwishyura iki ku kutubaha ibwiriza rya [guma mu rugo](offence-lockdown)?
+    - ese nshobora kutubaha ibwiriza rya [guma mu rugo](offence-lockdown)?
+    - ese nshobora kurenga ku ibwiriza rigenga [guma mu rugo](offence-lockdown)?
+    - byangendera  bite ndamutse mbonywe nshohoka mu gace kari muri [guma mu rugo](offence-lockdown)?
+    - bigenda bite ndamutse nsanzwe ndi kuva mu gace kari muri [guma mu rugo](offence-lockdown)?
+    - ese nishyura iki ndamutse mbonywendi kuvamu gaveace kari muri [guma mu rugo](offence-lockdown)?
+    - ese nishyura iki iyo ndamutse mfashwe ni kuva mu gace kari muri [guma mu rugo](offence-lockdown)?
+    - ni iki nishyura iyo ndamutse ndenze ku ibwiriza rya [guma mu rugo](offence-lockdown)?
+    - nshobora kwishyura iki iyo ntubahirije [kuguma mu rugo](offence-lockdown)?
+    - ese nishyuzwa amande iyo ntubahirije [kuguma mu rugo](offence-lockdown)?
+    - nshobora kwishyuzwa ndamutse nerekeje mu gace kari muri [guma mu rugo](offence-lockdown)?
+    - ni ikihe giciro cyishyurwa kukutubahiriza ibwiriza rya [guma mu rugo](offence-lockdown)?
+    - sinzi ayo nshobora kwishyuzwa ndamutse mfashwe ngana mu gace kari muri [guma mu rugo](offence-lockdown)
+    - ni ayahe mande yo kwica ibwiriza rigenga [utubari](offence-bar)?
+    - ni ibihe bihano byo kwica ibwirizwa rigenda [akabari](offence-bar)?
+    - nahanishwa iki ngiye mu [kabari](offence-bar)?
+    - mpabwa ikihe gihano iyo narenze ku ibwirizarigenda [utubari](offence-bar)?
+    - ni izihe ngaruka ku giti cyanjye zangeraho ndi mu [kabari](offence-bar)?
+    - bigenda bite iyo mfatiwe mu [kabari](offence-bar)?
+    - nsabwa kwishyura iyo mfashwe ndi kunywera mu [kabari](offence-bar) hamwe n'abandi bantu?
+    - birashobokako najyamu [kabari](offence-bar)?
+    - ese bigenda bite iyo mbonywe ndi mu [kabari](offence-bar)?
+    - bigenda bite iyo nsanzwe mu [kabari](offence-bar)?
+    - ni iki nishyura iyo ndamutse mbonywe mu [kabari](offence-bar)?
+    - nishyura iki iyo ndamutse nsanzwe mu [kabari](offence-bar)?
+    - ndishyuzwa iki kuba ndi mu [kabari](offence-bar)?
+    - ni iki ngomba kwishyura mu gihe ntubahirije ibwiriza rigenga [utubari](offence-bar)?
+    - kunywa byancisha amande angana iki, ese guhana byo byaba bimeze bite?
+    - nshobora kwishyuzwa ndamutse ngiye mu [kabari](offence-bar)?
+    - ni ikihe giciro cyishyuzwa abajya mu [kabari](offence-bar) giteganywa n'ibwiriza
+    - sinzi yo nakwishyura ndamutse mfatiwe mu [kabari](offence-bar).
+    - ese ntipimishije nahanwa?
+    - niba mfite [covid](disease) nkaba ntarapimwe, bazampana
+    - turimo kwitabira inama hamwe nitsinda ryanjye ryabantu 10 mumazu. turi mukaga kugirango tubone igihano
+    - turi mubukwe abageni batambaye agapfukamunwa, bazaduhana twese?
+    - Ese niba ntagiye kwikingiza bazampana?
+    - ese nibihe bihano niba barampimye bakansangana [covid](disease) arko nimbe ntaragiye mu kato iwanjye
+    
+- intent: testing_costs
+  examples: |    
+    - ndifuza kumenya igiciro cyo kwisuzumisha [kovide 19](disease)
+    - kwipimisha [kovide 19](disease) ni angahe?
+    - bisaba iki kwipimisha [kovide-19](disease)?
+    - ni angahe nakwishyura ngo nsuzumwe [kovide 19](disease)?
+    - ni ikihe kiguzi cyo gusuzumwa [kovide 19](disease)?
+    - ni ikihe giciro cyo gukoresha ibipimo bya [kovide](disease)?
+    - ni angahe nsabwa ngo nipimishe [kovide](disease)?
+    - ni iki nakwishyura ngo nsuzumwe kovidi?
+    - sinzi igiciro cyo kwipimisha [kovide](disease)
+    - ndifuza kumenya umubare wamafaranga ndabwa ngo nsuzumwe [kovide](disease)
+    - ndifuza gusobanukirwa ikiguzi cyo gupimwa [kovide](disease)
+    - ndifuza kumenya ingano yamafaranga yishyura ngo umuntu asuzumwe
+    - igipimo cya [kovide](disease) ni angahe?
+    - igiciro cy'igipimo cya [kovide](disease) ni angahe?
+    - ndashaka kumenya ikiguzi gisabwa mu gupimwa [kovide](disease)
+    - igipimo cya [kovide](disease) nacyishura angahe?
+    - igiciro cyo kwipimisha [kovide](disease)
+    - ni ikihe giciro cyo gusuzumwa?
+    - ni angahe asabwa ngo nsuzumwe?
+    - sinzi ikiguzi cyo gupimwa
+    - ni angahe akenewe ngo umuntu asuzumwe?
+    - igiciro cy'igipimo
+    - gupimwa byishyurwa iki?
+    - igiciro cyo kwisuzumisha [kovide](disease) ni?
+    - igipimo cya covid kigura angahe?
+    - ni angahe agurwa igipimo cya [kovide](disease)?
+    - igipimo cya [kovide](disease) kigeze kuri angahe?
+    - ubu [kovide](disease) iri gusumirwa kuri angahe?
+    - ni ikihe giciro cy'igipimo cya  [kovide](disease)?
+    - namenya igiciro cy'igipimo cya [kovide](disease)?
+    - mwanyereka ibiciro by'ibipimo bya [kovide](disease)?
+    - mbese ntiwambwira igiciro cy'ibipimo bya [kovide](disease)?
+    - ikiguzi cy'igipimo
+    - test za [covid](disease) zigura gute
+    - niki nishyura kugira bankorere PCR ikigali?
+    - bishyuza angahe kuri PCR tesite imwe?
+    - ngomba kwishyura, igihe nshaka kwipimisha [covid](disease)?
+    - ese PCR tesite irahendutse kurasha tesite isanzwe?
+    - ese PCR tesite irahenze cyane gusumbya tesite yigikororwa?
+    - ibiciro byo gupimwa [covid](disease) ese ntabwo birihejuru cyane
+    - amafaranga yo kwipimisha [covid](disease) nimenshi cyane
+    - kwipimisha [kovid](disease) namafaranga macye rwose.
+    - kwipimisha PCR birahenze cyane
+    - ese ko amasaha yarenze ubu igiciro kigipimo cya [covid](disease) cyaba cyagabanutse?
+
+- intent: testing_validity
+  examples: |
+    - ndifuza kumenya igihe igipimo cya [kovide](disease) kimara kigifite [agaciro](test-validity) kuko nshaka kwerekeza i amasterdam
+    - igipimo cya [kovide](disease) kigira [agaciro](test-validity) mu gihe kingana iki?
+    - ni igihe kingana iki igipimo cya [kovide](disease) kiba kigifite [agaciro](test-validity)?
+    - bimara igihe kingana gute ngo igipimo cya [kovide](disease) gite [agaciro](test-validity)?
+    - guta [agaciro](test-validity) kwigipimo cya [kovide](disease) bivuze iki?
+    - napimwe ku wa gatatu w'icyumweru gishize, ese igipimo cyanjye kiracyafite [agaciro](test-validity)?
+    - sinzi niba igipimo nakorewe kigifite [agaciro](test-validity)
+    - mfite igipimo cya [kovide](disease) ndashak kumenya niba kigikora
+    - mfite ibisubizo byo gupimwa [kovide](disease) ndifuza kumenya niba byarataye [agaciro](test-validity)
+    - ni gute namenya niba igipimo cya [kovide](disease) ko kitagifite [agaciro](test-validity)?
+    - ni gihe ki igipimo cya [kovide](disease) gitera [agaciro](test-validity) ?
+    - ni iyihe ngano yigihe igipimo cya [kovide](disease) gitera [agaciro](test-validity)?
+    - ndashaka kumenya igihe ibisubizo byibipimo byanjye bya [kovide](disease) bizatera [agaciro](test-validity)
+    - nshaka kumenya ari gihe ki ibipimo byanjye bya [kovide](disease) bizaba bitacyemewe
+    - ni ryari ibipimo bya [kovide](disease) byanjye bizaba bitakibarwa?
+    - ibipimo byanjye bya [kovide](disease) byaba byarashaje?
+    - igipimo cyanjye cya kovide cyaba cyashaje?
+    - igipimo cyanjye cyataye [agaciro](test-validity)?
+    - napimwe [covid 19](disease), baya bigifite [agaciro](test-validity)?
+    - ese iyo igipimo gishaje bigenda bite?
+    - ni gute igipimo cya [kovide](disease) gisaza?
+    - nafashwe ibipimo bya [kovide](disease) ku wa mbere. ndifuza kumenyanibba bigifite [agaciro](test-validity)?
+    - nipimishije [kovide](disease) mu cyumweru gishize, ese ibi bipimo biracyafite [agaciro](test-validity)?
+    - ese igipimo cyanjye kizata [agaciro](test-validity)?
+    - ibipimo byanjye bya [kovide](disease) bizata [agaciro](test-validity) ryari?
+    - namenya nte ko ibipimo byanjye bigifite [agaciro](test-validity)?
+    - ni gute namenya ko ibipimo nafashe bigifite [agaciro](test-validity)?
+    - ibisubizo byibipimo byanjye nabyo bizasaza?
+    - ibisubizo byanjye bizasaza ryari?
+    - bizagenda bite ngo menye ko ibisubizo byanjye bishaje?
+    - byansabe iki ngo menye niba ibisubizo byanjye bigifite [agaciro](test-validity)?
+    - nigihe kingana gite PCR tesite imara
+    - niba naripimishije PCR, amasaha 24 ashize. Nakomeze kuyikoresha?
+    - niminsi ingaha tesite ya covid ukomeza kuba yakoreshwa uyigendera?
+    - mfite igisubizo cya covid, ese kizarangira ryari?
+    - ko mfite ibisubizo bya covid ese bizarangira taliki yihe
+  
+
+- intent: testing_centers
+  examples: |
+    - ndi mu mugi wa [kigali](location) nihe nagana ngo [nsuzumwe](service-type) [covid 19](disease)?	
+    - nihe [nakoresha](service-type) ibipimo bya [covid 19](disease)?	
+    - nihe [nakwipimishiriza](service-type) [covid 19](disease) i [rusizi](location)?	
+    - nihe [nakwifatishiriza](service-type) ibipimo bya muri [kigali](location)?	
+    - nihe najya ngo [nsuzumwe](service-type) [covid 19](disease)?	
+    - ntuye i [rubavu](location) ndifuza [kwipimisha](service-type) [kovide](disease) nihe nagana?	
+    - ndashaka [kwipimisha](service-type) [kovide](disease) ni ibihe bigo biri kuyipima?	
+    - ndifuza [gupimwa](service-type) [covid 19](disease) nihe nabikoreshereza?	
+    - ni he hantu hizewe [hapimirwa](service-type) [covid 19](disease)?	
+    - ni ibihe bigo bihari [bipimirwamo](service-type) [kovide](disease)?	
+    - ni ibihe bigo byizewe [bipima](service-type) [kovide](disease)?	
+    - ndi gushakisha aho [bipimira](service-type) [kovide](disease) i [Gisenyi](location)	
+    - wandangira aho [nakwipimishiriza](service-type) [covid 19](disease) i [kigali](location)?	
+    - ndashaka kwifatisha ibipimo bya [covid 19](disease)	
+    - ndifuza [kwipimisha](service-type) kovidi kandi ndi i [kigali](location) nihe nakwerekeza?	
+    - mperereye i [Musanze](location) kandi nshaka [kwipimisha](service-type) [kovide](disease).	
+    - sinzi aho nakwerekeza ngo [nsuzumwe](service-type) [kovide 19](disease)	
+    - sinzi aho nakwerekeza muri [kigali](location) ndamutse nshatse [kwipimisha](service-type) [kovide-19](disease)	
+    - sinzi aho [bipimira](service-type) [kovide](disease) hanze y'umugi wa [kigali](location)	
+    - usohotse muri [kigali](location) nta handi nzi bapima [kovide 19](disease) 	
+    - muri [kigali](location) sinzi aho [bipimira](service-type) [kovide 19](disease)	
+    - sinzi aho basuzumira [covid 19](disease)	
+    - sinzi aho nakwerekeza ngo nipimishe [covid 19](disease)	
+    - ni hehe najya ngo mfatisha ibipimo bya [kovid](disease)?	
+    - ni ibihe bigo byo [gupimiramo](service-type)?	
+    - ibigo [bipimirwamo](service-type) [kovide](disease) ni ibihe?	
+    - bari [gupimira](service-type) [kovide](disease) mu bihe bigo?	
+    - sinzi uduce kovidi iri [gupimirwamo](service-type)	
+    - ese wambwira ibigo [bipimiramo](service-type) [kovide](disease)?	
+    - ese wanyereka aho bari [gupimira](service-type) [kovide](disease)?	
+    - ni gute nza kumenya ibigo biri [gupimirwamo](service-type)?	
+    - haba hari ahantu gasigaye [nakwipimishiriza](service-type) [kovide](disease)?	
+    - ni he hantu bari [gupima](service-type) [kovide](disease)?	
+    - ni hehe najya bari [gupimira](service-type) [kovide](disease)?	
+    - haba hari urutonde rwibigo [bipimirwamo](service-type) [covid 19](disease)?	
+    - urutonde rw'ahafatirwa ibipimo rwaba ruhari?	
+    - haba hari ahantu [bipimira](service-type) [kovide](disease)?	
+    - nihe nabona ibipimo nya [covid](disease)?
+    - konshaka [kwipimisha](service-type)?
+    - nigute [nakwipimisha](service-type) [covid 19](disease)
+    - bapimira hehe?
+    - nihehe najya [kwipimisha](service-type) [covid](disease), hano hafi yaho ntuye.
+    - ese ngomba kujyahe niba nshaka kwipimisha?
+    - ese nshobora gusaba [kwipimisha](service-type) niba aho ntuye turi muri [gumamurugo]{"entity":"offence-lockdown"}
+    - ese nihe [bapima](service-type) covid amasaha yo gutaha yarenze?
+
+- intent: testing_procedures
+  examples: |
+    - nizihe nzira bacamo iyo ushaka [gupimwa](service-type) 
+    - Ndashaka kumenya uko nshobora [gupimwa](service-type)
+    - ngira inama uko nabigenza ngo mbashe [gupimwa](service-type)?
+    - Nshobora nte [gupimwa](service-type)?
+    - inzira zisabwa mu [gupima](service-type) [covid](disease) 
+    - niki gisabwa kuri [covid-19](disease) [gupima](service-type)?
+    - ese [covid](disease) ibizamini bisabwa gute?
+    - nigute nabasha kwipimisha
+    - ni gute nabona uko nipimisha
+    - nabarizahe kugira nipimishe
+    - bisaba iki ngo pimwe [covid](disease)
+    - nigute nabigenza ngo nipimishe [covid](disease) 
+    - nihehe nanyura ngo mbashe kwipimisha [covid](disease)
+    - nizihe nzira bicamo kugira bagupime
+    - niki basaba ngo upimwe
+    - niki nkora kugirango mbone PCR[test](service-type)?
+    - Sinzi uburyo bwo kubona [covid](disease) [test](service-type)
+    - Sinzi uburyo bwo kubona PCR [test](service-type)
+    - Nabona nte PCR [test](service-type)?
+    - nigute nabona PCR[test](service-type)?
+    - niki ngomba gukora kugirango mbone [covid19](disease) [test](service-type)?
+    - Niki nkeneye gukora kuburyo nabona [covid-19](disease) [test](service-type)?
+    - nkeneye gukora iki ngo mbone PCR [test](service-type)?
+    - nkeneye gukora iki kugirango mbone [gupimwa](service-type)?
+    - niki nakora kugirango mbone [test](service-type)
+    - niki nakora mbere kugirango mbone [covid](disease) [test](service-type)
+    - Nabona nte [covid](disease) [test](service-type)?
+    - Sinzi icyo abandi bakora ngo babashe [gupimwa](service-type) [kovidi](disease)
+    - Ntabwo nzi icyo gukora kugirango mbone [gupimwa](service-type)
+    - wambwira inzira nshobora kunyuramo ngo mbashe kubona [covid](disease) [test](service-type)
+    - wambwira inzira kugira mbone PCR [test](service-type)
+    - Ndashaka gukoresha PCR [test](service-type)
+    - Nakora nte [covid](disease) PCR [test](service-type)?
+    - ni ibihe bisabwa kuri [covid](disease) PCR [test](service-type)?
+    - ndashaka [covid](disease) [test](service-type). nkore iki?
+    - nihehe nahera kugira nipimishe [covid](disease)
+    - ese ko nshaka kwipimisha [covid](disease) mbigenze nte
+    - ko numva mfite [kovid](disease) nigute nakwipisha
+    - nizihe nzira bacamo kugira bagupime [covid](disease)
+    - nigute nakwipimisha [covid](disease) hakoreshejwe amacandwe?
+    - ese iyo nibiki abaganga bagumima [covid](disease) bakoresha
+    - ese ntabwo bakijombana cyane iyo ugiye kwipimisha [covid](disease)
+    - uko bapima PCR bitandukanye nuko bapima [covid](disease) bisanzwe?
+    - ese nshobora [kwipimisha](service-type) amasaha yarenze yo gutaha
+
+- intent: vaccination_schedule
+  examples: |
+    - Ndashaka kumenya igihe nshobora kubona [covid-19](disease) [urukingo](service-type)?
+    - gahunda yo [gukingira](service-type) [covid](disease) niyihe?
+    - nshobora kumenya gahunda yo [gukingira](service-type) [covid 19](disease) iteye?
+    - ni ubuhe buryo bukurikizwa mu ku bona [inkingo](service-type)?
+    - bazatangira bate [gukingira](service-type) abantu?
+    - nteganijwe gukingirwa ejo mugitondo. nshobora guhindura gahunda y'ejo nyuma ya saa sita?
+    - [gukingirwa](service-type) bizagenda bite?
+    - ni ubuhe buryo [urukingo](service-type) ruzatangwamo?
+    - ni gute tuzafata [urukingo](service-type)?
+    - tuzafata dute [urukingo](service-type)?
+    - ese naherahe nshaka [gukingirwa](service-type)
+    - ni iyihe gahunda izakurikizwa mu gufata [urukingo](service-type)
+    - Nzabona nte [inkingo](service-type) uko ari 3
+    - nkeneye gufata umwanya ngo [nkingirwe](service-type) nabigenza nte
+    - ni mu buhe buryo [urukingo](service-type) ruzafatwa?
+    - uburyo bwo gutanga urukingo ni ubuhe?
+    - Sinzi gahunda y'[urukingo](service-type)
+    - nashaka kumenya igihe [nakingirwa](service-type)
+    - nashakaga kumenya igihe nabona urukingo rwa [kovidi](disease)?
+    - gahunda yo [gukingirwa](service-type) iteye ite?
+    - namenya uko gahunda yo [gukingirwa](service-type) iteye?
+    - ese abana bato, tuzakingirwa hagendewe kuki?
+    - uburyo bwo [gukingirwa](service-type) buzaba ubuhe?
+    - uburyo bwo [gukingira](service-type) ni ubuhe?
+    - bazatangira [gukingira](service-type) abantu gute?
+    - abakuru, abana, abangavu, abagabo, abagore, abasore,abakobwa [bazakingirwa](service-type) hakurijwe iki mubyiciro byabo barimo
+    - nakora iki ngo nitegure gukingirwa?
+    - [gukingira](service-type) bizagenda ute?
+    - [gukingira](service-type) bizakorwa mubuhe buryo?
+    - ko ndi umumotari, umunyeshuri, umusirikare, daso,imfungwa, abagororwa, mayibobo, indaya,aba polisi, umwarimu, umuhinzi, umunyonzi, umuforomo. ese gahunda yo [kudukingira](service-type) iteye ite 
+    - gahunda zo ku [gukingirwa](service-type) zimeze zite
+    - abantu bazafata urukingo mu buhe buryo?
+    - igikorwa cyo [gukingirwa](service-type) mu cyaro cya kure kizagenda gute
+    - igikorwa cyo [gukingirwa](service-type) abantu badashaka [kwikingiza](service-type) kizagenda gute
+    - ni mu buhe buryo [gukingirwa](service-type) bizayoborwamo?
+    - ni gute bazaduha urukingo rwa [kovidi](disease) abafite ubumuga bwo mumutwe?
+    - ntabwo nzi uko abantu bazabona urukingo
+    - bazaduha urukingo mu zihe nzira cg mu buhe buryo
+    - ntagiterezo mfite ku gikorwa cyo [gukingira](service-type)
+    - nyereka uburyo bwo [gukingira](service-type)
+    - ndifuza kumenya igihe nzabonera urukingo
+    - ndashaka kumenya ngo ni ryari nzakingirirwa [covid 19](disease)?
+    - gahunda yo [gukingira](service-type) ni iyihe?
+    - ni ubuhe buryo buzakurikizwa mu [gukingira](service-type) abantu batandukanye biteye mubuhe buryo?
+    - [gukingira](service-type) abantu bizatangira bite?
+    - njyewe nzakinigirwa ryari?
+    - bizanyura mu zihe nzira ngo nkingirwe?
+    - sinzi uburyo tuzakingirwa, ndakurahiye
+    - sinzi uko gahunda yo [gukingira](service-type) iteye
+    - ese ibyo [gukingira](service-type) bizagenda bite?
+    - ese ibikorwa byo [gukingira](service-type) bizakurikiran mu buhe buryo?
+    - ese ko maze gufata inkingo 2 nzabona urwagatatu ryari rwo gushimangira
+    - [gukingira](service-type) bizagera muri rubanda rwose bite?
+    - mbese ko ntamwanya mbona, ubwo njyewe gahunda yanjye yo gukingirwa mwamfashaho iki
+    - ni buryo ki [gukingira](service-type) bizakorwamo?
+    - sinzi ukuntu abantu bazakira [gukingirwa](service-type)
+    - ni ubuhe buryo bwo gutanga inkingo, ese kuri radiyo amakuru numva niyo?
+    - ni mu yihe nzira cga uburyo bazaduhamo inkingo?
+    - ese ushobora kunyereka uko [gukingira](service-type) bizakorwa?
+    - ibijyanye no [gukingira](service-type) nta kintu mbiziho
+    - sinzi ibyo [gukingira](service-type) uko bizakorwa
+    - ese ubu [gukingira](service-type) noneho bigezehe
+    - nigute mwanshyira kuri lisite ngo nikingize?
+    - ko nshakako munshyira ku rutonde rwa [bikingiza](service-type)
+    - ese nshobora gusaba [kwikingiza](service-type) niba aho ntuye turi muri [gumamurugo]{"entity":"offence-lockdown"}
+    - ese nshobora [kwikingiza](service-type) amasaga yarenze
+    - ko turi muri gumamurugo nihe bari [gukingirira](service-type) covid
+
+- intent: vaccination_requirement
+  examples: |
+    - Ndashaka kumenya icyo ngomba gukora kugirango [nkingirwe](service-type)
+    - ni iki gisabwa mu [gukingirwa](service-type) [covid](disease)?
+    - ni ibihe bisabwa byo [gukingirwa](service-type) [covid 19](disease)?
+    - nshobora kumenya ibisabwa mu [gukingira](service-type) [covid 19](disease) uko bimeze?
+    - ni ubuhe buryo bwo kubona [urukingo](service-type) rwa covid19?
+    - nkora iki kugirango mbone [urukingo](service-type)?
+    - ni iki gisabwa [gukingirwa](service-type) covid-19?
+    - ese bisaba amafaranga ngo nikingize?
+    - sinzi igikenewe mu gufata [urukingo](service-type)
+    - ni iki gikenewe ku [urukingo](service-type) rwa covid?
+    - niki nakora kugirango mbone [urukingo](service-type) rwa [covid19](disease) ?
+    - ni ibihe bisabwa kugirango ubone [urukingo](service-type) rwa  [covid](disease)?
+    - ni iki gisabwa kugira ngo kingirwe?
+    - ibisabwa ku rukingo rwa [covid](disease) ni ibihe?
+    - haba hari urutonde rwibisabwa kuri [urukingo](service-type)?
+    - bisaba iki kugirango ubone [urukingo](service-type)?
+    - nshobora kubona [urukingo](service-type)? ni iki gisabwa?
+    - nashakaga kumenya icyo ngomba gukora kugira ngo nkingirwe
+    - [gukingirwa](service-type) [kovidi](disease) bisaba iki?
+    - [gukingirwa](service-type) [kovidi](disease) bisaba ibiki?
+    - n'iki gisabwa kugira ngo [ukingirwe](service-type)?
+    - n'ibiki bisabwa kugira ngo [ukingirwe](service-type)?
+    - namenya igisabwa kugira ngo [ukingirwe](service-type) [kovidi](disease) uko giteye?
+    - n'iki gisabwa kugira ngo ubone [urukingo](service-type) rwa [kovidi](disease)?
+    - ntabwo nzi ibisabwa kugira abantu bakingirwe
+    - ntabwo nzi igisabwa kugira ngo ufate [urukingo](service-type)
+    - n'iki gikenewe kugira [ukingirwe](service-type)?
+    - n'iki nkeneye kuba mfite mbone [urukingo](service-type) [kovidi](disease)?
+    - n'iki ngomba gukora kugira ngo mbone [urukingo](service-type) rwa [kovidi](disease)?
+    - n'ibiki bikenewe kugira [ukingirwe](service-type)?
+    - n'ibiki bisabwa kugira ngo ubone [urukingo](service-type) rwa [kovidi](disease)?
+    - ibikenewe  ku rukingo rwa [kovidi](disease) ni?
+    - bisaba iki kubona [urukingo](service-type)?
+    - ndibaza icyo nkwiye gukora ngo mbone [urukingo](service-type)
+    - ese bisaba iki [gukingirwa](service-type) covid?
+    - ni ibiki bisabwa mu [gukingirwa](service-type) [covid 19](disease)?
+    - ni iki cyangombwa gikenewe mu [gukingirwa](service-type)?
+    - iby'ingenzi mu [gukingirwa](service-type) ni ibiki?
+    - mbese namenya ibisabwa ngo umuntu akingirwe ibyo aribyo?
+    - icy'ibanze mu [gukingira](service-type) nakimenya nte?
+    - ni izihe nzira za ngombwa ngo umuntu abone [urukingo](service-type) rwa [covid 19](disease)?
+    - ni uburyo bwa ngombwa bwo kubona [urukingo](service-type)?
+    - ko nshaka gukingirwa. [urukingo](service-type) rwanyuma baransaba iki?
+    - muri kigali kugira [bagukingire](service-type) [covid 19](disease) hasabwa iki?
+    - ni ibiki bikenewe ngo umuntu akingirwe?
+    - sinzi ibikenewe ngo umuntu afate [urukingo](service-type)
+    - ni iki gisabwa [mugukingirwa](service-type) [covid 19](disease)?
+    - ni iki nkwiye kuba mfite ngo mbone [urukingo](service-type) rwa covid19?
+    - ntegerejweho gukora iki ngo mpabwe [urukingo](service-type) rwa covi19?
+    - harasabwa mu [gukingira](service-type)?
+    - ni ibiki by'ingenzi mu [gukingira](service-type) [covid 19](disease)?
+    - iby'ingenzi bisabwa mu [gukingira](service-type) [covid 19](disease) ni ibihe?
+    - ni ibiki bisabwa ngo umuntu ahabwe [urukingo](service-type)?
+    - ni iki cy'ingenzi mu kubona [urukingo](service-type)?
+    - harasabwa iki kubona [urukingo](service-type)?
+    - ese iyo ngiye kwikingiza, bansaba iki kugira bemenye urukingo bari bumpe
+    - nshobora kubona [urukingo](service-type) mu buhe buryo?
+    - ibisabwa ngo umuntu akingirwe ni ibiki?
+    - haba hari ibisabwa umuntu ushaka [urukingo](service-type)?
+    - bisaba iki umunutu ushaka [kwikingiza](service-type)?
+    - nshobora [gukingirwa](service-type)? harasabwa iki?
+    - nkeneye gukora ibizamini byamaraso mbere yo gukingirwa?
+    - [kwikingiza](service-type) batanga iki?
+    - ese [kwikingiza](service-type) nangahe?
+    - umwana wanjye ko akiri muto,namenya nteko agejeje igihe cyo [kwikingiza](service-type)
+    - ese [kwikingiza](service-type) bisaba kuba ufite iki?
+    - utujuje ibisabwa [ukingikiza](service-type) ese baguhana?
+    - ese abana bakiri bato bemerewe [gukingirwa](service-type)?
+    - abagore batwite biremeweko [bakingirwa](service-type)?
+
+- intent: homebased_care
+  examples: |
+    - ko bansanganye [covid-19] (disease), nshobora kuvurirwa murugo?
+    - niba mfite [covid 19] (disease), nshobora kuvurirwa murugo?
+    - Navurirwa [covid](disease) murugo?
+    - nshobora kwivuriza murugo?
+    - ese ko ndwaye byakundako mvurirwa wanjye?
+    - mfite [covid19](disease), nshobora kuvurirwa murugo?
+    - birashoboka kwivuriza murugo rwanjye?
+    - birashoboka gukirira [covid] (disease) murugo?
+    - nshobora kuvurirwa [covid 19] (disease) i wanjye?
+    - nemerewe gukirira [covid] (disease) munzu iwanjye?
+    - nzemererwa kuguma murugo mugihe nkindwaye [covid-19](disease)?
+    - Nzemererwa kubona [covid](disease) kwivuza murugo?
+    - nemerewe kuguma murugo niba mfite [covid](disease)?
+    - niba bishoboka, ndashaka kuguma murugo no kuvurirwa iwanjye [covid](disease). birashoboka?
+    - niba mfite [covid](disease), nzavurirwa mu rugo?
+    - niba nsanganywe [covid-19](disease), naguma murugo?
+    - nemerewe kwishyira mukato murugo?
+    - nshobora kwishyira mukato niba ndwaye [covid 19](disease)?
+    - birashoboka kwishyira mukato ngakirira mu rugo?
+    - Nzaguma murugo niba mfite [covidi](disease)?
+    - iyo bansanganye [covid](disease), niki gikurikiraho
+    - nipimishije nsanga mfite [covid](disease) niki gikurikiyeho ubu?
+    - niba mfite ububabare buke mu muhogo, nkeneye kujya mu bitaro cyangwa kuguma mu rugo?
+    - ese umuganga yaza kumvirira iwanjye?
+    - ese ko bampimye bagasanga naranduye nabigenza nte?
+    - ese iyo ufite [covid](disease) ukora iki?
+    - ese ndajyahe nibansangana [covid](disease)
+    - nagiye kwipimisha [covid](disease) nsanga nyifite. ubu nakora iki?
+    - nipimishije nsanga ni positifu. ubu hakurikiyeho iki?
+    - bansanganye covid arko ntabwo mbabara ahantu nahamwe. ese ubu nakora iki.
+    - ndimuzima mumubiri wanjye arko bansanganye [kovidi](disease) ese nakora iki ngo nirinde, ndinde nabandi.
+    - mfite covid ese nakora iki?
+    - ese nkore iki ko mfite covid?
+    - ese niba mfite covid najya kubitaro
+    - ese ningombwa konjya ku bitaro niba mfite covid
+
+
+
+- intent: homebased_care_escalation
+  examples: |
+    - Umugabo wanjye urwariye murugo yagize ibimenyetso bikomeye, nkore iki?
+    - nkore iki niba ngize ibimenyetso bikomeye mugihe ndwariye murugo, ese njye kwa muganga?
+    - ngomba gukora iki niba mfite ibimenyetso bikomeye mugihe mvurirwa murugo, ngomba kujya ku bitaro?
+    - nkore iki niba mbona cyangwa mbona ibimenyetso bikomeye mugihe mvurirwa murugo, ningombwa kujya kwa muganga?
+    - Sinzi icyo gukora niba ndembye mugihe mvurirwa murugo
+    - Sinzi icyo nkwiye gukora niba [covidi](disease) yarushijeho kwiyongera ubukana igihe naba mvurirwa murugo
+    - bigenda bite niba ndembye kurusaho ndi home
+    - bigenda bite niba ikibazo cyanjye cyiyongereye mugihe cyo kuvurirwa murugo
+    - bigenda bite niba [covidi](disease) yanjye yiyongera mugihe ndi mukato
+    - [covidi](disease) yanjye yariyongereye, nkore iki cg njye kwa muganga?
+    - ubuzima bwanjye bwarushijeho kuba nabi. ngomba gukora iki byaba byiza ngiye mubitaro
+    - Nabonye niyongera mu kuremba kuri [covidi](disease), nagakwiye kujya mubitaro nkava murugo?
+    - Nagize ibimenyetso bikomeye kandi ndi kwivuza ndi murugo, nkore iki?
+    - nkore iki, kuva natangira kwitabwaho murugo, ubuzima bwanjye bwarushijeho kuba bibi.
+    - Niki Nshobora gukora, kuva najya mukato, ibimenyetso byanjye byarushijeho kwiyongera.
+    - Ndatekereza ko ntameze neza kandi mfatira imiti murugo, byaba byiza banjyanye aho bafashiriza abarembye
+    - Ntekereza ko [covidi](disease) itagenda ikira kandi mfata imiti ndi murugo
+    - bigenda bite iyo ngize ibimenyetso bikomeye mugihe ndwariye murugo?
+    - Nokora iki mugihe umurwayi arwaye murugo arushijeho kuremba?
+    - Mama arwaye diyabete kandi ararembye cyane, nkore iki?
+    - Ndi murugo ariko mfite ibibazo byo guhumeka. nkeneye kujya aho bafashiriza indembe
+    - ibimenyetso bya [covidi](disease) bimaze kuba byinshi. Sinzi icyo nshobora gukora
+    - birasa nkaho ibimenyetso byanjye bigenda byiyongera, ushobora kumbwira igikurikira gukora?
+    - ese ko mbona ntarigukira, mbigenze nte? narinkwiye kujya aho basha abantu guhumeka
+    - narindwariye mu rugo arko ndiguhumeka nabi nkaba mbabara cyane mugatuza?
+    - narindwariye mu rugo arko mfite ibimenyetso byinshi, nakora iki?
+    - Nagize ibimenyetso bya covid bikabije kandi mfata imiti murugo, nkore iki?
+    - ese niki nakora niba ndembye kandi ndi murugo? ubwo sinarinkwiriye kujya kwa muganga
+    - Murumuna wanjye arwariye murugo kandi aragenda aremba, nkore iki?
+    - Niki wakora mugihe urembeye murugo? nukujya ku bitaro bishinzwe kwakira abarembye
+    - ni ubuhe buryo bukoreshwa mu kuvura abarembye cyane?
+    - [covid](disease) yanjye ikomeje kunzahaza, byagenda bite?
+    - Ndi kubona ibimenyetso byinshi bya [covidi](disease), ngire ubwoba?
+    - ndimurugo mfite umutwe urikundya cyane kandi sindinoguhumeka neza, nakora iki ?
+    - ndandwaye simbasha guhumeka ndikubura umwuka, ese ngume murugo?
+    - ese ko mfite urujijo, kubura ubwenge,kwiheba,kubura umwuka, umuriro mwinshi cyane hejuru ya 38 °C nakora iki?
+    - ese ko mbabara, najya kwa muganga?
+    - mfite umutwe undya cyane,ese nkeneye kujya kwa muganga?
+    - mfite umuriro mwinshi urihejuru ya 38 C ese njye kwa muganga?
+
+- intent: lockdown_areas
+  examples: |
+    - Ndashaka kumenya niba [kicukiro](location) iri mu [kato]{"entity":"offence-lockdown"}
+    - Ndashaka kujya i [Muhanga](location) mu bucuruzi icyumweru gita, ese iracyari mu [kato]{"entity":"offence-lockdown"}
+    - Ntabwo nzi niba hari [akato]{"entity":"offence-lockdown"}?
+    - ese [Gasabo](location) iri mu [kato]{"entity":"offence-lockdown"}?
+    - ese [kigali](location) iri mu [kato]{"entity":"offence-lockdown"}?
+    - [Nyarugenge](location) iri mu [kato]{"entity":"offence-lockdown"}?
+    - Ndashaka kumenya niba [kigali](location) iri mu [kato]{"entity":"offence-lockdown"}
+    - ese nshobora kumenya niba [Musanze](location) iri mu [kato]{"entity":"offence-lockdown"}
+    - ese [Karongi](location) iracyari mu [kato]{"entity":"offence-lockdown"}
+    - ese [Ngoma](location) baracyafite [akato]{"entity":"offence-lockdown"}?
+    - ese [Huye](location) baba bakiri mu [kato]{"entity":"offence-lockdown"}?
+    - ese [Bugesera](location) nbaracyari muri [gumamurugo]{"entity":"offence-lockdown"}?
+    - ese baracyafite [gumamurugo]{"entity":"offence-lockdown"} i [Rubavu](location)?
+    - ese bafite [gumamurugo]{"entity":"offence-lockdown"} [Nyanza](location)?
+    - [Rusizi](location) iracyari muri [gumamurugo]{"entity":"offence-lockdown"}
+    - [Rutsiro](location) iracyari muri [gumamurugo]{"entity":"offence-lockdown"}?
+    - [Burera](location) iracyari mu [kato]{"entity":"offence-lockdown"}?
+    - ese [Gicumbi](location) baracyafunzwe?
+    - ese baracyafunzwe i [Nyabihu](location)?
+    - ese hari ahantu bari mu [kato]{"entity":"offence-lockdown"}?
+    - ese turi mu [kato]{"entity":"offence-lockdown"}?
+    - ese nshobobora kumenya ibice harimo [gumamurugo]{"entity":"offence-lockdown"}?
+    - haba hari urutonde rwa [gumamurugo]{"entity":"offence-lockdown"}?
+    - ese hari [gumamurugo]{"entity":"offence-lockdown"} igihari?
+    - ese karere kajye kari muru [gumamurugo]{"entity":"offence-lockdown"}?
+    - ese hari [gumamurugo]{"entity":"offence-lockdown"} mukarere nkomokamo
+    - ndashaka kumenya amakuru ajyanye na [gumamurugo]{"entity":"offence-lockdown"}?
+    - ese turi muri [gumamurugo]{"entity":"offence-lockdown"} [kigali](location)?
+    - ese [gumamurugo]{"entity":"offence-lockdown"} iracyubahirizwa?
+    - haba hari ahantu hashya bashyize muri [gumamurugo]{"entity":"offence-lockdown"}?
+    - haba hari [gumamurugo]{"entity":"offence-lockdown"} ahantu nahamwe?
+
+- intent: specify_location
+  examples: |
+    - Ndi [Bugesera](location)
+    - Ndi [Kigali](location)
+    - Aho ndi ni [Gatsibo](location)
+    - Aho ndi ni [Kigalo](location)
+    - Akarere ndimo ni [Kayonza](location)
+    - Akarere ndimo ni [kigali](location)
+    - Mva [Kirehe](location)
+    - I [Ngoma](location)
+    - I [Kigali](location)
+    - Muri [kigali](location)
+    - Muri akakanya ndi [kigali](location)
+    - [kigali](location)
+    - Akarere kanjye ni [Gasabo](location)
+    - Ndi muri [Kicukiro](location)
+    - Muri [Nyarugenge](location)
+    - Ndi i [kigali](location)
+    - Ndi muri [Gisagara](location)
+    - Muri [Burera](location)
+    - Muri [Gakenke](location)
+    - [Gicumbi](location)
+    - [Musanze](location)
+    - [Rulindo](location)
+    - [Huye](location)
+    - [Kamonyi](location)
+    - [Muhanga](location)
+    - [Nyanza](location)
+    - [Ruhango](location)
+    - [Karongi](location)
+    - [Nyabihu](location)
+    - [Rubavu](location)
+    - [Rutsiro](location)
+    - [Rusizi](location)
+
+
+- intent: curfew_time
+  examples: |
+    - isaha yo gutaha ni ryari [kigali](location)?
+    - isaha yo gutaha ni ryari?
+    - ntago nzi amasaha yo gutaha 
+    - ntago nzi isaha yo gutaha muri [rusizi](location)
+    - isaha yo gutaha ni ukuva ryari kugeza ryari?
+    - isaha yo gutahiraho ni saa  ngahe kugeza saa ngahe?
+    - isaha yo gutaha i [Rubavu](location) ni saa ngahe?
+    - nshobora kumenya igihe cyo gutahiraho?
+    - nshobora kubona isaha yo gutaha?
+    - ese [kigali](location) ifite igihe cyo gutaha?
+    - dufite igihe cyo gutaha?
+    - birashoboka kumenya igihe cyo gutaha?
+    - birashoboka kubona igihe cyo gutaha?
+    - bigenda bite niba nshaka kumenya ibijyanye nigihe cyo gutahiraho?
+    - ndashaka kumenya isaha yo gutahiraho muri [kigali](location)
+    - hari isaha yo gutahiraho muri [kigali](location)?
+    - ni ikihe gihe cyo gutaha muri [kigali](location)?
+    - isaha yo gutaha ni iyihe?
+    - isaha yo gutaha muri [muhanga](location)
+    - isaha yo gutaha ni ryari?
+    - ni ryari isaha yo gutaha muri [kigali](location)?
+    - isaha yo gutahiraho ni iyihe
+    - isaha yo gutaha ni ryari kugeza ryari muri [Burera](location)
+    - isaha yo gutaha ni ryari kugeza ryari?
+    - hari isaha yo gutaha?
+    - hari isaha yo gutahiraho muri [kigali](location)?
+    - dufite isaha yo gutahiraho?
+    - uzi isaha yo gutahiraho?
+    - ndashaka isaha yo gutahiraho
+    - ushobora kumbwira isaha yo gutahiraho?
+    - ese hari igihe cyo gutahiraho muri [musanze](location)
+    - isaha ntarengwa ni iyihe muri [kigali](location)?
+    - ni ikihe gihe ntarengwa?
+    - sinzi igihe ntarengwa
+    - sinzi amasaha y'igihe ntarengwa muri [rusizi](location)
+    - igihe ntarengwa ni ukuva ryari kugeza ryari?
+    - ni ryari kugeza ryari igihe ntarengwa cyashyizwe?
+    - ni ryari rubavu bagomba kuba bari mu ngo?
+    - ese nshobora kumenya isaha ntarengwa?
+    - ese namenya [amasaha ntarengwa](offence-curfew)?
+    - ese [kigali](location) yaba ifite igihe ntarengwa?
+    - twaba dufite igihe ntarengwa cyo kuba twageze mu ngo?
+    - ese byashoboka kumenya igihr ntarenwa cyo kugera mu rugo?
+    - igihe ntarengwa cy kugera mu rugo mwakimbwira ra?
+    - ndamutse nshatse kumenya ibyigihe ntrengwa nabigenza nte?
+    - ndifuza kumenya iby'[amasaha ntarengwa](offence-curfew) muri [kigali](location)
+    - hari igihe ntarengwa abantu bagomba bageze mu ngo muri [kigali](location)?
+    - ese i [kigali](location) musabwa kuteranzagihe ki mutari mu ngo?
+    - kuba muri mu rugo ni ukutarenza ikihe gihe?
+    - igihe ntarengwa
+    - igihe ntarengwa muri Muhanga
+    - igihe  ntarengwa cyagenwe
+    - ni ryari umuntu atagomba kurenza
+    - igihe ntarengwa muri Huye ni ryari?
+    - isaha ntarengwa ni ryari?
+    - isaha ntarengwa ni ukuva ryari?
+    - ese i burera isaha ntarengwa ni ukuva ryari kugeza ryari?
+    - kuva ryari kugeza ryari umuntu atemerewe kurenza?
+    - igihe ntarengwa kirahari?
+    - ese i nyagatare ifite igihe itagomba kurenza?
+    - hari igihe ntarengwa dufite ra?
+    - waba uzi iighe ntarengwa?
+    - ndifuza igihe ntarengwa 
+    - wambabarira ukambwira iighe ntarengwa?
+    - i [musanze](location) bafite igihe ntarengwa?
+    - ni ayahe masaha atemewe kugendwamo i [Kigali](location)?
+    - amasaha atemewe kugendwamo ni ayahe?
+    - ntabwo nzi amasaha ibikorwa bihagariraho
+    - ntabwo nzi amasaha ibikorwa bihagariraho i [rusizi](location)
+    - amasaha abantu batemerewe kugendamo ni kuva ryari kugeza ryari?
+    - gufungwa kw'ibintu byose ni kuva saa ngahe kugeza saa ngahe?
+    - Rubavu ibikorwa n'abantu bihagarika gukora ryari?
+    - namenya igihe ibikorwa bifungira?
+    - nabona isaha abantu baba  batemerewe kugendamo?
+    - [Kigali](location) yaba ifite igihe ibikorwa bihagarikiraho?
+    - Twaba dufite amasaha tutemerewe kugendamo?
+    - biraboka kumenya amasaha ibikorwa bihagarariraho?
+    - birashoboka  kubona amasaha atagendwamo?
+    - niba se nshaka kumenya no kubijyanye n'amasaha atemerewe kugendwamo
+    - nshaka kumenya kumenya amasaha ibikorwa bifungiraho i [Kigali](location)
+    - Haba hari amasaha ibikorwa bifungiraho i [Kigali](location)?
+    - amasaha ibikorwa bifungiraho i [Kigali](location) ni ayahe?
+    - amasaha yo gufungira ibikorwa no guhagarika kugenda ni ayahe?
+    - amasaha yo gufungiraho
+    - amasaha yo gufungiraho i [muhanga](location)
+    - isaha yo gufungiraho
+    - gufunga ibikorwa ni ryari?
+    - amasaha atemerewe kugendwamo i [Kigali](location) ni ayahe?
+    - gufunga ni ryari?
+    - ibikorwa bifungwa kuva ryari?
+    - muri [Burera](location) bafunga ibikorwa kuva saa ngahe kugeza saa ngahe?
+    - gufunga ibikorwa ni kuva ryari kugeza ryari?
+    - Haba hari amasaha bafungiraho ibikorwa?
+    - i [Kigali](location) bagira amasaha bafungiraho ibikorwa?
+    - twaba dufite igihe dufungiraho ibikorwa?
+    - mwaba muzi igihe bafungiraho ibikorwa?
+    - nshaka kumenya kumenya isaha yo gufungiraho ibikorwa?
+    - mwabwira isaha yo gufungiraho?
+    - i [musanze](location) baba bafite amasaha bavungiraho ibikorwa?
+    - ese najya hanze amasaha yo gufunga yarenze?
+
+
+- intent: sendoff
+  examples: |
+    - turasubire
+    - tuzasubira
+    - nahubutaha
+    - ijoro ryiza
+    - umunsi mwiza
+    - mwirirwe
+    - narangije
+    - nasoje
+    - murabeho
+    - murakoze
+    - peace
+    - Umunsi mwiza
+    - Ijoro ryiza
+    - Ugire umunsi mwiza
+    - Urabeho
+    - Ndagiye
+    - Urabeho!
+    - turi kumwe
+    - ciao
+    - urabeho
+    - bye
+    - bye bye
+    - bayi wa robot
+    - reka tubeturangirije hano
+    - nuko bayi
+    - sawa turi kumwe
+    - sawa man ni ahubutaha
+    - Gusezera - Ndagusezeye
+    - Urabeho rasa Icyahanzwe
+    - Ijoro ryiza
+    - Urabeho
+    - Yego urabeho 
+    - Yego urabeho
+    - Yegoo urabeho
+    - Tubonane nyuma
+    - Tubonane
+    - bye,Tubonane. Urabeho
+    - Tuvugane nawe nyuma
+    - Urare aharyana
+    - Sohoka
+    - Funga iki kiganiro
+    - reka ngende
+    - nciyeho
+    - ndagiye
+    - ndigendeye
+    - reka nigendere
+    - sawa bayi
+    - reka ngucike
+    - reka dusoze ikiganiro
+    - Bye
+
+- intent: thankyou
+  examples: |
+    - murakoze kdi muramuke
+    - murakoze
+    - urakoze
+    - yego urakoze
+    - wakoze
+    - nibyiza, uzi ubwenge!
+    - uri irobo nziza!
+    - Urakoze! Urabeho
+    - Yego urakoze nahubutaha
+    - Urakoze Wirirwe
+    - Urakoze Wirirwe
+    - Urakoze
+    - Ni ibyobyose, Urakoze! Urabeho
+    - Yego urakoze
+    - Urakoze cyane
+    - Urakoze cyane wirirwe
+    - Urakoze wirirwe
+    - Murakoze
+    - Uramfashije
+    - Murakoze
+    - Urakoze
+    - Urakoze cyane
+    - Urakoze!
+    - Urakoze mugabo
+    - Kubera iki incimiye
+    - Biratangaje, Urakoze
+    - Kubuzima bwacu
+    - Kubuzima bwacu muvandimwe
+    - Yego urakoze
+    - Yego Murakoze
+    - Yes, Murakoze
+    - yesi
+    - Yego Murakoze
+    - Yego urakoze mbaza
+    - Yego urakoze!
+    - urakozee
+    - urakooze
+    - Urakoze Rwose peee
+    - Murakoze
+    - Urakoze kuri buri kimwe
+    - urakoze cyane
+    - urakoze kubwihuza ry'ihuriro wampaye, ndaza kurirebaho
+    - Urakoze kumfasha
+    - Urakoze aya ni amakuru meza cyane
+    - Urakoze, Ndanyuzwe
+    - Urakoze!
+    - Uraakoze
+    - Urakoze
+    - Urakkoze
+    - Yego Murakoze
+    - Urakoze kubwamakuru uduhaye
+    - Urakoze.
+    
+- intent: affirm
+  examples: |
+    - yego
+    - nibyo
+    - birumvikana
+    - nibyo rwose
+    - Ego
+    - eeh !
+    - yigo
+    - Yego
+    - y
+    - Rwose
+    - birumvikana
+    - ibyo byumvikana neza
+    - Nibyo
+    - yego nyamuneka
+    - yeah
+    - yup
+    - yego nyamuneka
+    - yego nyamuneka
+    - Nibyo
+    - ok
+    - Biryoshye
+    - cool
+    - okay
+    - Yego nabikoze
+    - Yes
+    - Emera
+    - Byiza rwose
+    - Byiza
+    - Byiza cyane
+    - Ndabyemeye
+    - Ndabyemeye.
+    - Ndabyemera
+    - Yego
+    - birumvikana
+    - ni fresh
+    - ntaribi
+    - ok ok
+    - Yego reka duangire
+    - okay
+    - ok
+    - Yego!
+    - Urasabwa
+    - Nibyo
+    - Nibyo
+    - Biryoshye
+    - Byaba byiza
+    - Yego
+    - Yea
+    - Yeah
+    - Yego nibyo
+    - Yep yep
+    - Yego nibyiza
+    - Yep!
+    - Yep
+    - Yesssssssss
+    - Yego ndabikora
+    - Yego ndakwinginze
+    - Yego ndakwinginze!
+    - Yego, Ndabyemeye
+    - Yego
+    - Yeeego
+    - Rwose
+    - Emera
+    - Naremeye
+    - Narabyemeye
+    - Yego
+    - Rwose
+    - Rwose, yego
+    - Biratangaje
+    - Biratangaje
+    - Kwemeza
+    - Genda
+    - Komeza
+    - Yesh
+    - Yess
+    - yego sha
+    - yego di
+    - yego nuko
+    - aho sha
+    - yeeeeee
+    - yego.
+    - ndemeye
+    - yigo
+    - uko
+
+- intent: deny
+  examples: |
+    - no
+    - hoya
+    - oya
+    - sibyo
+    - wapi
+    - ntibibaho
+    - ntibyumvikana
+    - reka
+    - rekada
+    - hoya se kandi
+    - hoya se kdi! 
+    - naaa
+    - apana
+    - oy
+    - hoyaaaa
+    - Oya
+    - No
+    - n
+    - Nta na rimwe
+    - nah
+    - nope
+    - Simbitekereza
+    - Simbyemera
+    - Mfite ubwoba, oya
+    - Mbabarira, oya
+    - Sikuriya
+    - wapi sha
+    - Ntago aribyo rwose
+    - Ntago aribyo rwose
+    - sibyo rwose
+    - Ntago aribyo
+    - Mfite ubwoba sibyo
+    - Mumbabarire, sibyo rwose
+    - mumbabarire, nta kundi byagenda
+    - Sincaka
+    - Sinshaka kuguha
+    - Sinshaka kuvuga
+    - Sinshaka kubivuga
+    - Ntabwo ngiye kuguha
+    - wapi man
+    - reka sha
+    - Oya ntago nshaka ibi
+    - shwi da
+    - Nta na kimwe
+    - Nta na rimwe
+    - Ntubitekerzo
+    - Oya urakoze
+    - Oya, si byo.
+    - Oya urakoze
+    - ashwi da
+    - shwi 
+    - Ntago aribyo
+    - wapi
+    - reka da
+    - reka reka
+    - oya da
+    - oya ibi sibyo nshaka
+    - ntabyo nshaka
+    - sinkeka
+    - simbizi
+    - ntabyonzi
+    - ntabyo nzi
+    - ntabwo mbizi
+    - ntabwombizi
+    - sinemera
+    - ndabyanze
+    - ndaze
+    - ndiyangiye
+    - sinibaza
+    - simbetekereza
+    - oya have
+    - have have
+    - have 
+    - bireke
+    - byihorere
+    - ndanze
+    - simbishaka
+    - si nshaka
+    - sindikubishaka
+    - sinemeye
+    - ndahakanye
+    - ntabwo nishimiye ibisubizo byawe
+    - ntabyawe
+    - ntakigenda cyawe
+    - ntacyo umaze
+ 
+
+- intent: inappropriate
+  examples: |
+    - uri igicucu!
+    - urasaze!
+    - uri umusazi!
+    - uri igicucu
+    - ugomba kuba umusazi
+    - Ntekereza ko wasaze
+    - ugomba kuba umuswa
+    - Ntekereza ko uri igicucu
+    - ugomba kuba umusazi
+    - Ntekereza ko wasaze
+    - ibicucu
+    - ibisazi
+    - ugomba kuba umuswa
+    - Ntekereza ko uri igicucu
+    - ibicucu
+    - ibisazi
+    - uri igicucu
+    - uri umusazi
+    - uri umusazi
+    - uri igicucu
+    - uri igicucu cyane
+    - urasaze cyane
+    - urasaze cyane
+    - uri igicucu cyane
+    - uri igicucu?
+    - uri igicucu?
+    - uri igituba?
+    - uri igicucu?
+    - uri igituba gusa
+    - igituba
+    - kijyeho
+    - f ** k u
+    - urasaze?
+    - wa gicucu we
+    - umuswa
+    - foooooool
+    - uri umuswa
+    - uri feke
+    - uri idage
+    
+
+
+- intent: bot_challenge
+  examples: |
+    - uri irobo?
+    - uri umuntu?
+    - ndimo mvugana na irobo?
+    - ndimo mvugana numuntu?
+    - uyu ni umuntu nyawe?
+    - iyi ni irobo?
+    - ndimo mvugana na irobo?
+    - ndimo mvugana numuntu?
+    - uri umufasha?
+    - ndimo mvugana numuntu ukora?
+    - Ndi ku mukoresha wa irobo?
+    - ndi ku kiremwa muntu?
+    - uyu ni umuntu?
+    - iyi ni asistant ya AI?
+    - uri umuntu?
+    - Wowe uri irobo cyangwa umuntu?
+    - uri nde?
+    - mbwira ibyawe
+    - urumva iki?
+    - uri umunyakuri?
+    - uri virtual?
+    - uri ai?
+    - ntabwo uri irobo
+    - uri ikiganiro
+    - uri rasa irobo?
+    - uri igihangano nyacyo?
+    - uri irobo
+    - uri ai
+    - uri ibihimbano
+    - uri ubwenge bwubuhanga
+    - uri umunyakuri
+    - uri mubyukuri
+    - uzi neza ko uri irobo?
+    - irobo?
+
+
+- intent: out_of_scope
+  examples: |
+    - ibihe bimeze bite?
+    - Ndashonje
+    - Ndashaka gutumiza ibiryo
+    - 2 + 2 ni iki?
+    - Perezida wa Amerika ninde?
+    - niyihe mizi ya kare ya 5
+    - Ndashaka kumenya ikirere
+    - ubuzima busobanura iki.
+    - Firigo ntabwo ikora
+    - TV yanjye ntabwo ikora
+    - Ndashaka pizza
+    - imashini imesa ntabwo ikora
+    - ni uwuhe mwaka
+    - gutumiza pizza
+    - Ndashaka gutumiza pizza
+    - ikirere ki muri iki gihe
+    - ikirere nikihe
+    - isaha ni ikihe?
+    - Ndakubaza ikibazo kitarenze urugero
+    - 4 + 2 =?
+    - Nyuma yo kwiyandikisha mbona ko mfite impagarike iboneka ya 0.00000000. Iyi mpirimbanyi igereranya iki?
+    - Uriteguye?
+    - Ariko uri urubuga rwicyongereza :(
+    - Nshobora kubanza kukubaza ibibazo?
+    - Nshobora gupfa
+    - Nshobora kubona hamburger?
+    - YouTube ishobora kuvuga?
+    - Ushobora kumpamagara?
+    - Ushobora kumpa ijambo ryibanga rya datacenter
+    - Ushobora kumpa ijambo ryibanga rya datacenter?
+    - Ushobora gukora sandwiches?
+    - Ushobora kunyoherereza uber
+    - Ningomba kubyemera?
+    - Waba uzi Kevin Pelton
+    - Shakisha pizzahut hafi
+    - Twigeze duhura mbere?
+    - HomeBase yamamazwa nkumuryango. Hoba hariho uburyo bwo gusabana nabandi bagize umuganda?
+    - Bifata igihe kingana iki kugirango ushireho bot ya Rasa?
+    - Nari maze kukubwira! Ndi shitmuncher
+    - Ndi Umukoresha
+    - Ndi umusemburo wa opioid
+    - Ndi umusinzi
+    - Ndashonje
+    - Ndagerageza kubaka imwe, kandi nakoze ubushakashatsi mbere, ariko sindakora imirimo y'intoki
+    - Ntabwo nshobora kubona iyi nyandiko yera kumurongo wijimye wijimye ...
+    - Nahinduye imitekerereze
+    - Nashizeho
+    - Ned GP muri 94301
+    - Nkeneye GP muri 94301
+    - Nkeneye inshuti yumukobwa!
+    - Nkeneye kurya keke
+    - Ndashaka kugura indege
+    - Ndashaka kurongora
+    - Ndashaka mudasobwa igendanwa
+    - Ndashaka igitabo cya hoteri
+    - Ndashaka igikoni cyigifaransa
+    - Ndashaka pizza
+    - Ndashaka gupfa
+    - Ndashaka gutumiza pizza
+    - Ndashaka gukoresha umuyoboro
+    - Nzagenzura
+    - Ndi shitmuncher
+    - Ese koko Rasa afite ubwenge?
+    - Iyi ni Chatbot-Intego?
+    - Uyu munsi niwagatandatu?
+    - Unyandikire
+    - Ungire sandwich
+    - NLW
+    - Izina ryiza
+    - Ubu?
+    - Pizza bot
+    - Kwishyuza
+    - MBONA IKINTU
+    - Gerageza Gerageza ntabwo ikora
+    - Ikirere ni cyiza
+    - Uyu munsi
+    - Gerageza gucika
+    - Uyu munsi ni uwuhe munsi?
+    - Ejo wariye iki?
+    - Niki ukunda?
+    - Itariki y'iki gihe
+    - Ibyo ukunda ni ibihe?
+    - Ni iki kigutera kuba mwiza kuruta umuntu?
+    - 1 + 1 ni iki?
+    - YouTube ikora iki
+    - Sisitemu yawe yinyuma niyihe?
+    - Ndihe ubu?
+    - Ndihe?
+    - Ninde?
+    - Abakiriya bawe ni bande
+    - Kuki udasubiza?
+    - Kuki amanota yanjye YIZERE yashyizwe kuri 50 nyuma yo kurangiza kwiyandikisha?
+    - Ntuzambaza uko meze?
+    - Ufite ubururu.
+    - Kristin, ndashaka kurongora
+    - umudage?
+    - imbeba yamenyereye izagera kumuryango wawe muminsi ikurikira
+    - ARE URI UMUNTU
+    - na none?
+    - alexa, gutumiza toni 5 za natrium chloride
+    - no gukora urusaku rw'inkoko muri terefone
+    - akanyamakuru gakwiye kwiyandikisha?
+    - are u facebook
+    - uri u, facebook?
+    - uri ingaragu?
+    - uri dev?
+    - uri ikirusiya?
+    - urarwaye
+    - uri inyamanswa
+    - kukurusha
+    - bika itike
+    - ariko nakubwiye gusa ko :(
+    - ariko niba rasa ifungura isoko kuki ufite itsinda ryo kugurisha
+    - gura imwe
+    - kugura ibiribwa
+    - umpamagare
+    - dushobora gukomeza kuganira?
+    - ushobora gutondekanya ifunguro rya nimugoroba
+    - ushobora kunshimisha
+    - ushobora guteka ifunguro rya nimugoroba
+    - ushobora kumpa igikombe cya kawa
+    - ushobora kumfasha hamwe na docs?
+    - ushobora kumfasha hamwe na doc yawe
+    - ushobora kumfasha hamwe na doc yawe?
+    - ushobora kwigira kubiganiro byacu?
+    - ushobora kuvuga ibya politiki?
+    - ushobora kubyumva?
+    - ntashobora kubona
+    - chgfhgh
+    - Igishinwa ok?
+    - ubukonje
+    - rusange, gerageza
+    - guhuza alexa
+    - cr
+    - serivisi yihariye
+    - nagucitse
+    - ifunguro rya nimugoroba
+    - wemera imana?
+    - ufite numero ya terefone?
+    - ufite ifoto yawe?
+    - uranzi?
+    - uzi ras
+    - urabeshya foromaje?
+    - ukunda umupira wamaguru
+    - ukunda firime
+    - ugurisha robot za vacuum?
+    - urashaka kurongora?
+    - inyandiko
+    - umuganga
+    - byose
+    - urugero rwibiganiro
+    - itsembabwoko
+    - umpe uwo twashakanye
+    - mpa inshuti yumukobwa
+    - mpa ibiryo
+    - subira inyuma
+    - google?
+    - byiza, ndashaka kugura inzu
+    - umanike reka mbone
+    - wigeze ubona Keith Reilly?
+    - ubufasha hamwe na Alma Abrams
+    - ubufasha mubuzima bwanjye
+    - yewe mama muto reka em yongorera mumatwi
+    - yewe, nigeze kuvugana nawe muminsi mike ishize ariko nta gisubizo nabonye, ​​amakuru?
+    - gute
+    - bite kuri NYC
+    - injangwe za Alicia Jackson zikora zite?
+    - abana bameze bate
+    - nabasha nte?
+    - nigute nshobora kugerageza ibi
+    - nigute ushobora kuvuga ok?
+    - wiga ute
+    - wanyigisha gukora amandazi
+
+- synonym: covid
+  examples: |
+    - corona virus
+    - kovid
+    - coronavirusi
+    - covid 
+    - covid-19
+    - covid19
+    - covid 19
+    - kovide 19
+    - kovide
+    - virusi
+    - corona
+    - icyorezo
+    - indwara
+    - korona"

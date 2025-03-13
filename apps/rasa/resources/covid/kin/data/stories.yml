@@ -1,0 +1,101 @@
+version: "3.0"
+
+stories:
+
+- story: salutations
+  steps:
+  - intent: salutations
+  - action: utter_salutations
+
+- story: symptoms + salutations
+  steps:
+  - intent: symptoms
+  - action: action_kba_layer
+
+- story: check statistics
+  steps:
+  - intent: statistics
+  - action: action_check_statistics
+
+- story: preventions
+  steps:
+  - intent: prevention
+  - action: action_kba_layer
+
+- story: testing cost
+  steps:
+  - intent: testing_costs
+  - action: action_kba_layer
+
+- story: testing validity
+  steps:
+  - intent: testing_validity
+  - action: action_kba_layer
+
+- story: Penalities
+  steps:
+  - intent: fines_penalties
+  - action: action_check_fines_penalties
+
+- story: testing centers
+  steps:
+  - intent: testing_centers
+  - action: action_show_testing_centers
+
+- story: testing procedures
+  steps:
+  - intent: testing_procedures
+  - action: action_kba_layer
+
+- story: vaccination schedule
+  steps:
+  - intent: vaccination_schedule
+  - action: action_kba_layer
+
+- story: vaccination requirement
+  steps:
+  - intent: vaccination_requirement
+  - action: action_kba_layer
+
+- story: homebased care
+  steps:
+  - intent: homebased_care
+  - action: action_kba_layer
+
+- story: homebased care escalation
+  steps:
+  - intent: homebased_care_escalation
+  - action: action_kba_layer
+
+- story: show if a location is under lockdown or not
+  steps:
+  - intent: lockdown_areas
+  - action: action_check_lockdown
+
+- story: lockdown + ask location + specify location
+  steps:
+  - intent: lockdown_areas
+  - action: action_check_lockdown
+  - intent: specify_location
+    entities:
+    - location: "kigali"
+  - action: action_check_lockdown
+  - intent: specify_location
+    entities:
+    - location: "kigali"
+  - action: action_check_lockdown
+
+
+- story: curfew time + ask location + specify location
+  steps:
+  - intent: curfew_time
+  - action: action_check_curfew_time
+  - intent: specify_location
+    entities:
+    - location: "kigali"
+  - action: action_check_curfew_time
+  - intent: specify_location
+    entities:
+    - location: "kigali"
+  - action: action_check_curfew_time
+  

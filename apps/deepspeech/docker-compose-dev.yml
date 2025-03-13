@@ -1,0 +1,37 @@
+services:
+  deepspeech-stt:
+    build:
+      context: ./stt
+    container_name: deepspeech-stt
+    volumes:
+      - ./stt/:/api/:rw
+      - ./utils/:/api/utils/:rw
+      - ./stt/sounds/:/api/sounds/:rw
+    depends_on:
+      - postgresql
+    env_file:
+      - "./.env"
+    networks:
+      - infrastructure_default
+    profiles:
+        - voicechat
+  deepspeech-tts:
+    build:
+      context: ./tts
+    container_name: deepspeech-tts
+    volumes:
+      - ./tts/:/api/:rw
+      - ./utils/:/api/utils/:rw
+      - ./tts/sounds/:/api/sounds/:rw
+    depends_on:
+      - postgresql
+    env_file:
+      - "./.env"
+    networks:
+      - infrastructure_default
+    profiles:
+        - voicechat
+
+networks:
+  infrastructure_default:
+    external: true

@@ -1,0 +1,954 @@
+version: "3.0"
+nlu:
+- intent: statistics
+  examples: |
+    - how many [covid-19](disease) cases are there in the [world](GPE)?
+    - how many [covid](disease) cases are there in the [world](GPE) today?
+    - what is the number of [covid 19](disease) cases we have in the [world](GPE)?
+    - what is the total number of [covid19](disease) cases we have in the [world](GPE)?
+    - [covid-19](disease) statistics in the [world](GPE)
+    - [covid](disease) cases in the [world](GPE)
+    - how many [covid 19](disease) cases are there in Rwanda?
+    - how many [covid19](disease) cases are there today in Rwanda?
+    - what is the number of [covid-19](disease) cases we have in Rwanda?
+    - what is the number of [covid](disease) cases we have in Rwanda today?
+    - what is the [covid 19](disease) statistics?
+    - [covid19](disease) statistics in Rwanda
+    - [covid-19](disease) cases in Rwanda
+    - can you tell me something about the cases?
+    - [covid](disease) stats
+    - [covid](disease) statistics
+    - what are [covid](disease) numbers today
+    - What are the numbers today
+    - how many deaths
+    - how many cases yesterday?
+    - what is the number of cases
+    - case numbers?
+    - do you have information on cases?
+    - Number of [covid](disease) cases in the [world](GPE)
+    - Can I get the [covid](disease) statistics?
+    - what are the [covid](disease) statistics
+    - how many cases today?
+    - What is the number of cases?
+    - what are the number of cases in Rwanda
+    - what are the statistics?
+    - what is the statistics?
+    - covid stats Uganda
+    - what are the statistics in Rwanda
+    - covid statistics in Rwanda
+    - what are the statistics in Russia
+    - covid statistics Rwanda
+    - how many people are sick in Kigali?
+    - How many cases are there in Kigali?
+    - covid stats rwanda
+    - covid stats Rwanda
+    - what are the covid cases today in Rwanda?
+    - are there any people who recovered?
+    - what are covid stats
+    - What about covid in America?
+    - What about covid in Russian?
+    - How many people died in Rwanda becose  of covid?
+    - what is the statistics for rwanda
+    - Try to show me the result of covid ni rwanda
+    - How many cases of covid 19 in africa?
+    - what is the death rate for covid-19?
+    - how many covid-19 cases worldwide
+    - how many covid deaths
+    - how many covid-19 cases
+    - what are covid-19 statistics
+    - which country that has a high number of cases and deaths
+    - what is the covid-19 infection rate in Rwanda
+    - what are covid-19 statistics in the US
+    - What are Covid-19 cases in Canada
+    - What are Covid-19 cases in Burundi
+    - covid-19 cases in Uganda
+    - covid-19 cases in brazil
+    - covid-19 cases in brunei
+    - covid-19 cases in UK
+    - how can I get the daily covid-19 statistics
+    - hwat is statistic of covid in rwanda?
+    - how covid is worst for human being?
+    - what percentage of covid 19 new cases per day in rwanda?
+    - how loss the country recieve because of covid 19?
+    - is rwanda have more cases of covid 19?
+    - what are the maximum deaths caused by covid 19 per day?
+    - How is COVID-19 vaccination progressing in Rwanda?
+    - where the covid-19 statistics are published
+    - What are the number of cases today?
+    - How many people got covid today?
+    - how much people killed by covid 19 by now?
+    - what are the covid stats
+    - covid stats
+    - there is any country in the world which is not contiminated by covid 19?
+    - which country by now have more cases of covid 19?
+    - What are the covid statistics in Rwanda
+    - how many people healed to covid 19 by now?
+    - how much people have cured covid 19 so far?
+    - when covid-19 hs killed many people per one day?
+    - which areas are most affected in Rwanda
+    - what are the difference between average of death rate among confirmedcases, and overall death rate of covid-19?
+    - how many people who recovered from covid-19?
+    - is there any country which has no case of covid-19?
+    - what are the covid-19 statistics in rwanda
+    - what are the covid-19 cases generally in Burundi
+    - what are the covid-19 cases generally in Rwanda
+    - which country has many cases of covid-19 worldwide
+    - which country in Africa has the high number of covid-19 deaths
+    - What are the number of covid-19 patients in Rwanda?
+    - how many people get effect of covid-19?
+
+- intent: symptoms
+  examples: |
+    - what are the [symptoms](symptom) of [covid-19](disease)?
+    - what are the [covid](disease) [symptoms](symptom)
+    - i have a [cold](symptom), does it mean that i have [covid 19](disease)?
+    - my child has been having a very high [fever](symptom), does he have [covid19](disease)?
+    - i am having [difficulty breathing](symptom), how can I know if I have [covid-19](disease)?
+    - I have a [dry cough](symptom) and a [fever](symptom); does that mean I have [covid](disease)?
+    - do I have [covid 19](disease)?
+    - does my friend have [covid19](disease)?
+    - how do i know that i don't have [covid](disease)?
+    - how can i know if my friend has [covid-19](disease)?
+    - how do i know that my father has [covid](disease)?
+    - how can i tell if my professor has [covid 19](disease)?
+    - how do I know I am infected?
+    - what are the signs of [covid](disease)?
+    - what are some of the [covid-19](disease) signs?
+    - what are the [symptoms](symptom)?
+    - What are the [symptoms](symptom) of [covid](disease)
+    - am I infected?
+    - do I have [covid](disease)?
+    - am I infected with [covid-19](disease)?
+    - I think am I infected with [covid-19](disease), how do I confirm?
+    - does [covid 19](disease) have any [symptoms](symptom)?
+    - what [symptoms](symptom) does [covid](disease) have?
+    - what signs does [covid](disease) have?
+    - are there [symptoms](symptom) for [covid](disease)
+    - what are the [symptoms](symptom)
+    - [covid](disease) signs
+    - [covid](disease) [symptoms](symptom)
+    - I don't know the [covid](disease) [symptoms](symptom)?
+    - symtpms of [covid](disease)
+    - what are the symptoms of [covid](disease)
+    - What are symptoms of [Covid](disease)
+    - What is symptoms of the [covid](disease)?
+    - What are the symptomes of [covid 19](disease)?
+    - How do I know that I have [covid 19](disease)?
+    - what are the symptoms of [covid-19](disease)
+    - what is the synonym of [covid-19](disease)?
+    - how can I know that I've contracted [covid-19](disease)
+    - which significant signs of [covid-19](disease)
+    - what are the significant signs of [covid-19](disease)
+    - what do I have to do if I have fever
+    - how a [covid-19](disease) case is identified
+    - how to know is [covid 19](disease) thattacks you?
+    - how [covid 19](disease) reveals itself?
+    - what is the signs of [covid 19](disease)?
+    - HOW IS [COVID-19](disease) DIAGNOSED?
+    - WHAT ARE THE SIGNS AND SYMPTOMS OF [COVID-19](disease) INFECTION IN HUMANS?
+    - HOW DO I KNOW I HAVE RECOVERED FROM [COVID-19](disease)?
+    - When is a person infectious?
+    - what are [covid-19](disease) symptoms for children
+    - how [covid-19](disease) variants are detected
+    - What are key recovery symptoms following [COVID-19](disease) infection and successful treatment?
+    - How Do the Symptoms of [COVID-19](disease) Differ from Those of Cold and Flu?
+    - how long [covid-19](disease) might be identified in the human blood
+    - is [covid-19](disease) seen on human eyes
+    - What are the symptoms of [Covid-19](disease)?
+    - I have a dry cough does that mean I have [covid-19](disease)?
+    - I have a dry cough does that mean I have [covid](disease)?
+    - how a person can know has tasted positive for [covid 19](disease)?
+    - can [covid 19](disease) be seen by using our physical eyes?
+    - write short notes on [covid 19](disease) symptoms?
+    - which evidence that can show me that I recovered from [Covid-19](disease)
+    - highlight the psynthoms of [covid-19](disease)?
+    - if i am close contact with someone who have [covid-19](disease), it means i am affected?
+    - how to know someone who have [covid-19](disease)?
+    - can someone see [covid-19](disease) with his eyes?
+    - if someone have flu, it means he has [covid-19](disease)?
+    - what are the symptoms of the beta variant
+    - how to know the signs of [covid-19](disease)?
+    - how [covid-19](disease) symptoms are different from the Malaria symptoms
+    - How is [COVID-19](disease) diagnosed?
+    - what are the effects to the children when they are affected by [covid-19](disease)?
+    - what are the symptoms and complications that [covid-19](disease) can cause?
+    - how to proove people that you are recovered from [covid-19](disease)?
+    - how does [covid-19](disease) diagnosed?
+    - how can I know that I've recovered against [covid-19](disease)
+    - how do they know that someone has [covid-19](disease)?
+    - on symptoms, how can I differentiate [covid-19](disease) from Malaria
+    - what are the symptoms of the Omicron varian
+    - how can I identified that I was infected
+    - how do I know am recovered from [covid-19](disease)?
+    - how is [covid-19](disease) diagnosed?
+    - what is [covid-19](disease)?
+    - what is [covid-19](disease)
+    - what is [covid](disease)
+    - what is [covid](disease)?
+    - What is [covid_19](disease)?
+    - what's [covid-19](disease)
+    - what is [coronavirus](disease)
+    - What is a [Coronavirus](disease)?
+
+- intent: prevention
+  examples: |
+    - how can I prevent myself from having [covid-19](disease)?
+    - what can I do to prevent my child who is going to school from getting [covid](disease)?
+    - I keep seeing the rising number of [covid 19](disease) cases in [rusizi](location) where I live, how can I restrain myself?
+    - how can I prevent myself and my family from getting infected because I hear that the number of [covid19](disease) cases in [kigali](location) is rising sharply
+    - my neighbor has been infected with [covid-19](disease); how can I stop myself from getting infected?
+    - my son is going back to school this monday I would like to know how he can best avoid himself from getting infected with [covid](disease)?
+    - how do I make sure I dont get [covid 19](disease)?
+    - how do I make sure I am don't get infected with [covid](disease)?
+    - how can I not get [covid19](disease)?
+    - how can I not catch [covid19](disease)?
+    - what do I do to make sure I dont get [covid](disease)?
+    - what are some [covid-19](disease) prevention measures?
+    - how can I avoid getting [covid 19](disease) disease?
+    - how can I avoid my [family] from getting infected with [covid19](disease)?
+    - how can I restrain myself from catching [covid-19](disease)
+    - how can I avoid [covid-19](disease)?
+    - what are some prevention measures?
+    - the preventive measures
+    - the prevention measures
+    - some preventive measures
+    - some [covid 19](disease) prevention measures
+    - what are the preventive measures?
+    - how to prevent the spread of [covid-19](disease)
+    - how to prevent myself
+    - can I avoid [covid](disease)?
+    - how can I prevent [covid19](disease)?
+    - are there preventive measures for [covid-19](disease)
+    - the prevention measures for [covid 19](disease) are what?
+    - are there some preventions tips
+    - can you give me some prevention tips for [covid](disease)?
+    - the prevention tips
+    - I don't know the steps to avoid [covid 19](disease)
+    - I don't know if there are tips to prevent catching [covid-19](disease)
+    - are there [covid](disease) prevention tips?
+    - to avoid contracting [covid-19](disease), what should I do?
+    - what should I do to avoid [covid](disease)?
+    - What is mejars that Uganda tekes to privent covid?
+    - Which medicine that privents covid symptoms?
+    - How chain privant there people when covid happen?
+    - Which mejars that Rwanda could take to privant covid of there people?
+    - what is the means of winning [covid-19](disease)?
+    - what is the advise for people to eliminate [covid-19](disease)?
+    - how to live with [covid-19](disease)?
+    - how to fight [covid-19](disease)?
+    - How to live with [covid 19](disease)
+    - how to fight [covid 19](disease)?
+    - how to deal with [covid 19](disease) in rwanda?
+    - which suitable and helpful restrictions to fight against [covid-19](disease)
+    - which suitable restrictions to fight against [covid-19](disease)
+    - how to overcome [covid-19](disease)
+    - which helpful ways to conquer against [covid-19](disease)
+    - what are the best techniques to fight against [covid-19](disease)
+    - which techniques used to fight against [covid-19](disease)
+    - how people are advisable to fight against [covid-19](disease)
+    - what best advice for fighting against [covid-19](disease)
+    - what to do for fighting [covid 19](disease)?
+    - what government o rwanda establish to fight [covid 19](disease)?
+    - who can take the responsability to fight [covid 19](disease)?
+    - Should I wear a facemask to protect myself against the virus?
+    - What can I do to ensure my workplace is safe for me and my colleague?
+    - What advice should be given to patients with known or presumed [COVID-19](disease) managed at home?
+    - How to protect yourself and others
+    - What safety measures are still going to be in place, both in academic spaces and social spaces?
+    - What precautions should I take for my family if we travel?
+    - how to live with [covid 19](disease)?
+    - what people did to stop the rate of [covid 19](disease) to the people?
+    - what strategy used to bring down the [covid 19](disease) consequences?
+    - what precautions we can take in family when we have covid 19?
+    - what measures of fighting [covid 19](disease)?
+    - how doctors are protected while treating persons tested positive for [covid-19](disease)
+    - can I visit a person tested positive for [covid-19](disease)?
+    - how does the government insure that all people participate in activity of fighting covid-19?
+    - which is easy way of elminating [covid 19](disease)?
+    - how rwandans manage to live with [covid 19](disease)?
+    - how strategy rwanda as a country use to protect their citizens against [covid-19](disease)?
+    - how the refugees manage to live with [covid 19](disease)?
+    - what the way of ending [covid 19](disease) in the world?
+    - is the world able to live with [covid 19](disease)?
+    - how to deal with [covid 19](disease)?
+    - how to sensibilise deef people to fight [covid 19](disease)?
+    - discuss the measurement of rwanda forelminating [covid 19](disease)?
+    - is hand sanitiser a reponse of fighting spread of [covid 19](disease)?
+    - what precautions should be applied in the period of breastfeeding
+    - how people included in the activity of fighting [covid 19](disease)?
+    - how to control [covid 19](disease) in easy way?
+    - what to do in presence of [covid-19](disease)?
+    - which measures should be applied while many persons are at the market
+    - does the spraying people with disinfectant lower spread [covid 19](disease)?
+    - is hand sanitiser effective for [covid-19](disease)?
+    - are there any institution made the drugs (medicines) for [covid-19](disease)?
+    - should people use another medicine like chloroquin to treat [covid-19](disease)?
+    - which better way of fighting [covid-19](disease)?
+    - what rule of hand sanitiser in case of [covid-19](disease)?
+    - how to win [covid-19](disease)?
+    - what are  the requires for fighting [covid-19](disease)?
+    - washing hands can kill virus of [covid-19](disease)?
+    - what is rwanda doing in terms of [covid-19](disease) preparedness measures?
+    - how does nongovernmental organisation operating in rwanda facilitate to deal with [covid-19](disease) issue?
+    - how does government ensure that outside country people aware about [covid-19](disease) effects?
+    - how strategy people who are in transit center use to cover themselves against [covid-19](disease)?
+    - who have task to fight [covid-19](disease)?
+    - when children live alone what should they do to protect themselves against [covid-19](disease)?
+    - what types of materials used to protect [covid-19](disease)?
+    - how a blind person can protect himself against [covid-19](disease) while he needs assistance of another people?
+    - can [Covid-19](disease) spread through the face masks
+    - how a facemask can protect someone against [covid-19](disease)
+    - how can people attend a physical meeting
+    - what is the important of wearing masks?
+    - give the deafferent ways of protecting [covid-19](disease)?
+    - how does [Covid-19](disease) restrictions are applied in airports?
+    - how doctors who treat persons tested [covid-19](disease) are protected against the [pandemic](disease)
+    - How do I protect myself if I have been around someone who is infected with [COVID-19](disease)?
+    - is it safe to share tools with a [Covid-19](disease) home patient
+    - which shortcut is used to unspread [covid-19](disease)?
+    - how people who have blood pressure resist on [covid-19](disease)?
+    - who is in charge of fighting [covid-19](disease)?
+    - what can be done if both persons of one family get sick [covid-19](disease)?
+    - which hygene measure is effective for [covid-19](disease)?
+    - what is the efective way of avoiding the impact of [covid-19](disease)?
+    - what the advice to someone who has [covid-19](disease)?
+    - do I have to follow [covid-19](disease) prevention measures in case I was vaccinated
+    - how can I prepare a meeting in this times of the [pandemic](disease)
+    - how to overcome [covid-19](disease)?
+    - what are the objective to people for fighting [covid-19](disease)?
+    - who is supposed to fight [covid-19](disease)?
+    - how doctors are protected against [covid-19](disease)
+    - can two vaccinated persons shake hands
+    - is it allowed to share tools with a [covid-19](disease) patient
+    - what precautions people in village can take to protect themselves against [covid-19](disease)?
+    - I am going to a concert, how can i stop having [corona](disease)?
+    - I am travelling, how can i not have [corona](disease)?
+    - How can I stop [covid-19](disease)
+    - How can I stop [corona](disease)?
+    - How can I stop myself from having [corona](disease)?
+
+- intent: fines_penalties
+  examples: |
+    - tell me about fines
+    - are there any penalties?
+    - which penalties are there in place?
+    - what are penalties
+    - what are the penalties
+    - are there some [covid](disease) fines?
+    - are there [covid](disease) penalties?
+    - what is the fine for [mask offences](offence-mask)?
+    - I have been caught [not wearing a mask](offence-mask) correctly in my shop and I am told I should pay fines. What fines should I legally pay?
+    - what is the fine for [not wearing a mask](offence-mask)?
+    - what is the penalty for [not wearing a mask](offence-mask)?
+    - what are the penalties if I [don't wear a mask](offence-mask)?
+    - what is the repercussion for [not wearing a mask](offence-mask)?
+    - what happens if I [don't wear a mask](offence-mask)?
+    - what happens if I am caught [not wearing a mask](offence-mask)?
+    - what do I need to pay for [not having a mask on](offence-mask)?
+    - can I [not wear a mask](offence-mask)?
+    - what happens if I am seen [without a mask](offence-mask)?
+    - what happens if I am found [without a mask](offence-mask)?
+    - what do i pay if i am seen [without a mask](offence-mask)?
+    - what do i pay if i am found [without a mask](offence-mask)?
+    - what am i paying for [not wearing a mask](offence-mask)?
+    - what should i pay if i [don't wear a mask](offence-mask)?
+    - do I have a fine if I [don't have a mask on](offence-mask)?
+    - would I pay if I [don't wear a mask](offence-mask)?
+    - what's the price of [not wearing a mask](offence-mask)?
+    - i don't know how much to pay if I am caught [without a mask](offence-mask)
+    - What will I pay for [not wearing a mask](offence-mask)
+    - what is the fine for [social distancig offences](offence-distance)?
+    - what are the fine for [not social distancing](offence-distance)?
+    - what is the penalty for [not social distancing](offence-distance)?
+    - what is the penalty if I [don't social distance](offence-distance)?
+    - what are the penalties if I [violate social distancing](offence-distance) rules?
+    - what is the repercussion for [not following social distancing](offence-distance)?
+    - what happens if I [don't follow social distance](offence-distance) myself?
+    - what happens if I am caught [not social distancing](offence-distance)?
+    - what do I need to pay for [not obeying social distancing](offence-distance)?
+    - can I [not obey social distancing](offence-distance) rules?
+    - what happens if I am seen [without social distancing](offence-distance)?
+    - what happens if I am found [without social distancing](offence-distance)?
+    - what do i pay if i am seen [without social distancing](offence-distance)?
+    - what do i pay if i am found [without social distancing](offence-distance)?
+    - what am i paying for [not following social distancing](offence-distance) rule?
+    - what should i pay if i [don't social distance](offence-distance)?
+    - do I have a fine if I [don't obey social distance](offence-distance)?
+    - would I pay if I [disobey social distancing](offence-distance)?
+    - what's the price of [not following social distancing](offence-distance)?
+    - i don't know how much to pay if I am caught [without obeying social distance](offence-distance)
+    - what is the fine for [curfew offences](offence-curfew)?
+    - what are the fine for [violating curfew](offence-curfew) rules?
+    - what is the penalty for [violating curfew](offence-curfew)?
+    - what is the penalty if I [don't obey curfew](offence-curfew)?
+    - what are the penalties if I [violate curfew](offence-curfew) rules?
+    - what is the repercussion for [not following curfew](offence-curfew) myself?
+    - what happens if I am caught [outside during curfew](offence-curfew)?
+    - what do I need to pay for [not obeying curfew](offence-curfew) rules?
+    - can I [not obey curfew hours](offence-curfew) rules?
+    - what happens if I am seen [outside curfew hours](offence-curfew)?
+    - what happens if I am found [outside curfew hours](offence-curfew)?
+    - what do i pay if i am seen [outside curfew hours](offence-curfew)?
+    - what do i pay if i am found [outside curfew hours](offence-curfew)?
+    - what am i paying for [not following curfew](offence-curfew) rule?
+    - what should i pay if i [don't obey curfew](offence-curfew)?
+    - do I have a fine if I [disobey curfew](offence-curfew)?
+    - would I pay if I am [outside during curfew](offence-curfew) hours?
+    - what's the price of [not following curfew](offence-curfew) rule?
+    - i don't know how much to pay if I am caught [outside during curfew](offence-curfew) hours
+    - what is the fine for [unauthorized gatherings](offence-gathering)?
+    - what is the fine for attending [gatherings not authorized](offence-gathering)?
+    - what is the penalty for [gatherings not permitted](offence-gathering)?
+    - what are the penalties if I [don't obey authorized gathering](offence-gathering) rule?
+    - what is the penalty if I [violate the allowed gathering](offence-gathering) rules?
+    - what is the repercussion for [not following permitted gatherings) rules myself?
+    - what happens if I am caught in [unauthorized gathering](offence-gathering)?
+    - what do I need to pay for [not obeying authorized gathering](offence-gathering) rules?
+    - can I [not obey authorized gathering](offence-gathering) rules?
+    - what happens if I am seen in [gatherings not allowed](offence-gathering)?
+    - what happens if I am found in [gatherings not allowed](offence-gathering)?
+    - what do i pay if i am seen in [gatherings not allowed](offence-gathering)?
+    - what do i pay if i am found in [gatherings not allowed](offence-gathering)?
+    - what am i paying for being in an [unauthorized gathering](offence-gathering) rule?
+    - what should i pay if i [don't obey authorized gathering](offence-gathering)?
+    - do I have a fine if I [disobey authorized gathering](offence-gathering)?
+    - what's the price of [not following permitted gatherings](offence-gathering) rule?
+    - i don't know how much to pay if I am caught in [unauthorized gathering](offence-gathering) hours
+    - what is the fine for [lockdown offences](offence-lockdown)?
+    - what is the fine for [violating lockdown](offence-lockdown) rules?
+    - what are the penalties for [violating lockdown](offence-lockdown)?
+    - what is the penalty if I [disobey lockdown](offence-lockdown)?
+    - what is the penalty if I [violate lockdown](offence-lockdown) rules?
+    - what is the repercussion for [not following lockdown](offence-lockdown) myself?
+    - what happens if I am caught [going to lockdown places](offence-lockdown)?
+    - what do I need to pay for [not obeying lockdown](offence-lockdown) rules?
+    - what will happen for [disobeying lockdown](offence-lockdown) rules?
+    - can I [not obey lockdown](offence-lockdown) rules?
+    - can I [violate lockdown](offence-lockdown) rules?
+    - what happens if I am seen [leaving lockdown areas](offence-lockdown)?
+    - what happens if I am found [leaving lockdown areas](offence-lockdown)?
+    - what do i pay if i am seen [leaving lockdown places](offence-lockdown)?
+    - what do i pay if i am found [leaving lockdown places](offence-lockdown)?
+    - what am i paying for [not following lockdown](offence-lockdown) rule?
+    - what should i pay if i [don't obey lockdown](offence-lockdown)?
+    - do I have a fine if I [don't obey lockdown](offence-lockdown)?
+    - would I pay if I am [going to lockdown places](offence-lockdown)?
+    - what's the price of [not following lockdown](offence-lockdown) rule?
+    - i don't know how much to pay if I am caught [going to lockdown areas](offence-lockdown) hours
+    - what is the fine for being [in a bar](offence-bar)?
+    - what is the fine for [violating bar](offence-bar) rules?
+    - what is the penalty for [violating bar](offence-bar)?
+    - what is the penalty if I [go to the bar](offence-bar)?
+    - what are the penalties if I [violate bar](offence-bar) rules?
+    - what is the repercussion for being [in a bar](offence-bar) myself?
+    - what happens if I am caught [in the bar](offence-bar)?
+    - what do I need to pay for drinking [at the bar](offence-bar) with people?
+    - can I [go to the bar](offence-bar)?
+    - can I [visit the bar](offence-bar)?
+    - what happens if I am seen staying [in the bar](offence-bar)?
+    - what happens if I am found [at the bar](offence-bar)?
+    - what do i pay if i am seen [in a bar](offence-bar)?
+    - what do i pay if i am found [in a bar](offence-bar)?
+    - what am i paying for being [at a bar](offence-bar)?
+    - what should i pay if i [don't obey bar](offence-bar)?
+    - what should i pay if i [disobey bar](offence-bar)?
+    - do I have a fine if I drink [at a bar](offence-bar)?
+    - would I pay if I am [going to the bar](offence-bar)?
+    - what's the price of being [at a bar](offence-bar) rule?
+    - i don't know how much to pay if I am caught [at a bar](offence-bar) hours
+    - what are offenses of disobeying the [covid-19](disease) restrictions
+    - how can I be punished if I disobey the [covid-19](disease) restrictions
+    - how fines asked to a person who breaks [covid 19](disease) rules?
+    - is necessary to wear mask while you are not in the crowds for fighting covid 19?
+    - do I have to respect all [covid-19](disease) restrictions in case I was vaccinated?
+    - how persons who disobey the [covid-19](disease) restrictions are punished
+    - which offenses relating to [covid-19](disease) restrictions
+    - what are the offenses related to [covid-19](disease)
+
+- intent: testing_costs
+  examples: |
+    - I would like to know the testing costs for [covid-19](disease)
+    - how much does a [covid](disease) test cost?
+    - what does it cost to do a [covid 19](disease) test?
+    - how much can I do a [covid19](disease) test?
+    - what is the cost for a [covid-19](disease) test?
+    - what is the price of doing a [covid-19](disease) test?
+    - how much is a [covid](disease) test?
+    - what should I pay for [covid 19](disease) testing?
+    - i don't know the testing costs for [covid19](disease)
+    - i'd like to know the price of [covid-19](disease) testing
+    - i'd like to know the cost of testing for [covid](disease)
+    - i'd like to know the amount for testing for [covid](disease)
+    - how much is the [covid 19](disease) test?
+    - what is the price of [covid19](disease) test?
+    - I want to know how much to do [covid-19](disease) test
+    - How much should I pay for a [covid 19](disease) test?
+    - the price of a [covid](disease) test
+    - what is the price of testing?
+    - how much for testing?
+    - i don't know the cost for testing
+    - how much does the test cost?
+    - cost of the test
+    - the price for testing is?
+    - the price for a [covid](disease) test is?
+    - a [covid](disease) costs how much?
+    - a [covid-19](disease) test costs how much?
+    - the test goes for how much?
+    - the [covid](disease) test is for how much?
+    - what is the price of the test?
+    - can I know the price for the test?
+    - can I have the price for the [covid](disease) test?
+    - can you give me an idea of how the [covid](disease) test costs?
+    - the test price
+    - Is it true [covid](disease) test consumer big financial?
+    - how much does the [covid-19](disease vaccine cost
+    - Does health insurance cover [COVID-19](disease testing and care?
+    - how much money is required in rwanda to have a taste of [covid 19](disease?
+
+- intent: testing_validity
+  examples: |
+    - I would like to know the validity of [covid-19](disease) tests. I want to travel to Amsterdam.
+    - what is the validity of a [covid](disease) test?
+    - how long does a [covid 19](disease) test last for?
+    - how long will it take for a [covid19](disease) test to expire?
+    - what is the expiration of a [covid-19](disease) test?
+    - my [covid](disease) test was last week wednesday, is it still valid?
+    - I don't know if my [covid 19](disease) test is still valid?
+    - I have a [covid19](disease) test, I want to know if it is still valid
+    - I have a [covid-19](disease) test result, I want to know if it has expired
+    - how do I know if my [covid](disease) test has expired?
+    - what is the expiry like for [covid 19](disease) test?
+    - what is the expiry date for [covid19](disease) test?
+    - I want to find out when my [covid-19](disease) test result will expire
+    - I want to find out when my [covid](disease) test will be invalid
+    - when will my [covid 19](disease) test be invalid?
+    - is my [covid19](disease) test invalid?
+    - has my [covid-19](disease) test expired?
+    - has my test expired?
+    - I took a [covid](disease) test. Is it still valid?
+    - What's the expiry like for [covid 19](disease) tests
+    - What's the expiry of a [covid](disease) test
+    - I took a [covid 19](disease) test on monday, I would like to know if it is still valid?
+    - I took a [covid19](disease) test last week, is it still valid?
+    - will my test expire
+    - when will my test expire
+    - how do I know if my test is valid?
+    - how do I know if my test is still valid?
+    - will my test result expire
+    - when will my result expire
+    - how do I know if my test result is valid?
+    - how do I know if my result is still valid?
+    - what's a validation of a [covid-19](disease) test
+    - does the [covid-19](disease) test have validity
+
+- intent: testing_centers
+  examples: |
+    - I am in [kigali](location), where can I go to get a [covid-19](disease) [test](service-type)?
+    - where can I do a [covid](disease) [testing](service-type)?
+    - where can I do a [covid](disease) [test](service-type) in [rusizi](location)?
+    - where can I do some [covid](disease) [testing](service-type) in [kigali](location)?
+    - where can I go for a [covid 19](disease) [test](service-type)?
+    - I based in [Rubavu](location), and I will like to do a [covid19](disease) [test](service-type). where can I do it?
+    - I want to do a [covid-19](disease) [test](service-type), what are the testing centers?
+    - I want to do a [covid](disease) [test](service-type), where can I do it?
+    - What are the recommended [test](service-type) centers for [covid 19](disease)?
+    - What are the available [test](service-type) centers for [covid19](disease)?
+    - What are the recommended places for [covid-19](disease) [test](service-type)?
+    - I am looking for a [covid](disease) [testing](service-type) center in [Gisenyi](location)
+    - can you tell me where I can do a [covid 19](disease) [test](service-type) in [Kigali](location)
+    - I want to do a [covid19](disease) [test](service-type)
+    - I want to do a [covid-19](disease) [test](service-type) in kigali, where do I go?
+    - I am located at [musanze](location) and I want to do a [covid 19](disease) [test](service-type)
+    - I don't know where to [test](service-type) for [covid](disease)
+    - I don't know where to go if I want to [test](service-type) for [covid](disease) in [kigali](location)
+    - I don't know where they do [covid 19](disease) tests out of [kigali](location)
+    - I don't know where they do [covid 19](disease) tests outside [kigali](location)
+    - I don't know where they do [covid 19](disease) [tests](service-type) in [Kigali](location)
+    - I don't know where they do [covid 19](disease) [tests](service-type)
+    - I don't know where to go for a [covid](disease) [test](service-type)
+    - where can I do a [covid-19](disease) [test](service-type)?
+    - what are the testing centers?
+    - what are the testing centers for [covid](disease)?
+    - what are the [covid](disease) testing centers?
+    - I dont know where the test places are
+    - can you tell me the testing centers?
+    - can you show me the testing venues?
+    - how do I locate the testing centers?
+    - is there a lost of places I can do a test
+    - what are the places for testing [covid](disease)
+    - the venies for testing for [covid](disease) are where and where?
+    - is there a list of testing centers?
+    - is there a list of testing venues?
+    - are there testing places?
+    - where can I get the [covid](disease) test?
+    - [covid](disease) test
+    - [covid](disease) testing centers
+    - [Covid](disease) test in Kigal
+    - [Covid](disease) test in [kigali](location)
+    - where are the testing centers
+    - what available [covid-19](disease) test places
+    - is there some centers to consult [covid 19](disease)?
+    - When and where should I be tested for [COVID-19](disease)?
+    - What are the testing centers in [Kigali](location)?
+    - Where can I get tested?
+    - Where can I get tested in [Kigali](location)?
+    - [Covid](disease) testing centers
+    - is all hospital have ability of tasting [covid 19](disease)?
+    - can I test myself [covid-19](disease) if I am at home
+    - are there tests available to detect [covid-19](disease)?
+
+- intent: vaccination_schedule
+  examples: |
+    - I would like to know when I can get [vaccinated](service-type)
+    - I would like to know when I can get [covid-19](disease) [vaccination](service-type)?
+    - what is the [covid](disease) vaccination schedule?
+    - can I know what the [covid 19](disease) vaccination schedule is like?
+    - what is the order in which people will get [vaccinated](service-type)?
+    - what will be the [vaccination](service-type) order?
+    - what is the order of [vaccination](service-type)?
+    - how will they start [vaccinating](service-type) people?
+    - when will I be [vaccinated](service-type)?
+    - what is the way we will get [vaccinated](service-type)?
+    - i don't know how we will be [vaccinated](service-type)
+    - I don't know the [covid-19](disease) [vaccine](service-type) schedule
+    - how is the [vaccination](service-type) going to be?
+    - in what order will the [vaccination](service-type) be carried out?
+    - how are we going to take the [vaccine](service-type)?
+    - how will we take the [vaccination](service-type)?
+    - what kind of order will people take the [vaccine](service-type)
+    - what is the way to [vaccinate](service-type) the public
+    - How will I get [vaccinated](service-type)
+    - the [vaccination](service-type) process
+    - the process for [vaccination](service-type) is
+    - in what manner will the [vaccination](service-type) be conducted?
+    - how will they give the vaccine?
+    - how will they give us the [covid](disease) vaccine?
+    - I don't know how people will receive the [vaccination](service-type)
+    - the manner of giving the vaccine is?
+    - they will gove us the vaccine in what way or order
+    - can you give me the process for [vaccination](service-type)
+    - I have no idea of the [vaccination](service-type) process
+    - I don't know the order of the [vaccination](service-type)
+    - When the Rwanda should end to vaccines there people?
+    - Is there a vaccine for [covid-19](disease)
+    - what is the vaccination schedules
+    - can I get a [Covid-19](disease) vaccine anywhere
+    - when people should go to take a [covid-19](disease) vaccine
+    - when can I obtain a [covid-19](disease) vaccine
+    - in Rwanda, what is the [covid-19](disease) vaccination schedule
+    - What are Rwanda's recommendations regarding [COVID-19](disease) vaccination?
+    - Should adolescents and/or younger population groups be vaccinated against [COVID-19](disease) disease?
+    - What about vaccination?
+    - what's the importance of a [covid-19](disease) vaccine
+    - where to get vaccination of [covid-19](disease)?
+    - is vaccines of [covid-19](disease) available to everyone?
+    - who supposed to be vaccinated against [covid-19](disease)?
+    - who is eligible to receive a [covid-19](disease) vaccine
+
+- intent: vaccination_requirement
+  examples: |
+    - I would like to know what I have to do to get [vaccinated](service-type)
+    - what is the [covid](disease) vaccination requirement?
+    - what are the [covid 19](disease) vaccination requirements?
+    - what is the vaccination requirement?
+    - what are the vaccination requirements?
+    - can I know what the [covid 19](disease) vaccination requirement is like?
+    - can I know what the vaccination requirement is like?
+    - what is the required way to get a [covid19](disease) [vaccination](service-type)?
+    - what is the required method to get [vaccinated](service-type)?
+    - what do i do to get the [vaccination](service-type)?
+    - what is the requirement for [covid-19](disease) [vaccination](service-type)?
+    - what is the requirement to get [vaccinated](service-type)?
+    - i don't know the requirements for [vaccinating](service-type) people
+    - i don't know what is required to take take the [vaccine](service-type)
+    - what is needed for [covid](disease) [vaccination](service-type)?
+    - what do i need to get the [covid 19](disease) [vaccine](service-type)?
+    - what am I supposed to do to get [covid19](disease) [vaccine](service-type)?
+    - What's the requirement for [vaccination](service-type)?
+    - what are the [covid 19](disease) vaccination requirement?
+    - what are the requirements for [covid-19](disease) [vaccine](service-type)
+    - what are the requirements for getting the [covid](disease) [vaccine](service-type)?
+    - what is the requirement for the [vaccine](service-type)?
+    - what is required for the vaccine?
+    - what is required to get vaccinated?
+    - how do I get vaccinated?
+    - how can I get the vaccine?
+    - the requirements for the [covid](disease) vaccine are?
+    - are there some requirements for the [covid](disease) vaccine?
+    - is thera requirment list for the vaccine?
+    - what does it take to get the vaccine?
+    - can I get the vaccine? what is required?
+    - what is [covid-19](disease) vaccination process
+    - how can I get vaccinated against [covid-19](disease)
+    - what are the [covid-19](disease) vaccination requirements
+    - what criteria of receiving a [covid-19](disease) vaccine
+    - what is the [covid-19](disease) vaccine criteria
+    - what required to be vaccinated?
+    - what are the criteria to receive a [covid-19](disease) vacccine
+    - what are vaccinations requirement to [covid-19](disease)?
+
+- intent: testing_procedures
+  examples: |
+    - I don't know the [testing](service-type) procedures
+    - I would like to know how I can get [tested](service-type)
+    - how can I get [tested](service-type)?
+    - how can I be [tested](service-type)?
+    - the required procedures for [covid](disease) [testing](service-type)
+    - what is the requirement for covid-19 [testing](service-type)?
+    - what is the [covid](disease) [testing requirement?
+    - what is the test requirement for covid19?
+    - the requirement for covid 19 [testing](service-type)?
+    - what do i do to get the PCR [test](service-type)?
+    - I don't know how to get the [covid](disease) [test](service-type)
+    - I don't know how to get the PCR [test](service-type)
+    - how do I get the PCR [test](service-type)?
+    - how am I supposed to get the PCR [test](service-type)?
+    - what am I supposed to do to get the [covid19](disease) [test](service-type)?
+    - what do I need to get a [covid-19](disease) [test](service-type)?
+    - what do I need to do a PCR [test](service-type)?
+    - what do I need to do to get [tested](service-type)?
+    - what can I do to get the [test](service-type)
+    - what can I do to get the [covid](disease) [test](service-type)
+    - how can I get the [covid](disease) [test](service-type)?
+    - I have no idea of what to do to get [tested](service-type)
+    - can you tell me the ways I can get the [covid](disease) [test](service-type)
+    - can you tell me the ways to get the PCR [test](service-type)
+    - I want to get [tested](service-type)
+    - I want to do the PCR [test](service-type)
+    - how do I do the [covid](disease) PCR [test](service-type)?
+    - what are the requirements for the [covid](disease) PCR [test](service-type)?
+    - I need the [covid](disease) [test](service-type). what do I need?
+    - how to test [covid-19](disease)
+    - how to get a covid test
+    - after having tested [covid-19](disease), how will I get the results
+    - which techniques applied to test [covid-19](disease)
+    - how a [covid-19](disease) test is done
+    - who is in charge of testing [covid-19](disease)
+    - how to test [covid 19](disease)?
+    - how PCR taste is done?
+    - how rapid taste is done?
+    - what are the testing procedures?
+    - how to pay a [covid-19](disease) test
+    - what are the recommendation's for someone who think he has [covid-19](disease)?
+
+- intent: lockdown_areas
+  examples: |
+    - I would like to know if [kicukiro](location) is under lockdown
+    - I want to travel to [Muhanga](location) next week for a business appointment, is it still under lockdown
+    - I don't know if there is still lockdown
+    - is [Gasabo](location) in a lockdown?
+    - is [kigali](location) under lockdown
+    - [Nyarugenge](location) is in a lockdown?
+    - I wanted to know if [kigali](location) is under lockdown
+    - can I know if [Musanze](location) is in a lockdown
+    - is [Karongi](location) still in lockdown
+    - does [Ngoma](location) still have a lockdown?
+    - is [Huye](location) still experiencing lockdown?
+    - is [Bugesera](location) still having lockdown?
+    - do they still have lockdown in [Rubavu](location)?
+    - do they have lockdown in [Nyanza](location)?
+    - [Rusizi](location) is in a lockdown?
+    - [Rutsiro](location) is still under lockdown?
+    - [Burera](location) have a lockdown?
+    - is [Gicumbi](location) still locked down?
+    - are they having a lockdown in [Nyabihu](location)?
+    - is there still lockdown?
+    - are we in the lockdown?
+    - can I know the places with lockdown restrictions?
+    - is there a list of places with lockdown?
+    - is this are still in lockdown?
+    - does my district still have lockdown?
+    - is lockdown in my district?
+    - i want to find out information about lockdown?
+    - lockdown in [kigali](location)?
+    - does lockdown still apply in some areas?
+    - are there any new lockdown places?
+    - is there any lockdown currently?
+    - Lockdown areas
+    - Place with lockdown
+    - The location under lockdown
+    - What are the areas under lockdown?
+    - are there areas under lockdown
+    - can you tell me the places under lockdown?
+    - the areas experiencing lockdown
+    - are there locations with lockdown
+    - how can I know if my area is under lockdown?
+    - is my location under lockdown?
+    - My district is in a lockdown?
+
+- intent: inappropriate
+  examples: |
+    - you are stupid!
+    - you are mad!
+    - you are crazy!
+    - you are foolish
+    - you must be mad
+    - I think you are crazy
+    - you must be stupid
+    - I think you are stupid
+    - you must be crazy
+    - I think you are mad
+    - stupid bot
+    - crazy bot
+    - you must be foolish
+    - I think you are foolish
+    - foolish bot
+    - mad bot
+    - you are a stupid bot
+    - you are a crazy bot
+    - you are a mad bot
+    - you are a foolish bot
+    - you are very foolish
+    - you are very crazy
+    - you are very mad
+    - are you a crazy bot?
+    - are you foolish?
+    - are you a bitch?
+    - are you stupid?
+    - you are just a bitch
+    - bitch
+    - fuck you
+    - f**k u
+    - are you mad?
+    - you fool
+    - fool
+    - foooooool
+    - you are a fool
+
+- intent: homebased_care
+  examples: |
+    - I have been diagnosed with [covid-19](disease), can I be treated at home?
+    - if I have [covid 19](disease), can I be treated at home?
+    - can I treat [covid](disease) at home?
+    - can I receive treatment at home?
+    - can I be treated in my home?
+    - I have [covid19](disease), can I receive treatment at home?
+    - I have [covid-19](disease), can I get treatment in my house?
+    - is it possible to get treatment at my home?
+    - is it possible to be cured in the house?
+    - is it possible to cure [covid](disease) from home?
+    - can I be treated of [covid 19](disease) at my house?
+    - am I allowed to cure  my [covid](disease) from the house?
+    - will I be allowed to stay at home while solving [covid-19](disease)?
+    - will I be permitted to get [covid](disease) treatment at home?
+    - am I permitted to stay at home if I have [covid](disease)?
+    - if possible, I want to stay at home and treat my [covid](disease). Can I do that?
+    - if I have [covid](disease), will i treat it from my house?
+    - if I have [covid-19](disease), can I stil stay at home?
+    - am I allowed to self-isolate at home?
+    - can I self-isolate at my house if I have [covid 19](disease)?
+    - is it possible to self-isolate at my home and be cured from home?
+    - will I stay in my house if I have covid disease?
+    - what about the [covid-19](disease) home based care
+    - what I have to do if I've been infected against [covid-19](disease)
+    - how can I help a person infected against [covid-19](disease)
+    - what is the [covid-19](disease) home based care system
+    - what is [covid-19](disease) homebased care system
+    - what is homebased care
+    - what should be done by a person contracted against [covid-19](disease) to avoid the spread among the neighbors
+    - What can I do to protect others if I am sick or have tested positive with the [Coronavirus](disease) Disease?
+    - What are the recommendations for someone who has symptoms of [COVID-19](disease)?
+    - what should i do if sick [covid-19](disease)?
+    - what is the home basic care for [covid-19](disease)?
+    - How are patients with [COVID-19](disease) monitored at home?
+    - what do I have to do if I have tested positive for [covid-19](disease)
+    - how to treat a [covid-19](disease) patient at home
+    - what should someone do when he tested positive or [covid-19](disease)?
+    - Is it necessary to go to hospital whenever I get [Covid](disease)?
+    - what should i do if I amwhat should i do if I am sick sick?
+
+- intent: curfew_time
+  examples: |
+    - What is the curfew time in [kigali](location)?
+    - what is the curfew time?
+    - I don't kow the time for curfew
+    - I don't kow the time for the curfew in rusizi
+    - curfew is from when to when?
+    - the curfew is from what time to what time?
+    - what time is curfew in [Rubavu](location)?
+    - can I know the curfew time?
+    - can I get the time for the curfew?
+    - does [kigali](location) have a curfew time?
+    - do we have a time for curfew?
+    - is it possible to know the curfew time?
+    - is it possible to get the time for curfew?
+    - what if I want to find out about curfew time?
+    - I want to know the curfew time in [kigali](location)
+    - is there a curfew time at [kigali](location)?
+    - what is the time for curfew in [kigali](location)?
+    - what is the time for curfew?
+    - curfew time
+    - curfew time in [Muhanga](location)
+    - the curfew time
+    - when is the curfew?
+    - when is the curfew in [kigali](location)?
+    - the curfew is when
+    - the curfew is from what time
+    - the curfew is from what time to what time in Burera
+    - the curfew is from when to when?
+    - is there curfew?
+    - is there curfew in [kigali](location)?
+    - do we have curfew?
+    - do you know the time for curfew?
+    - I want to know the time for the curfew
+    - can you tell me the time for curfew please?
+    - is there curfew in [musanze](location)?
+    - there are some hours which contain [covid 19](disease) than others?
+
+- intent: homebased_care_escalation
+  examples: |
+    - My husband who is under homebased care has developed serious symptoms, what should I do?
+    - what do I do if I develop serious symptoms while under homebased care?
+    - what am I supposed to do if I have serious symptoms while being treated at home?
+    - what should I do if I see or notice severe symptoms while being treated at home?
+    - I don't know what to do if my condition gets worse while being treated at home
+    - I don't know what I should do if my [covid 19](disease) gets worse while self isolating
+    - what if my condition escalates under homebased care
+    - what if my case escalates while being treated at home
+    - what if my [covid](disease) escalates during self isolation
+    - my [covid](disease) has increased, what do I do?
+    - my condition has increased. what am I supposed to do
+    - my health has gotten worse, what should I do?
+    - I have seen a rise in my [covid](disease) condition, what am I to do?
+    - I have seen am increase in my [covid](disease) condition, what am I to do?
+    - I have developed severe symtomps and I am under homebased treatment, what do I do?
+    - I have developed severe [covid](disease) symtomps and I am taking treatments at home, what do I do?
+    - what do I do, since I started taking treatments at home, my health is getting worse.
+    - what should I do, since I started home care, my condition has worsened.
+    - what can I do, since I started self isolating, my symptoms has worsened.
+    - I think I am not feeling better with this taking treatments at home
+    - I think my [covid](disease) condition is not getting better in this home treatment
+    - what if I have developed severe symptoms at home during treatment?
+    - do I have to do something if I am really sick during homebased treatment?
+    - My brother is sick at home and his condition is getting worse, what should I do?
+    - What can I do if the condition of the patient sick at home gets worse?
+    - My mom is getting sicker, what should I do?
+    - What to do if the situation becomes worse at home?
+    - I am at home but I am having breathing problems
+    - how will you help me if my case is getting worse?
+    - My case is worsening what's next?
+    - what are the treatment for worsening cases?
+    - I have more symptoms, what can I do?
+    - my [covid](disease) i worse now, what can I do?
+    - I am developing more [covid](disease) symptoms. I don't know what I can do
+    - I can see more symptoms, should I be scared?
+    - it looks like my situation is increasing, can you tell me what next to do?
+    - what should I do if I have met with a person tested positive for [covid-19](disease)
+    - when should I seek emergency care if I've contracted [covid-19](disease)
+    - when should I seek emergency care if i have [covid-19](disease)?
+    - when someone should seek emergence care when he has [covid-19](disease)?
+    - What should I do if I was recently exposed to someone who now has [Covid-19](disease)? How long do I have to quarantine?
+
+- synonym: covid
+  examples: |
+    - covid-19
+    - covid19
+    - covid 19
+    - corona
+    - corona virus
+    - coronavirus
+    - pandemic
+    
+- regex: salutation
+  examples: |
+    - hey[^\s]*

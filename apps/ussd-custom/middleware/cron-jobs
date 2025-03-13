@@ -1,0 +1,3 @@
+# do daily/weekly/monthly maintenance
+# min	hour	day	month	weekday	command
+* * */1 * * python3 /usr/share/data/pull_zammad_kb_script.py > /proc/1/fd/1 2>/proc/1/fd/2 && python3 /usr/share/data/push_to_ussd_postgres_db_script.py  > /proc/1/fd/1 2>/proc/1/fd/2 && echo "Cronjob Executed"  > /proc/1/fd/1 2>/proc/1/fd/2

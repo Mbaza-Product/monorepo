@@ -1,0 +1,28 @@
+name: mbaza
+include:
+  #### INFRASTRACTURE ####
+  - path: ./infrastructure/traefik/docker-compose.yaml
+  - path: ./infrastructure/elk/docker-compose.yaml
+  - path: ./infrastructure/memcached/docker-compose.yaml
+  - path: ./infrastructure/postgres/docker-compose.yaml
+  - path: ./infrastructure/rabbitmq/docker-compose.yml
+
+  #### SERVICES ####
+  - path: ./apps/zammad/docker-compose.yml
+  - path: ./apps/asterisk/docker-compose.yml
+  - path: ./apps/kba/docker-compose-dev.yml
+  - path: ./apps/ussd/docker-compose-dev.yml
+  - path: ./apps/ussd-custom/docker-compose-dev.yml
+  - path: ./apps/orchestrator/docker-compose-dev.yml
+  - path: ./apps/stt/docker-compose-dev.yml
+  - path: ./apps/tts/docker-compose-dev.yml
+  - path: ./apps/rasa/docker-compose-dev.yml
+  - path: ./apps/deepspeech/docker-compose-dev.yml
+
+  #### FRONTENDS ####
+
+  - path: ./frontend/mbaza-widget/docker-compose-dev.yml
+  - path: ./frontend/knowledge-base/docker-compose-dev.yml
+  - path: ./frontend/zammad-form/docker-compose-dev.yml
+  - path: ./frontend/rasa-widget/docker-compose-dev.yml
+  - path: ./frontend/bakame-widget/docker-compose-dev.yml

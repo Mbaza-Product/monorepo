@@ -1,0 +1,128 @@
+version: "3.0"
+
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+  - salutations
+  - nlu_fallback
+  - statistics
+  - symptoms
+  - prevention
+  - fines_penalties
+  - testing_costs
+  - testing_validity
+  - testing_centers
+  - testing_procedures
+  - vaccination_schedule
+  - vaccination_requirement
+  - homebased_care
+  - homebased_care_escalation
+  - lockdown_areas
+  - specify_location
+  - curfew_time
+  - sendoff
+  - affirm
+  - thankyou
+  - deny
+  - out_of_scope
+  - inappropriate
+  - bot_challenge
+
+  
+entities:
+  - symptom
+  - person
+  - GPE
+  - location
+  - country
+  - disease
+  - offence-mask
+  - offence-distance
+  - offence-curfew
+  - offence-gathering
+  - offence-lockdown
+  - offence-bar
+  - service-type
+  - test-validity
+
+
+slots: {}
+responses:
+  utter_default:
+  - text: Ntabwo ndimo kumva neza icyo mushaka kubaza. ese mwabaza mubundi buryo
+
+  utter_salutations:
+  - text: |
+      Muraho! amazina yange ni Mbaza 👋!
+      Nshobora kubasubiza ibibazo mwibaza kuri KORONAVIRUSI, nk':
+      • Ibimenyetso by'ubwandu bwa KORONAVIRUSI
+      • Imibare yabanduye mu Rwanda
+      • Uko wakwirinda KORONAVIRUSI
+      • Ibyemezo byo gukumira KORONAVIRUSI
+      • Ibiciro by'ibipimo bya KORONAVIRUSI
+      • Igihe ibipimo bya KORONAVIRUSI bimara
+      • Aho wakwipimishiriza KORONAVIRUSI
+
+  utter_choose_fines_penalties:
+  - buttons:
+    - payload: /fines_penalties{{"offence-mask":"not wearing a mask"}}
+      title: Agapfukamunwa
+    - payload: /fines_penalties{{"offence-distance":"without social distancing"}}
+      title: Guhana intera
+    - payload: /fines_penalties{{"offence-curfew":"violating curfew"}}
+      title: Amamasaha yategetswe
+    - payload: /fines_penalties{{"offence-gathering":"in gatherings that are not allowed"}}
+      title: Amatsinda/Amahuriro atemewe
+    - payload: /fines_penalties{{"offence-lockdown":"not following lockdown"}}
+      title: Guma mu rugo
+    - payload: /fines_penalties{{"offence-bar":"in a bar"}}
+      title: Utubari
+    text: Hitamo amande waba wifuza kumenya.
+
+  utter_within_or_outside_kigali:
+  - buttons:
+    - payload: /testing_centers{{"location":"kigali"}}
+      title: Muri Kigali
+    - payload: /testing_centers{{"location":"mu ntara"}}
+      title: Mu Ntara 
+    text: Ese uri muri Kigali cyangwa mu Ntara?
+  utter_ask_location:
+  - text: Uri mu kahe karere?
+  utter_sendoff:
+  - text: Murabeho 👋
+  utter_youwelcome:
+  - text: Murakoze 🙂
+  utter_ok:
+  - text: byiza! 👍
+  utter_ask_whatelse:
+  - text: |-
+      Munyihanganire simbashije kugufasha kubyo umbajije 😞
+      Ni iki kindi nagufasha?
+  utter_restart_with_button:
+  - buttons:
+    - payload: /restart
+      title: Restart
+    text: Kanda hano niba ushaka gutangira bundibushya.
+  utter_out_of_scope:
+  - text: Mwihangane, ntabwo natojwe gusubiza kuri ubu bwoko bwibibazo. Mubaze ibintu byose bifitanye isano na Covid-19 .
+  utter_iamabot:
+  - text: Ndi robo, yakozwe na Rasa.
+  
+
+actions:
+- action_check_statistics
+- action_show_testing_centers
+- action_check_fines_penalties
+- action_default_ask_affirmation
+- action_check_curfew_time
+- action_kba_layer
+- action_check_lockdown
+- action_restart_with_button
+
+
+forms: {}
+e2e_actions: []

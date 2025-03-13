@@ -1,0 +1,29 @@
+{
+    "name":"Mbaza",
+    "themes":"theme1",
+    "logo":false,
+
+    "chatbots":[
+        {
+            "name":"covid",
+            "languages":[
+                {
+                    "lang":"Kiny",
+                    "api":"kiny api"
+                },
+                {
+                    "lang":"Eng",
+                    "api":"eng api"
+                }
+            ]
+        },
+        {
+            "name":"bakame",
+            "languages":["Kiny"]
+        },
+        {
+            "name":"Mbaza",
+            "languages":["Eng"]
+        }
+    ]
+}

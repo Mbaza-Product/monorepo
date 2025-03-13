@@ -1,0 +1,34 @@
+services:
+  traefik:
+    image: "traefik:v3.3"
+    container_name: "traefik"
+    command:
+      - "--log.level=DEBUG"
+      - "--providers.docker=true"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.endpoint=unix:///var/run/docker.sock"
+      - "--providers.docker.exposedByDefault=false"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "443:443"
+      - "8080:8080"
+      - "80:80"
+    volumes:
+      - "letsencrypt:/letsencrypt"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    networks:
+      - infrastructure_default
+    profiles:
+      - ussd
+      - ussd-custom
+      - ivr
+      - chat
+      - voicechat
+
+volumes:
+  letsencrypt:
+
+networks:
+  infrastructure_default: # external network
+    external: true

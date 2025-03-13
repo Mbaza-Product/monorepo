@@ -1,0 +1,44 @@
+{
+  "name": "@scalableminds/chatroom",
+  "version": "0.12.0",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "classnames": "^2.2.6",
+    "concurrently": "^9.1.2",
+    "date-fns": "^2.0.1",
+    "lodash.isequal": "^4.5.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-icons": "^3.2.1",
+    "react-markdown": "^3.3.0",
+    "remark-breaks": "^1.0.0",
+    "sass": "^1.85.1",
+    "unfetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-syntax-class-properties": "^7.2.0",
+    "@babel/plugin-transform-flow-strip-types": "^7.4.4",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@parcel/transformer-sass": "^2.13.3",
+    "flow-bin": "^0.106.3",
+    "http-server": "^0.11.1",
+    "parcel": "^2.13.3",
+    "path-browserify": "^1.0.1",
+    "prettier": "^1.14.2",
+    "process": "^0.11.10"
+  },
+  "scripts": {
+    "build": "parcel build src/index.js --dist-dir dist",
+    "watch": "parcel watch src/index.js --dist-dir dist",
+    "flow": "flow",
+    "pretty": "prettier --write src/*",
+    "serve": "http-server",
+    "start:dev": "concurrently \"npm run watch\" \"npm run serve\""
+  },
+  "main": "dist/Chatroom.js",
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}

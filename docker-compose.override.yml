@@ -1,0 +1,103 @@
+# Used only for setting up profiles
+
+services:
+  zammad:
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.zammad.rule=Host(`zammad.mbaza.local`)"
+      - "traefik.http.routers.zammad.service=zammad"
+      - "traefik.http.services.zammad.loadbalancer.server.port=8080"
+      - "traefik.http.services.zammad.loadbalancer.passhostheader=true"
+      - "traefik.http.middlewares.zammad-cors.headers.accessControlAllowMethods=GET,OPTIONS,PUT"
+      - "traefik.http.middlewares.zammad-cors.headers.accessControlAllowOriginList=*"
+      - "traefik.http.middlewares.zammad-cors.headers.accessControlAllowHeaders=*"
+      - "traefik.http.middlewares.zammad-cors.headers.addVaryHeader=true"
+      - "traefik.http.routers.zammad.middlewares=zammad-cors"
+  kba:
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.kba.rule=Host(`kba.mbaza.local`)"
+      - "traefik.http.routers.kba.service=kba"
+      - "traefik.http.services.kba.loadbalancer.server.port=3000"
+  zammad_sync_cron:
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.zammad_sync_cron.rule=Host(`zammad_sync_cron.mbaza.local`)"
+      - "traefik.http.routers.zammad_sync_cron.service=zammad_sync_cron"
+      - "traefik.http.services.zammad_sync_cron.loadbalancer.server.port=3000"
+  zammad-websocket:
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.zammad-websocket.rule=Host(`zammad-ws.mbaza.local`)"
+      - "traefik.http.routers.zammad-websocket.service=zammad-websocket"
+      - "traefik.http.services.zammad-websocket.loadbalancer.server.port=6042"
+  ussd:
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.ussd.rule=Host(`ussd.mbaza.local`)"
+      - "traefik.http.routers.ussd.service=ussd"
+      - "traefik.http.services.ussd.loadbalancer.server.port=8080"
+  ussd-custom:
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.ussd-custom.rule=Host(`ussd-custom.mbaza.local`)"
+      - "traefik.http.routers.ussd-custom.service=ussd-custom"
+      - "traefik.http.services.ussd-custom.loadbalancer.server.port=8080"
+  rasa-server:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.rasa-server.rule=Host(`rasa.mbaza.local`)"
+        - "traefik.http.routers.rasa-server.service=rasa-server"
+        - "traefik.http.services.rasa-server.loadbalancer.server.port=5005"
+  rasa-actions:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.rasa-actions.rule=Host(`rasa-actions.mbaza.local`)"
+        - "traefik.http.routers.rasa-actions.service=rasa-actions"
+        - "traefik.http.services.rasa-actions.loadbalancer.server.port=5055"
+  frontend-widget:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.widget.rule=Host(`widget.mbaza.local`)"
+        - "traefik.http.routers.widget.service=widget"
+        - "traefik.http.services.widget.loadbalancer.server.port=80"
+  frontend-knowledge-base:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.knowledge-ui.rule=Host(`knowledge-ui.mbaza.local`)"
+        - "traefik.http.routers.knowledge-ui.service=knowledge-ui"
+        - "traefik.http.services.knowledge-ui.loadbalancer.server.port=5173"
+
+  frontend-zammad-form:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.zammad-form.rule=Host(`zammad-form.mbaza.local`)"
+        - "traefik.http.routers.zammad-form.service=zammad-form"
+        - "traefik.http.services.zammad-form.loadbalancer.server.port=80"
+
+  frontend-rasa-widget:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.rasa-widget.rule=Host(`rasa-widget.mbaza.local`)"
+        - "traefik.http.routers.rasa-widget.service=rasa-widget"
+        - "traefik.http.services.rasa-widget.loadbalancer.server.port=8080"
+  frontend-bakame-widget:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.bakame-widget.rule=Host(`bakame-widget.mbaza.local`)"
+        - "traefik.http.routers.bakame-widget.service=bakame-widget"
+        - "traefik.http.services.bakame-widget.loadbalancer.server.port=80"
+
+  deepspeech-tts:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.deepspeech-tts.rule=Host(`deepspeech-tts.mbaza.local`)"
+        - "traefik.http.routers.deepspeech-tts.service=deepspeech-tts"
+        - "traefik.http.services.deepspeech-tts.loadbalancer.server.port=8000"
+
+  deepspeech-stt:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.deepspeech-stt.rule=Host(`deepspeech-stt.mbaza.local`)"
+        - "traefik.http.routers.deepspeech-stt.service=deepspeech-stt"
+        - "traefik.http.services.deepspeech-stt.loadbalancer.server.port=8000"

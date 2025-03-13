@@ -1,0 +1,16 @@
+services:
+  memcached:
+    image: memcached:1.6.9-alpine
+    command: memcached -m 256M
+    container_name: 'memcached'
+    networks:
+      - infrastructure_default
+    profiles:
+      - ussd
+      - ivr
+      - chat
+      - voicechat
+
+networks:
+  infrastructure_default: # external network
+    external: true

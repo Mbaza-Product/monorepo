@@ -1,0 +1,14 @@
+services:
+  frontend-knowledge-base:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    container_name: mbaza-frontend-knowledge-base
+    networks:
+      - infrastructure_default
+    profiles:
+      - ussd-custom
+
+networks:
+  infrastructure_default: # external network
+    external: true

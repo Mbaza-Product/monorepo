@@ -1,0 +1,23 @@
+{
+  "salutation": "greetings",
+  "sendoff": "goodbye",
+  "statistics": "to get covid statistics",
+  "symptoms": "covid symptoms",
+  "prevention": "the prevention measures",
+  "fines_penalties": "fines and penalties for covid",
+  "vaccination_schedule": "the vaccination schedule",
+  "vaccination_requirement": "the vaccination requirement",
+  "testing_centers": "the testing centers",
+  "testing_costs": "the testing costs",
+  "testing_validity": "covid testing validity",
+  "testing_procedures": "covid testing procedures",
+  "lockdown_areas": "to find out about lockdown",
+  "specify_location": "to specify a location",
+  "homebased_care": "to ask about homebased care",
+  "homebased_care_escalation": "to escalate an homebased care issue",
+  "curfew": "to ask about curfew time",
+  "thankyou": "to say thank you",
+  "affirm": "to agree",
+  "deny": "to deny",
+  "bot_challenge": "to find out if I am a bot or human"
+}

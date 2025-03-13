@@ -1,0 +1,188 @@
+<div class="chatbot">
+  <form>
+    <div id="bakame" class="bakame">
+      <div class="headWrapper">
+        <div class="title">
+          <div class="header">
+            <label>{{title}}</label>
+            <div class="right">
+              <div class="bakameControllers">
+                <button
+                  type="button"
+                  id="btn-minimizer"
+                  class="reset-default-styles"
+                >
+                  <span class="minimizer">-</span>
+                </button>
+                <button
+                  id="btn-maximizer"
+                  type="button"
+                  class="reset-default-styles"
+                >
+                  <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    id="mdi-arrow-expand"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M10,21V19H6.41L10.91,14.5L9.5,13.09L5,17.59V14H3V21H10M14.5,10.91L19,6.41V10H21V3H14V5H17.59L13.09,9.5L14.5,10.91Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <!-- by default Kiny is used -->
+              <!-- <select id="bakameApi"> -->
+              <!-- <option value="covid" selected>covid</option>
+                              <option value="bakame">bakame</option> -->
+              <!-- </select> -->
+            </div>
+          </div>
+          <!-- <hr style="color:#BCBCBC"> -->
+        </div>
+      </div>
+      <div class="mbazaBrand">
+        <label class="text-gray-50">Mbaza</label>
+        <!-- by default Kiny is used -->
+        <div class="selectRound">
+          <select id="bakameApi" class="text-gray-50">
+            <!-- <option value="covid" selected>covid</option>
+                       <option value="bakame">bakame</option> -->
+          </select>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="initialText">
+          <label for=""
+            >Wabasha gusaba serivisi <br />
+            yo gutwara ibinyabiziga</label
+          >
+        </div>
+        <div class="chatTextContent"></div>
+        <div class="chatTextResponse"></div>
+      </div>
+    </div>
+    <div class="formSections" id="formSections">
+      <div class="leftSection">
+        <!-- <div  id="bakameSaba" class="chatbotTitle" for="input"> -->
+        <!-- <spn id="bakameSabaSpan">Saba form ushaka</spn> -->
+        <!-- <select id="bakameLanguageMini">
+                      <option value="Kiny" selected>🇷🇼️</option>
+                      <option value="Eng">🇬🇧️</option>
+                  </select> -->
+        <!-- </div> -->
+        <div class="bakameLangInput">
+          <!-- by default Kiny is used -->
+          <!-- <div class="selectBottomRound">
+                      <select id="bakameLanguage">
+                          <option value="Kiny" selected>🇷🇼️</option>
+                          <option value="Eng">🇬🇧️</option>
+                      </select>
+                  </div> -->
+          <!-- <input  id="bakameType" type="text" placeholder="Andika  hano umbaze.."> -->
+        </div>
+
+        <div class="bakameRecording" id="bakameRecording">
+          <div class="bakameCounter">
+            <label id="timerLabel">0:00</label>
+          </div>
+          <!-- <div  id="bakameRecorderControls"> -->
+          <button id="bakameCancel">
+            <img src="{{host}}/images/cancel.svg" alt="Cancel" />
+          </button>
+          <button id="bakamePause">
+            <img src="{{host}}/images/pause.svg" alt="Pause" />
+          </button>
+          <button id="bakameAudio">
+            <img src="{{host}}/images/send.svg" alt="Send" />
+          </button>
+          <!-- </div>  -->
+        </div>
+      </div>
+
+      <div class="rightSection">
+        <div>
+          <button id="bakameMic" type="submit">
+            <img src="{{host}}/images/mic.svg" alt="Mic" />
+          </button>
+          <!-- <button id="bakameSend" type="submit"><img src="{{host}}/images/send.svg" alt="Send"></button> -->
+        </div>
+      </div>
+    </div>
+    <div class="bakameFooterController">
+      <div id="bakameSaba" class="chatbotTitle text-gray-50" for="input">
+        <span id="bakameSabaSpan">{{title}}</span>
+      </div>
+
+      <div class="bakameInputController">
+        <div class="bakameLangController">
+          <div class="selectBottomRound">
+            <label for="bakameLanguage">
+              <div class="flag" id="flagDisplay"></div>
+            </label>
+            <select id="bakameLanguage" class="text-gray-50">
+              <option value="Kiny" selected>🇷🇼️</option>
+              <option value="Eng">🇬🇧️</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="bakameTypeController">
+          <input
+            id="bakameType"
+            type="text"
+            placeholder="Andika  hano umbaze.."
+          />
+        </div>
+
+        <div class="bakameSendController">
+          <button id="bakameSend" type="submit">
+            <img src="{{host}}/images/send.svg" alt="Send" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <!-- <div class="responsesSection">
+      <div class="questions">
+          Questions
+      </div>
+      <div class="answers">
+          Answer
+      </div>
+  </div> -->
+</div>
+<div class="smallDev">
+  <button id="bakameMobile" class="reset-default-styles">
+    <svg
+      width="39"
+      height="39"
+      viewBox="0 0 39 39"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="39" height="39" rx="19.5" fill="{{mobileFillIconColor}}" />
+      <path
+        d="M16.6667 16.0001H16.68M23.3334 16.0001H23.3467M9.33337 32.0001V14.6667C9.33337 13.6059 9.7548 12.5885 10.5049 11.8383C11.2551 11.0882 12.2725 10.6667 13.3334 10.6667H26.6667C27.7276 10.6667 28.745 11.0882 29.4951 11.8383C30.2453 12.5885 30.6667 13.6059 30.6667 14.6667V22.6667C30.6667 23.7276 30.2453 24.745 29.4951 25.4952C28.745 26.2453 27.7276 26.6667 26.6667 26.6667H14.6667L9.33337 32.0001Z"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M16.6667 21.3335C17.1013 21.777 17.6199 22.1293 18.1923 22.3698C18.7646 22.6103 19.3792 22.7342 20.0001 22.7342C20.6209 22.7342 21.2355 22.6103 21.8079 22.3698C22.3803 22.1293 22.8989 21.777 23.3334 21.3335"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </button>
+</div>

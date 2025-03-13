@@ -1,0 +1,51 @@
+version: "3.0"
+
+rules:
+# - rule: salutation
+#   steps:
+#   - intent: salutation
+#   - action: utter_salutation
+#   - action: utter_help
+  
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: action_two_stage_fallback
+  - active_loop: action_two_stage_fallback
+
+- rule: say ok when user affirms
+  steps:
+  - intent: affirm
+  - action: utter_ok
+
+- rule: say ok when user affirms after utter_did_that_help
+  steps:
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_ok
+
+- rule: say sorry and ask what else when user denies after utter_did_that_help
+  steps:
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_ask_whatelse
+
+- rule: thankyou
+  steps:
+  - intent: thankyou
+  - action: utter_youwelcome
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: sendoff
+  - action: utter_sendoff
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: end session whenever a user sends an inappropriate message
+  steps:
+  - intent: inappropriate
+  - action: action_restart

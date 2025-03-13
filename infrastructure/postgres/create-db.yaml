@@ -1,0 +1,35 @@
+- hosts: "postgres"
+  tasks:
+    - name: Install dependencies for PostgreSQL
+      apt: name={{ item }} update_cache=true state=latest
+      with_items:
+        - bash
+        - openssl
+        - libssl-dev
+        - libssl-doc
+    - name: Install PostgreSQL 
+      apt: name={{ item }} update_cache=true state=present
+      with_items:
+        - postgresql
+        - postgresql-contrib
+        - libpq-dev
+        - python3-psycopg2
+    - name: Ensure the PostgreSQL service is running
+      service: name=postgresql state=started enabled=yes
+      
+- hosts: "postgres"
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  tasks:
+    - name: Utility present
+      ansible.builtin.package:
+        name: python3-psycopg2
+        state: present
+      become: true
+    - name: create a database
+      become: true
+      become_user: postgres
+      postgresql_db: name={{ db_name }}
+        template='template0'
+        state=present
+        owner={{ db_user }}

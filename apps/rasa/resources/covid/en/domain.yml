@@ -1,0 +1,144 @@
+version: "3.0"
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- salutation:
+    use_entities: true
+- sendoff:
+    use_entities: true
+- statistics:
+    use_entities: true
+- symptoms:
+    use_entities: true
+- prevention:
+    use_entities: true
+- fines_penalties:
+    use_entities: true
+- vaccination_schedule:
+    use_entities: true
+- vaccination_requirement:
+    use_entities: true
+- testing_centers:
+    use_entities: true
+- testing_costs:
+    use_entities: true
+- testing_validity:
+    use_entities: true
+- testing_procedures:
+    use_entities: true
+- lockdown_areas:
+    use_entities: true
+- out_of_scope_custom:
+    use_entities: true
+- inappropriate:
+    use_entities: true
+- thankyou:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- specify_location:
+    use_entities:
+    - location
+- homebased_care:
+    use_entities: true
+- curfew_time:
+    use_entities: true
+- homebased_care_escalation:
+    use_entities: true
+entities:
+- disease
+- symptom
+- GPE
+- location
+- offence-mask
+- offence-distance
+- offence-curfew
+- offence-gathering
+- offence-lockdown
+- offence-bar
+- service-type
+slots: {}
+responses:
+  utter_salutation:
+  - text: "Hello! I am Mbaza \U0001F44B! I can answer your COVID related questions like:\n- checking covid statistics\n- showing covid symptoms\n- showing some prevention tips\n- fines and penalties\n- checking testing centers\n- checking lockdown areas\n- and more...\n"
+  utter_help:
+  - text: What would you like to know today?
+  utter_within_or_outside_kigali:
+  - buttons:
+    - payload: /testing_centers{{"location":"kigali"}}
+      title: Within Kigali
+    - payload: /testing_centers{{"location":"others"}}
+      title: Outside Kigali
+    text: Are you within kigali or outside kigali?
+  utter_ask_location:
+  - text: What district are you in?
+  utter_choose_fines_penalties:
+  - buttons:
+    - payload: /fines_penalties{{"offence-mask":"not wearing a mask"}}
+      title: Masks
+    - payload: /fines_penalties{{"offence-distance":"without social distancing"}}
+      title: Social distancing
+    - payload: /fines_penalties{{"offence-curfew":"violating curfew"}}
+      title: Curfew
+    - payload: /fines_penalties{{"offence-gathering":"in gatherings that are not allowed"}}
+      title: Unauthorized gathering
+    - payload: /fines_penalties{{"offence-lockdown":"not following lockdown"}}
+      title: Lockdown
+    - payload: /fines_penalties{{"offence-bar":"in a bar"}}
+      title: Bar
+    text: Please choose the offence for which you would like to know.
+  utter_out_of_scope_custom/other:
+  - text: Sorry, I am not trained to answer to these type of questions.
+  utter_out_of_scope_custom/covid:
+  - text: Sorry, I am not trained to answer to these type of questions. For more information, please visit https://www.rbc.gov.rw/index.php?id=707.
+  utter_possibilities:
+  - text: "You can ask me about:\n- checking covid statistics\n- showing covid symptoms\n- some prevention measures\n- fines and penalties\n- checking testing centers\n- checking lockdown areas\n- and more...\n"
+  utter_not_sure:
+  - text: Hmm, 🤔 not sure what you mean...
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_ask_rephrase:
+  - text: Sorry I didn't quite understand that. 🤔 Could you rephrase?
+  utter_default:
+  - text: I'm sorry, I can't help you.
+  utter_restart:
+  - text: Have a good day!.
+  utter_inappropriate_restart:
+  - text: It seems you have said something inappropriate 😞. Have a good day!.
+  utter_restart_with_button:
+  - buttons:
+    - payload: /restart
+      title: Restart
+    text: Click the button below if you want to start over.
+  utter_ask_whatelse:
+  - text: "Sorry I couldn't help you \U0001F61E \nWhat else can I help you with?"
+  utter_youwelcome:
+  - text: You're welcome 🙂
+  utter_ok:
+  - text: Great! 👍
+  utter_happy:
+  - text: Great, carry on!
+  utter_sendoff:
+  - text: Bye 👋
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+actions:
+- action_check_statistics
+- action_show_testing_centers
+- action_check_fines_penalties
+- action_default_ask_affirmation
+- action_check_lockdown
+- action_check_curfew_time
+- action_kba_layer
+- action_restart_with_button
+forms: {}
+e2e_actions: []

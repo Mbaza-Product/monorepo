@@ -1,0 +1,7 @@
+beautifulsoup4==4.9.3
+#mysql-connector-python==8.0.22 #no longer needed
+protobuf==3.13.0
+psycopg2-binary
+six==1.15.0
+soupsieve==2.0.1
+python-decouple==3.3

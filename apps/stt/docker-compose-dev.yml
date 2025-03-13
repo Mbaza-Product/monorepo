@@ -1,0 +1,28 @@
+services:
+  stt:
+    container_name: mbaza-stt
+    restart: unless-stopped
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      labels:
+        - mbaza-stt
+    ports:
+      - "6910:6910"
+    volumes:
+      - ./sample_eng.txt:/code/app/sample_eng.txt
+      - ./sample_kin.txt:/code/app/sample_kin.txt
+    environment:
+      - THREADS=2
+      - PROCESSES=1
+      - SRV_HOST=0.0.0.0
+      - SRV_PORT=6910
+      - APP_LOG_LEVEL=debug
+    networks:
+      - infrastructure_default
+    profiles:
+      - ivr
+
+networks:
+  infrastructure_default:
+    external: true

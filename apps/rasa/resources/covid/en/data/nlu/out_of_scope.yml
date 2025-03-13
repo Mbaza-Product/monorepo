@@ -1,0 +1,856 @@
+version: "3.0"
+nlu:
+- intent: out_of_scope_custom/other
+  examples: |
+    - what is the weather now?
+    - I am hungry
+    - I want to order food
+    - What is 2 + 2?
+    - Who's the US President?
+    - what is the square root of 5
+    - I want to know the weather
+    - what is the meaning of life.
+    - Fridge Isn't Running
+    - my tv isn't working
+    - I want a pizza
+    - my washing machine isn't working
+    - what year is it
+    - order a pizza
+    - I want to order a pizza
+    - what is the weather today
+    - what is the weather
+    - what is the time today?
+    - I am asking you an out of scope question
+    - 4 + 2 = ?
+    - After registration I see that I have an available balance of 0.00000000. What does this balance represent?
+    - Are you ready?
+    - But you're an english site :(
+    - Can I ask you questions first?
+    - Can I die
+    - Can I get a hamburger?
+    - Can YouTube talk?
+    - Can you call me back ?
+    - Can you give me your datacenter's password
+    - Can you give me your datacenter's password?
+    - Can you make sandwiches?
+    - Can you please send me an uber
+    - Do I have to accept?
+    - Do you know Kevin Pelton
+    - Find nearest pizzahut
+    - Have we met before?
+    - HomeBase is advertised as a community. Is there a way to interact with other members of the community?
+    - How long does it take to set up a Rasa bot?
+    - I already told you! I'm a shitmuncher
+    - I am User
+    - I am an opioid addic
+    - I am an opioid addict
+    - I am trying to build one, and did some research before, but I have not do hand-on work yet
+    - I can barely see this white text on light gray background ...
+    - I changed my mind
+    - I have installed it
+    - I ned a GP in 94301
+    - I need a GP in 94301
+    - I need a girl friend!
+    - I need to eat cake
+    - I wan to buy a plane
+    - I wanna marry you
+    - I want a new laptop
+    - I want book a hotel
+    - I want french cuisine
+    - I want pizza
+    - I want to die
+    - I want to order pizza
+    - I want to use pipe
+    - I will check
+    - I'm a shitmuncher
+    - Is Rasa really smart?
+    - Is this Goal-Oriented Chatbot?
+    - Is today saturday?
+    - Mail me the guide
+    - Make me a sandwich
+    - NLW
+    - Nice name
+    - Now?
+    - Pizza bot
+    - Recharge
+    - SEL ME SOMETHING
+    - The Try it out is not working
+    - The weather is good
+    - Today
+    - Try it out broken
+    - What day is it today?
+    - What did you eat yesterday?
+    - What do you prefer?
+    - What is todays date
+    - What is your hobbies?
+    - What makes you better than a human?
+    - What's 1 + 1?
+    - What's do YouTube do
+    - What's your backend system?
+    - Where am I right now?
+    - Where am I?
+    - Who ?
+    - Who are your customers
+    - Why don't you answer?
+    - Why is my TRUST score set to 50 after I completed the registration process?
+    - Won't you ask me how I am?
+    - You'r blue.
+    - Kristin, I want to marry you
+    - german?
+    - a tamed mouse will arrive at your doorstep in the next couple of days
+    - aRE YOU SINGLE
+    - again?
+    - alexa, order 5 tons of natrium chloride
+    - and make chicken noises into the phone
+    - are the newsletter worth the subscription?
+    - are u facebook
+    - are u, facebook?
+    - are you single?
+    - are you dev?
+    - are you russian?
+    - are you sick
+    - are you vegan
+    - better than you
+    - book a ticket
+    - but I just told you that :(
+    - but if rasa is open source why do you have a sales team
+    - buy one please
+    - buy groceries
+    - call me father
+    - can we keep chatting?
+    - can you book dinner
+    - can you cheer me up
+    - can you cook dinner
+    - can you give me a cup of coffee
+    - can you help me with the docs?
+    - can you help me with your docs
+    - can you help me with your docs?
+    - can you learn from our conversation?
+    - can you speak about politic ?
+    - can you understand ?
+    - cannot see
+    - chgfhgh
+    - chinese ok?
+    - colder
+    - common, just try
+    - connect to alexa
+    - cr
+    - custom service
+    - did i break you
+    - dinner
+    - do you believe in god?
+    - do you have a phone number?
+    - do you have your photo?
+    - do you know me
+    - do you know ras
+    - do you liek cheese?
+    - do you like football
+    - do you like movies
+    - do you sell vacuum robots?
+    - do you want to marry me?
+    - docs
+    - doctor
+    - everything
+    - example of a chatbot
+    - genocide
+    - get me a club mate
+    - give me a girl friend
+    - give me food
+    - go back
+    - google?
+    - great, I'd like to buy a house
+    - hang on let me find it
+    - have you ever seen Keith Reilly?
+    - help with Alma Abrams
+    - help with my life
+    - hey little mama let em whisper in your ear
+    - hey, I contacted you a couple of days ago but didn't get any response, any news?
+    - how
+    - how about NYC
+    - how are Alicia Jackson's cats doing?
+    - how are the kids
+    - how can i get them?
+    - how can i test this
+    - how come you say ok ?
+    - how do you learn
+    - how good is Rasa
+    - how it compares to alexa
+    - how long have you been online?
+    - how long will the next version will launch?
+    - how many lines of codes
+    - how much is 10 + 89 ?
+    - how much is 10 + 89
+    - how to get rasa studio
+    - how to go to newyork ?
+    - i am hungry
+    - i am hungry, what should i do?
+    - i am not a developer but need this for business
+    - i am qq
+    - i can't deal with _your_ request
+    - i do not care how are you
+    - i hope you will be better
+    - i immediately need help with implementing the coolest bot you can imagine
+    - i m looking for job
+    - i told you already
+    - i wanna party
+    - i want a non dripping ice cream
+    - i want caffe
+    - i want food
+    - i want good flycam
+    - i want more of you in my life!
+    - i want pizza
+    - i want pizza!!
+    - i want to book a hotel
+    - i want to buy a roomba for my grandson
+    - i want to eat
+    - i want to find new friends
+    - i want to find out what you can build with rasa
+    - i want to fly
+    - i want to grab lunch
+    - i want to know current situtation in pakistan
+    - i want to order a pizza
+    - i want to see your happy customers
+    - i will tame a mouse for you
+    - is John Lewis still married to you
+    - is it a wasteland full of broken robot parts?
+    - is it allow to
+    - is rasa a studio?
+    - is rasa any good
+    - is that any of your business
+    - isn't the newsletter just spam?
+    - it's a pity
+    - i'm hungry
+    - license
+    - ljljl
+    - lunch
+    - lunch??
+    - machine learning
+    - mail me the steps
+    - mascot means?
+    - more
+    - mountain
+    - my name k
+    - no wait go back i want a dripping ice cream but a cone that catches it so you can drink the ice cream later
+    - offer me lunch
+    - oh my god, not again!
+    - oh wait i gave you my work email address can i change it?
+    - ok one then
+    - on wiche nlp based system are you build?
+    - only that?
+    - order good
+    - order pizza
+    - personal or work?
+    - pizza
+    - please help with my ice cream it's dripping
+    - please hjave lunchj
+    - please hurry, i have deadline in two weeks to deliver the bot it is for very big company
+    - please play music
+    - rasa topics
+    - really? you're so touchy?
+    - refresh
+    - region with no. of records
+    - remember my name
+    - search wikipedia
+    - shitmuncher
+    - show me a picture of a chicken
+    - silly bot
+    - sing me a song
+    - so, I'm helping right now to training you?
+    - some thing else
+    - someone call the police i think the bot died
+    - sorry, i cannot rephrase
+    - sudo make me a sandwich
+    - tell me more about next best action
+    - that doesn't sound like a joke
+    - that link doesn't work!
+    - the one that is better than you
+    - tricked  ya
+    - turn off my stove
+    - umm
+    - wait a bit i am still reading
+    - what about wheather
+    - what are contextual AI assistants and how different are they from chatbots?
+    - what are you doing now?
+    - what are your uses for universities
+    - what did you eat for lunch?
+    - what do oyu think about siri?
+    - what do you think abou siri?
+    - what do you think about Stanley Ramirez?
+    - what do you think of alexa
+    - what does your soul feel my friend
+    - what doing
+    - what else?
+    - what films do you like
+    - what i do after cd starter-pack-rasa-stack?
+    - what is a discourse?
+    - what is a mascot
+    - what is adlingo
+    - what is differance between bot and mascot?
+    - what is evolution ?
+    - what is google rcs
+    - what is machine learning
+    - what is nice?
+    - what is the capital of delhi
+    - what is the capital of india
+    - what is the current petrol price
+    - what is the day ?
+    - what is the real use case where we can use this one
+    - what is your address?
+    - what is your purpose
+    - what lnu mean?
+    - what the latest news ?
+    - what you ate today?
+    - what's 5 + 5
+    - what's a newsletter?
+    - what's gingerale
+    - what's your wife doing this weekend
+    - what?
+    - whats that
+    - whats the sign
+    - when is the next train is coming?
+    - where do i get install files for mac?
+    - where is Oslo?
+    - where is mexico?
+    - wheres the party?
+    - which city are you talking about?
+    - which email
+    - which email should i send to ?
+    - which file is created first while developing chat bot
+    - which is the LNU asynchronism ?
+    - which kind
+    - who are the engineers at rasa?
+    - who are they?
+    - who is Sharon Zeches
+    - who is the MD of samsung bangalore ?
+    - who is the president of india ?
+    - who is your favourite robot?
+    - who let the dog out
+    - who was hitler
+    - who will anser my email?
+    - who's Bill Gates?
+    - whta you think about gdpr?
+    - why do you need that?
+    - why its called rasa ?
+    - will u kill me
+    - will u kill me?
+    - winter is already leaving
+    - with you recommend me?
+    - would you like some water
+    - yeah, my dog was drinking a couple of litres of water per day and tried drinking the swimming pool
+    - you already have that
+    - you can learn how to make a coffe
+    - you have children?
+    - you have job opening
+    - you lock sweety
+    - you should learn to count
+    - you will know it from the single red rose it carries between its teeth
+    - you're a woman
+    - i am learning python
+    - CALL THE POLICE
+    - tertyryutyi
+    - wsdrcftvgybhnj
+    - why sky is blue?
+    - what kind of bird are you?
+    - contextua
+    - contextual
+    - talk to me about voulette
+    - voulette voulette
+    - Do you have a demo?
+    - Cars
+    - please voulette
+    - Out of scope question.
+    - i need money
+    - no, i need cash, money! Do you have it ?
+    - the beatles
+    - Hi i want to go palghar
+    - I want to go palghar
+    - your contry name
+    - you girl
+    - gsaf
+    - expert of rasa
+    - i want play ball
+    - flight catch up
+    - how do you like your coffee
+    - Can you get analytics on who I'm chatting with when I use Rasa
+    - coronavirus
+    - have you heard of corona?
+    - where do i type in commandy
+    - where to type in commands
+    - kiss me
+    - you have to
+    - what type of bot?
+    - sfasd
+    - asdkjasdhjkasd
+    - j  bhbhj
+    - eshdtjfjfyk
+    - drhdtjfjfyj
+    - sudo reboot
+    - asdfgasd
+    - asdfgasdas
+    - who accused to cause covid-19?
+    - Covid affect business in Rwanda?
+    - Why financial should not stable during COVID-19?
+    - Covid is curious code in world wide yes or no
+    - American is ordering vaccine of covid?
+    - What about business of Tanzania during covid?
+    - Which addivantages that Rwanda gained in vacation of covid?
+    - How the world eleminate covid?
+    - Which disadvantes of the business coused by covid
+    - Is there covid affect economic in Rwanda?
+    - How created covid?
+    - Which budget that covid consuming?
+    - How the covid affect common market?
+    - Which countries that are covid free?
+    - what are the causes of covid-19
+    - in which age covid-19 is dangerous to human being?
+    - in which way covid-19 kills people?
+    - how covid-19 is disadvantage to rwandans?
+    - when covid-19 arrived in rwanda?
+    - when covid-19 outbreak in the world?
+    - what are the causes of covid-19?
+    - who is mostly irregible for covid-19 than others?
+    - who might be in risk of getting infected against covid-19
+    - what are the covid-19 vaccination statistics
+    - where covid-19 infected persons are treated
+    - which risky zones that might cause the spread of covid-19
+    - what's the price of the covid-19 vaccination certificate
+    - What are the vaccination statistics in Europe
+    - which country that have not yet recorded a covid-19 case
+    - who might not be allowed to get vaccinated against covid-19?
+    - how long will I get the answer after the covid-19 test?
+    - what's the importance of a lockdown in fighting against covid-19
+    - why a covid-19 test is essential
+    - who is eligible to obtain a covid-19 vaccine
+    - how covid outbreak in rwanda?
+    - when covid 19 arrived in rwanda?
+    - what happens when covid 19 attacks a person with noncommunicable diseases?
+    - when vaccines of covid 19 was inverted?
+    - is lockdown a consequence of covid 19?
+    - when covid 19 is scheduled to end in world?
+    - how covid 19 can kill a person?
+    - is covid 19 a virus of china?
+    - had covid 19 made in china?
+    - how to deal with covid 19 lost?
+    - where to go for escaping covid 19?
+    - is a covid 19 a punishment of GOD?
+    - How long does the virus that causes COVID-19 last on surfaces?
+    - Who is most at risk of catching COVID-19?
+    - How can I contribute to avoiding stigmatising people related to COVID-19?
+    - Must I fear COVID 19?
+    - Are Africans less at risk of contracting the COVID-19 compared to other races?
+    - WHAT MEASURES HAVE BEEN PUT IN PLACE IN RWANDA TO MINIMISE THE RISK OF TRANSMISSION?
+    - What is the risk of infection in pregnant women and newborn babies?
+    - How severe is COVID-19 infection?
+    - Will COVID-19 vaccines stop the pandemic?
+    - What percentage of the population should be vaccinated to achieve herd immunity?
+    - what are covid-19 myths
+    - How much time does this virus stay alive on surfaces?
+    - Is a closed air-conditioned office more prone to contamination even while maintaining social distance?
+    - Are all tests the same? What actually happens when you get tested?
+    - Can you catch COVID-19 twice?
+    - what's the mandate of a covid-19 test
+    - which suitable food for a covid-19 patient
+    - what physical exercises might be done by a covid-19 patient
+    - can a person be infected again after having recovered from covid-19
+    - Are there any medical conditions that legitimately exempt a person from wearing a face mask in public places where masks are required?
+    - how the use of technology might be essential in fighting against covid-19
+    - who might not be tested against covid-19
+    - how can church prayers might a way of spreading covid-19
+    - why the people should have to worry about covid-19
+    - why is covid-19 taken as a world's pandemic
+    - how can air strengthen the spread of covid-19
+    - are elders risky of dying of covid-19?
+    - does covid-19 kill persons with diabetes
+    - how long does covid-19 live in the bank notes
+    - what are the negative effects of using a bad hand sanitizer
+    - I've heard there are variants of the virus that causes COVID-19. What does this mean?
+    - how covid 19 make a whole world to be in lockdown?
+    - how much researches made for covid 19?
+    - is covid 19 has an impact on earth's economy?
+    - how to proove people that they can take covid 19 seriously?
+    - who is the first people was testing positive for covid 19?
+    - when covid 19 was found in rwanda?
+    - there is any advantage of covid 19 to human being?
+    - how can covid 19 can transform itself?
+    - how to proove people that covid 19 is dangerous than any other viruses?
+    - which first hospital holded a first person who tasted positive for covid 19?
+    - give the reason why we have to where masks for covid 19?
+    - why is covid 19 not covid 18?
+    - is still covid 19 a big deal on world?
+    - can also wild animals contaminated bby covid 19 as a person?
+    - when covid 19 entered in rwanda?
+    - from which year a person can be affected by covid 19?
+    - who is great person on the world killed by covid 19?
+    - what are the effect of covid 19?
+    - describe covid 19 causes?
+    - how come covid 19 started on the world?
+    - compare covid 19 virus to HIVAIDS?
+    - is covid 19 worst than any other virus?
+    - will we live together with covid 19 everlasting?
+    - how does covid-19 affect the mental health
+    - there is any refugee in rwanda tasted positive for covid-19?
+    - explain the ways of covid-19 up to the lungs of a person?
+    - why a vaccine of covid 19 was discovered in short term compared to other diseases?
+    - when a first lockdown caused by covid-19 started?
+    - how difficult or easy, has it been for people to follow the guidance of covid-19?
+    - are the children with years of under 15 affected by covid 19?
+    - why is covid 19 not covid 20?
+    - what does covid-19 wave mean
+    - is covid 19 a hindlence to the human being?
+    - are the cows affected by covid 19?
+    - what are the channels of covid 19 in human body?
+    - how to manage the loss caused by covid-19?
+    - why cafew is necessary for covid-19?
+    - probably covid 19 will end in earth when?
+    - there is any profit of covid-19?
+    - this covid-19 outbreak in world for first time or?
+    - how rate of unemployment caused by covid-19 in the country?
+    - covid 19 stops gathering of people, which other virus can also stop the crouds?
+    - when covid 19 entered in USA?
+    - how much time the virus of covid-19 can last on air before affect people?
+    - how long covid 19 can resist before entering in human being?
+    - what role of volunteers in rwanda during covid-19 time?
+    - give the examples of great people affected by covid-19?
+    - did the schools open while covid 19 continue?
+    - what first schools close their doors when covid 19 outbreak?
+    - how come covid-19 spread all over the world?
+    - who really inverted this covid 19?
+    - which impact of covid-19 to the economy of the countries?
+    - what is prepared by the government after this covid 19?
+    - what languages used for covid-19?
+    - why is covid 19 not covid17?
+    - explain the way of covid 19 in person's body?
+    - why many people want to make a research to covid 19?
+    - describe the disadvantages caused by covid 19?
+    - there are something positive caused by covid 19?
+    - why rwanda make effort to avoid the effect of covid 19?
+    - what the religious people talk to covid 19?
+    - is covid 19 a punishment of GOD to the human being?
+    - when someone affected by covid 19, can he pray and be cured?
+    - can a dead body spread a covid 19?
+    - whats the worst stage someone can achieve when he has covid 19?
+    - highlight the purposes of rwanda to the covid 19?
+    - how long covid 19 can survive on the metal?
+    - when people repend to their sins, covid 19 will be finished?
+    - what about transformation of covid 19?
+    - mention the impact of covid 19 to the society?
+    - how long covid 19 can last on the surfaces?
+    - does covid 19 affect echo system?
+    - what the effect of covid 19 to the animals?
+    - What are the organs most affected by COVID‐19?
+    - how to make funeral for a person died of covid-19
+    - why covid 19 doesn't take too long to get it's vaccinations as other viruses?
+    - old people cure covid-19 as young people?
+    - is covid-19 familiar with cough?
+    - children under 10 can be affected by covid-19?
+    - explain the way of covid-19 up to the lungs of a person?
+    - can black people attract covid-19 as white people?
+    - how to convince people who take covid-19 as rummers?
+    - how much effort rwanda expense to protect people against covid-19?
+    - can good oxygen be an answer for covid-19?
+    - to which extent covid-19 is bad?
+    - why all people stand for covid-19?
+    - can people who was vaccinated sick covid-19?
+    - is rapid test for covid-19 effective?
+    - is someone who smokes cigarettes cure covid-19 when affect him?
+    - discuss the covid-19 impact on the world?
+    - when will covid-19 be finished in rwanda?
+    - why covid-19 killed many people on the world?
+    - can rwanda rebring lockdown because of covid-19?
+    - how can vaccines of covid-19 can rich to massive people when there is no load?
+    - are the refugees being affected by covid-19?
+    - what government do when covid-19 is detected in refugees camp?
+    - is worship place everywhere in rwanda for fighting covid-19?
+    - how people get food in covid-19 lockdown when mass gathering is prohibited?
+    - what about funeral arrangement in covid-19 era?
+    - wat asked for foreigners who want to travel in rwanda?
+    - will refugee be able to get thematerials which is used to fight covid-19?
+    - what the advice to a pregnant woman in case of covid-19?
+    - how to inform deef people about covid-19?
+    - how Covid-19 affected the world economy
+    - how Covid-19 affected the social welfare
+    - are the doctors' masks better than others
+    - how to fight against the covid-19 misinformation put on internet
+    - do the nurses and doctors also affected by covid-19?
+    - which hospital receive many sickers of covid-19?
+    - which hospital that take care to the people sick covid-19?
+    - how covid-19 is a big problem to the education?
+    - how covid-19 is problem to the investment?
+    - how the foreigners enter in country while covid-19 take place?
+    - how covid-19 develop itself?
+    - what the impact of covid-19 to te economy of a country?
+    - is there any probability of finishing covid-19?
+    - How long does covid-19 stay on human hair?
+    - How long does covid-19 stay on human fingernails?
+    - how long does covid-19 stay on banknotes?
+    - can Covid-19 cause the mental illness? How?
+    - when the covid-19 first case was reported worldwide
+    - why Covid-19 was declared as a world's pandemic
+    - Why the governments puts up the carfews?
+    - can a person get infected many times?
+    - what does  the covid-19 wave mean
+    - how the funeral of the person who died of covid-19 is made
+    - what is the effect of covid-19 to the animals?
+    - is covid 19 a punishment of GOD  to the sinners?
+    - how long a virus of covid-19 last on metal?
+    - how long covid-19 can last in person before killing him?
+    - give the examples of people who are killed by covid-19?
+    - are children under 5 years affected by covid-19?
+    - who is vulnerable for covid-19?
+    - can someone test negative and at the same time test positive for covid-19?
+    - who can i share my personal information when i test positive for covid-19?
+    - who is considered a close contact with someone who have covid-19?
+    - what should we do when our animals show the symttoms of covid-19?
+    - i am sick covid-19, how to tell people i was around?
+    - is testing positive for covid-19 shame?
+    - if someone is a close contact, will he be tested for covid-19?
+    - who is most at risk of catching covid-19?
+    - can someone who is released from quarantine still spread covid-19?
+    - how can I avoid sigmatising people related to covid-19?
+    - do the Africans have less chance of contracting covid-19 compared to other races?
+    - must I fear for covid 19?
+    - Can other animals get infected against covid-19
+    - does Covid-19 spread quickly on winter conditions?
+    - how Covid-19 can affect the entire population economically
+    - can covid-19 break the record of killing many people in the world?
+    - how long it takes to recover from covid-19?
+    - what is the significance of covid-19?
+    - what happen when someone sick malaria affected by covid-19?
+    - demonstrate the negative impact of covid-19?
+    - are there the positive impact of covid-19?
+    - is covid-19 has category?
+    - there is any country still in lockdown because of covid-19?
+    - how social media can help to fight covid-19?
+    - process by process explain how covid-19 attack immunity of a person?
+    - can covid-19 end by next year?
+    - what is the advantages of fighting covid-19?
+    - what does it mean to be immunocompromised during covid-19?
+    - what is penn medicine's visitation policy during covid-19?
+    - do someone need to test negative for covid-19 before surgery? what can happen when he tested positive?
+    - what is covid-19 antibody test?
+    - are dogs trained to test covid-19?
+    - are penn medicines have information to covid-19 we don't know?
+    - how uneducated people are informed about covid-19?
+    - what can convince peple that covid-19 is really exist?
+    - does a pregnant woman allowed to be vaccinated
+    - what does a covid wave mean
+    - how many covid-19 waves do we have in rwanda
+    - where the first covid-19 was reported worldwide
+    - who approves the use of covid-19 vaccines
+    - can a person get tested positive for two different variants of covid-19 once?
+    - what's the importance of a covid-19 certificate
+    - who is allowed to give a covid-19 vaccine certificate
+    - why covid-19 is among the category of pandemics
+    - what's the importance of a curfew
+    - does covid-19 spread quickly in the winter?
+    - what are the disadvantages of covid-19 to massive people?
+    - is covid-19 a big collapse than a war?
+    - who was first to be a victim of covid-19?
+    - is africa having more cases of covid-19 than europe?
+    - how pen medecine used to cure covid-19?
+    - who is most at risk of severe of covid-19?
+    - what are the effect of covid-19 in mental health?
+    - can an adult people of 100 years recoverd from covid-19?
+    - when covid-19 introduce itself in rwanda?
+    - what impact of covid-19 to global economy?
+    - how covid 19 affect religion?
+    - is covid-19 a punishment's of GOD?
+    - there is any possibility to finish covid-19?
+    - Drink alcohol is the one that pivent covid?
+    - how cost is covid 19 pandemic is required gto be treated?
+    - what are the complications covid-19 can cause?
+    - can someone test negative and later test positive in viral for covid-19?
+    - who is considered to close contact of someone with covid-19?
+    - i have covid-19. how to tell people who was around?
+    - what the states are doing to rebuild their economy colapsed by covid-19?
+    - had economy colapsed because of covid-19?
+    - had education lost quality because of covid-19?
+    - when first school open after total lockdown caused by covid-19?
+    - what the relationship between whuhaan and covid-19?
+    - one person who have covid-19 can spread that covid-19 to which number of people?
+    - covid 19 is now everywhere in the world?
+    - why covid-19 create fear to the people compared to other disease?
+    - is covid-19 a contaminated disease?
+    - by relevent example, explain the way virus of covid-19 form itself and enter in someone's body?
+    - what happened when covid-19 attack people with noncommunicable  disease?
+    - why covid-19 looks like an hypocalipse?
+    - covid 19 of europe is the same to covid 19 of africa?
+    - which zone in rwanda covid 19 is being tested?
+    - is PCR  test efficient compared to rapid test?
+    - can covid-19 have ability of causing other illnesses?
+    - which food a person tested positive for covid-19 should take
+    - to prevent against covid-19, which greeting might replace the shaking hands greeting?
+    - does covid-19 vaccines cause other body problems
+    - will covid-19 end
+    - Do COVID-19 cases decline when it gets warm outside?
+    - COVID-19: Who's at higher risk of serious symptoms?
+    - what is the causes of covid-19?
+    - is any proposal ending covid-19 forever?
+    - will miracle of GOD cure covid-19?
+    - if someone smoke cigarettes, what will happen to him when covid-19 affect him?
+    - if i vape tobacco or nicotine am i at risk for complications of covid-19?
+    - will vaccines there be shortages due covid-19?
+    - do covid-19 check for delta or other variants?
+    - did rwanda start to make it's vaccinations?
+    - what can be happened when all countries establish their vaccines for covid-19?
+    - which rules people have taken because of covid-19?
+    - who is eligible for covid-19?
+    - when first people in rwanda had tested positive for covid-19?
+    - what is the rule of volunteers in rwanda for fighting covid 19?
+    - what worst things covid-19 caused?
+    - can animals like goats exposed to covid-19?
+    - why rwanda made extra effort to fight covid-19?
+    - who should be blamed because of covid-19?
+    - is covid-19 a conquer to the people?
+    - when will covid-19 end?
+    - what are the positive impact of covid-19?
+    - what about doctors during covid-19 outbreak?
+    - distinguish covid-19 and corona virus?
+    - why is covid-19 not covid-20?
+    - how long does covid-19 stay on hair
+    - how long does covid-19 stay on fingernails
+    - what is a  covid-19 wave
+    - can a person get infected on two difference covid-19 variants at once
+    - what are the components of a good hand sanitizer
+    - can insurance companies pay the covid-19 test
+    - how many world's population received full covid-19 vaccine
+    - how Rwanda was affected by covid-19 economically
+    - where was the first covid-19 case reported worldwide
+    - when the first covid-19 case was reported in rwanda
+    - is possible to change the result of testing for covid-19?
+    - can I make my own face mask
+    - who accused to bring covid-19 in the world?
+    - If PCR tests are so easily contaminated for covid-19,how sure are we about the accuracy of the case numbers? Should we be suspicious?
+    - how can i get free facemask against covid-19?
+
+- intent: out_of_scope_custom/covid
+  examples: |
+    - which country most affected by covid-19
+    - differentiate PCR taste from rapid taste?
+    - how many reported covid-19 variants worldwide
+    - what is the real causes of covid-19?
+    - how long it requires to be recovered from covid-19?
+    - Can Covid-19 cause death?
+    - What did COVID-19 affect economy
+    - How the covid affect social economy?
+    - How the covid affects security organisation?
+    - Is it true covid kills 10000000 in the world?
+    - What about covid during pregnancy?
+    - Is it true covid affect curiture?
+    - What about religion during covid?
+    - Is it true covid kills people?
+    - Covid kills ord people than young people?
+    - Covid can kill people how has 78 ages?
+    - Which country that created covid vaccine?
+    - How many factions of covid 19?
+    - Is covid 19 a curable disease?
+    - What are the causes of covid 19?
+    - Is covid 19 treated?
+    - what are the cause of covid-19/?
+    - what are covid-19 varrients
+    - what are covid-19 variants
+    - what are the covid-19 variants
+    - in which area covid-19 was found first time?
+    - why covid-19 is bad compared to other viruses?
+    - how covid-19 become a virus?
+    - where covid-19 was seen for first time?
+    - which covid-19 reported variants
+    - when the first covid-19 was reported
+    - when the first covid-19 case was reported
+    - how many covid-19 varriants
+    - what are the effects of covid[19
+    - what are the consequences of covid-19
+    - what are covid-19 consequences
+    - what is the consequences of covid-19?
+    - what are the covid-19 consequences?
+    - what is the consequences of covid 19?
+    - what is the consequences of covid-19 to living being?
+    - what are the consequences of lockdown caused by covid-19?
+    - what are covid-19 effects
+    - what are the effects of covid 19?
+    - describe the effect of covid 19?
+    - what are the effects of covid-19?
+    - can covid-19 cause death
+    - are any person who died of Covid-19
+    - what's the similarity of covid-19 to other diseases
+    - in which place covid 19 is to much compared to others?
+    - what is the corses of covid 19?
+    - where covid 19 was started?
+    - what are the disadvantage of covid 19?
+    - is covid 19 worst than HIVAIDS?
+    - what is the differents between covid 19 and corona virus?
+    - what are the types of covid 19?
+    - Where was COVID-19 first identified?
+    - Are patients who recovered from COVID-19 immune against the virus?
+    - Is COVID-19 worse than flu?
+    - what are common covid-19 misinformation worldwide
+    - how can I get accurate information about covid-19
+    - which researches done about covid-19
+    - is covid-19 a disease or a pandemic
+    - how covid 19 was started?
+    - except covid 19 there was any other pandemic in the world?
+    - what the listens we can learn from covid 19?
+    - is covid 19 inverted by a man?
+    - is covid 19 a serious problem on world?
+    - what is the orgin of covid19?
+    - explain the cause of covid 19?
+    - how long does the virus cause covid-19 last on surface?
+    - there is rummers of covid 19 trend on social media, what should we do to know truth?
+    - how long can covid-19 live in body's person?
+    - instead of delta, what are other covid-19 variants
+    - which covid-19 vaccines approved by the world health organization?
+    - make a comparison between covid 19 with other viruses?
+    - many people claim that covid 19 doesn't exist, are they in truth?
+    - what does a covid-19 variant mean
+    - can someone test negative and later test positive on a viral test for covid-19
+    - when covid 19 started?
+    - describe the form of covid-19?
+    - what are the categories of covid-19?
+    - can covid 19 transform into other viruses?
+    - where covid 19 was discovered for first time?
+    - There's a lot of misinformation about COVID-19 online. What should I do?
+    - where did covid-19 come from
+    - distinguish covid-19 from other viruses?
+    - which web addresses should be browsed to search for accurate covid-19 information
+    - what's the origin of covid-19
+    - When was COVID-19 declared a pandemic?
+    - who is a victim of covid 19?
+    - except delta there are other types of covid-19?
+    - what big challenges covid-19 cause to the world?
+    - is china a source of covid-19 in the world?
+    - is covid-19 tangible or is intangible?
+    - what's the name of all covid-19 variants
+    - where the first cases of covid-19 variants were reported
+    - When and where the first case of the delta variant was reported
+    - where covid-19 has started?
+    - how long it can take to a person to recover from covid-19?
+    - how long it takes to be cured when you sick covid-19?
+    - what is prognosis for people who get covid-19?
+    - what resources are available to help people to be informed about covid-19?
+    - where can I search for accurate information about covid-19
+    - what does covid-19 variants mean
+    - how many covid-19 variants reported worldwide
+    - how many approved covid-19 vaccines
+    - what does long covid mean
+    - what are the names of all covid-19 variants
+    - What causes COVID-19?
+    - what is the best way to stay informed about covid-19?
+    - in which conditions covid-19 can survive or longest?
+    - what if covid-19 affect people wihth mental disorder.
+    - is a covid-19 pandemic disease?
+    - when covid-19 was confirmed as disease outbreak in the world?
+    - what is the negative impact of covid-19?
+    - what are the advantages of covid-19?
+    - how long can covid-19 last on surface?
+    - how long can covid-19 last on hot metal?
+    - how many variants of covid-19 reported wordwide
+    - what are the names of covid-19 variants
+    - can covid-19 spread quickly in the winter
+    - can I get covid-19 through the sexual intercorse
+    - how long does covid-19 stay on air
+    - how long does covid-19 stay on human hair
+    - who is most risk for covid-19?
+    - is covid-19 predictable?
+    - How fast can covid-19 mutate?
+    - What exactly is in the Covid-19 vaccines? I've heard so many rumors and don’t know what to believe.
+

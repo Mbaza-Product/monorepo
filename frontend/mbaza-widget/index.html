@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot</title>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <h2>Mbaza CHATBOT</h2>
+    </div>
+
+    <!-- Load and initialize the chatbot -->
+    <script src="js/main.js"></script>
+    <script>
+      var mbazaChatbot = new MbazaChatbot({
+        title: "Bakame Chatbot",
+        welcomeMessage: "Welcome, I am Mbaza a multi-tenant chatbot",
+        theme: 'dark', // blue, orange, dark
+        useAudio: true,
+        chatbots: [
+          {
+            name: "covid",
+            languages: [
+              {
+                lang: "Kiny",
+                api: "http://rasa.mbaza.local/webhooks/rest/webhook",
+                welcomeMessage: "Murakaza neza, ndi Bakame, ndabaza covid19",
+              },
+              {
+                lang: "Eng",
+                api: "http://rasa.mbaza.local/webhooks/rest/webhook",
+                welcomeMessage: "Welcome, I am Bakame, I answer covid19 questions",
+              },
+              {
+                lang: "SWA",
+                api: "http://rasa.mbaza.local/webhooks/rest/webhook",
+                welcomeMessage: "Karibu, mimi ni Bakame, nina jibu maswali ya covid19",
+              },
+            ],
+          },
+          {
+            name: "bakame",
+            languages: [
+              {
+                lang: "Kiny",
+                api: "http://rasa.mbaza.local/webhooks/rest/webhook",
+                welcomeMessage: "Murakaza neza, ndi Bakame, ndabaza covid19",
+              },
+            ],
+          },
+         
+        ],
+      });
+      mbazaChatbot.init();
+    </script>
+  </body>
+</html>

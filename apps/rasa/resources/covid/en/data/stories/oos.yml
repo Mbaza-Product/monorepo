@@ -1,0 +1,37 @@
+version: "3.0"
+
+stories:
+- story: out of scope
+  steps:
+  - intent: out_of_scope_custom
+  - action: utter_out_of_scope_custom
+
+- story: utter possibilities after 2 out of scopes
+  steps:
+  - intent: out_of_scope_custom
+  - action: utter_out_of_scope_custom
+  - intent: out_of_scope_custom
+  - action: utter_out_of_scope_custom
+  - intent: out_of_scope_custom
+  - action: utter_out_of_scope_custom
+  - action: utter_possibilities
+
+- story: specifies location after greeting
+  steps:
+  - intent: salutation
+  - action: utter_salutation
+  - action: utter_help
+  - intent: specify_location
+    entities:
+    - location: "kigali"
+  - action: utter_not_sure
+
+# - story: affirms or deny after greeting
+#   steps:
+#   - intent: salutation
+#   - action: utter_salutation
+#   - action: utter_help
+#   - or:
+#     - intent: affirm
+#     - intent: deny
+#   - action: utter_not_sure

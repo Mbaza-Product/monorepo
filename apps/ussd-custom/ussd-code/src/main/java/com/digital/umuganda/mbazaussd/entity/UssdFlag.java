@@ -1,0 +1,15 @@
+package com.digital.umuganda.mbazaussd.entity;
+
+public enum UssdFlag {
+    LANGUAGE_SELECTED,
+    CATEGORY_SELECTED,
+    COMPLAINT_SELECTED,
+    USER_REGISTERED,
+    PROVINCE_SELECTED,
+    DISTRICT_SELECTED,
+    SECTOR_SELECTED,
+    CELL_SELECTED,
+    VILLAGE_SELECTED,
+    GO_BACK,
+    TICKET_SELECTED,
+}

@@ -1,0 +1,13 @@
+services:
+  frontend-widget:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    restart: no
+    container_name: mbaza-frontend-widget
+    networks:
+      - infrastructure_default
+
+networks:
+  infrastructure_default: # external network
+    external: true

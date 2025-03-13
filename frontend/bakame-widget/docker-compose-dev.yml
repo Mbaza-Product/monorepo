@@ -1,0 +1,15 @@
+services:
+  frontend-bakame-widget:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    restart: no
+    container_name: mbaza-frontend-bakame-widget
+    networks:
+      - infrastructure_default
+    profiles:
+      - bakame-widget
+
+networks:
+  infrastructure_default: # external network
+    external: true

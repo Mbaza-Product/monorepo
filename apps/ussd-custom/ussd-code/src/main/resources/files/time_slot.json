@@ -1,0 +1,42 @@
+{
+    "status": 200,
+    "msg": "Success",
+    "data": [
+        {
+            "slotID": 8,
+            "details": "From : 8 -  9 h"
+        },
+        {
+            "slotID": 9,
+            "details": "From : 9 -  10 h"
+        },
+        {
+            "slotID": 10,
+            "details": "From : 10 -  11 h"
+        },
+        {
+            "slotID": 11,
+            "details": "From : 11 -  12 h"
+        },
+        {
+            "slotID": 12,
+            "details": "From : 12 -  13 h"
+        },
+        {
+            "slotID": 13,
+            "details": "From : 13 -  14 h"
+        },
+        {
+            "slotID": 14,
+            "details": "From : 14 -  15 h"
+        },
+        {
+            "slotID": 15,
+            "details": "From : 15 -  16 h"
+        },
+        {
+            "slotID": 16,
+            "details": "From : 16 -  17 h"
+        }
+    ]
+}

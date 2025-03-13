@@ -1,0 +1,47 @@
+{
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "reporters": [
+    "default",
+    [
+      "jest-junit",
+      {
+        "outputName": "e2e-test-results.xml",
+        "uniqueOutputName": "false",
+        "classNameTemplate": "{classname}",
+        "titleTemplate": "{classname} - {title}",
+        "ancestorSeparator": "›",
+        "usePathForSuiteName": "true"
+      }
+    ],
+    [
+      "../node_modules/jest-html-reporter",
+      {
+        "outputPath": "./e2e-test-results.html",
+        "pageTitle": "Mbaza Chatbot KBAL for Rasa - E2E Test Report"
+      }
+    ]
+  ],
+  "collectCoverage": true,
+  "coverageReporters": [
+    "clover",
+    "cobertura",
+    "html",
+    "json"
+  ],
+  "collectCoverageFrom": [
+    "**/*.(t|j)s",
+    "!app.module.ts",
+    "!main.ts",
+    "!migrations/",
+    "!**/external-api.action-handler.ts",
+    "!**/pg.connection.ts",
+    "!**/zammad.query-builder.ts"
+  ],
+  "coverageDirectory": "../coverage-e2e"  
+}

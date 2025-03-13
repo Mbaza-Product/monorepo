@@ -1,0 +1,35 @@
+version: "3.0"
+nlu:
+- lookup: location
+  examples: |
+    - Bugesera
+    - Gatsibo
+    - Kayonza
+    - Kirehe
+    - Ngoma
+    - Nyagatare
+    - Rwamagana
+    - kigali
+    - Gasabo
+    - Kicukiro
+    - Nyarugenge
+    - Burera
+    - Gakenke
+    - Gicumbi
+    - Musanze
+    - Rulindo
+    - Gisagara
+    - Huye
+    - Kamonyi
+    - Muhanga
+    - Nyamagabe
+    - Nyanza
+    - Nyaruguru
+    - Ruhango
+    - Karongi
+    - Ngororero
+    - Nyabihu
+    - Nyamasheke
+    - Rubavu
+    - Rutsiro
+    - Rusizi

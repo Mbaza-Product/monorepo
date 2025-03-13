@@ -1,0 +1,9 @@
+http.host: 0.0.0.0
+
+node.name: logstash
+monitoring.enabled: true
+monitoring.elasticsearch.hosts: ["http://elasticsearch:9200"]
+monitoring.elasticsearch.username: "elastic"
+monitoring.elasticsearch.password: "changeme"
+# monitoring.elasticsearch.ssl.certificate_authority: "/usr/share/logstash/config/certs/ca/ca.crt"
+monitoring.cluster_uuid: GvTSjThwR5GGDDhajCUQug

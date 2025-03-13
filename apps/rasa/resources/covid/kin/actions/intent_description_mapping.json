@@ -1,0 +1,23 @@
+{
+  "salutation": "indamutso",
+  "sendoff": "murabeho",
+  "statistics": "kubona imibare ya covid",
+  "symptoms": "ibimenyetso bya covid",
+  "prevention": "ingamba zo gukumira",
+  "fines_penalties": "ihazabu n'ibihano kuri covid",
+  "vaccination_schedule": "gahunda yo gukingira",
+  "vaccination_requirement": "ibisabwa mu gukingirwa",
+  "testing_centers": "ibigo bipima",
+  "testing_costs": "ikiguzi cyo gupima",
+  "testing_validity": "ibizamini bya covid bifite agaciro",
+  "testing_procedures": "uburyo bwo gupima covid",
+  "lockdown_areas": "kugirango umenye ibijyanye na gumamurugo",
+  "specify_location": "kwerekana ahantu",
+  "homebased_care": "kubaza kubyerekeye kwitabwaho mu rugo",
+  "homebased_care_escalation": "kuzamura ikibazo cyo kwitabwaho mu rugo",
+  "curfew": "kubaza igihe cyo gutaha",
+  "thankyou": "kuvuga urakoze",
+  "affirm": "kubyemera",
+  "deny": "guhakana",
+  "bot_challenge": "kugirango menye niba ndi robo cyangwa umuntu"
+}

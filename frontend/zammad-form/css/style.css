@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: "Poppins", sans-serif;
+}
+body {
+  color: #fff;
+  height: 100vh;
+  background-color: #ffffff;
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 700px;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #073c9a, #1993df);
+}
+.container .heading {
+  font-size: 25px;
+  font-weight: 800;
+  position: relative;
+  text-align: center;
+  padding: 0 0 1px 10;
+}
+.container .heading::before {
+  position: absolute;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #dee1ec;
+}
+.container form .card-details {
+  /* margin-top: 25px; */
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  line-break: dist;
+}
+form .card-details .card-box {
+  width: calc(100% / 2 - 20px);
+  margin-bottom: 15px;
+}
+form .message-box .card-box {
+  width: calc(100% / 2 - 20px);
+  margin-bottom: 15px;
+}
+.card-details .card-box .card-details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.card-details input, .card-details select {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 15px;
+  font-weight: 400;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.card-details .card-box input:focus,
+.card-details .card-box input:valid {
+  border-color: rgb(174, 174, 230);
+}
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 20px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.card-box-textarea{
+  width: 100%;
+}
+textarea:focus,
+textarea:valid {
+  border-color: rgb(174, 174, 230);
+}
+span {
+  margin-bottom: 6px;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+form .button {
+  text-align: center;
+}
+
+form .btn button {
+  padding: 8px 40px;
+  margin-top: 10px;
+  /* height: 50%;
+  width: 50%; */
+  outline: none;
+  background-color: rgb(164, 186, 199);
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  cursor: pointer;
+
+  display: inline-block;
+  /* position: absolute; */
+}
+form .btn button:hover {
+  background-color: #fff;
+  color: #7f8faa;
+  /* color: rgb(35, 119, 168); */
+  font-weight: 600;
+}
+.button-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+.error {
+  color: red;
+}
+@media (max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+  form .card-details .card-box {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .container form .card-box {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+}
+
+#filename {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+#filename + label {
+  width: 70%;
+  color: #000;
+  background-color: #ffdddd;
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 400;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+#filename:focus + label,
+#filename + label:hover {
+  background-color:  #ffddfd;
+}
+
+#filename + label {
+	cursor: pointer; 
+}
+#filename:focus + label {
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
