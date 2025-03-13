@@ -13,14 +13,14 @@ On Ubuntu/Debian: sudo apt install git-lfs
 On Windows: Download from Git LFS website.
 
 
-## 1. Create manully external volumes and networks:
+## 2. Create manully external volumes and networks:
     docker network create infrastructure_default
     docker volume create certs
     docker volume create esdata01
     docker volume create kibanadata
     docker volume create kibanaconfig
 
-## 2. Run docker-compose up with profiles for specific services
+## 3. Run docker-compose up with profiles for specific services
 
 ### Profiles based on relevant application and functionality.
 **docker-compose --profile ussd up**  - Starts all necessary services for running ussd application
@@ -47,12 +47,28 @@ On Windows: Download from Git LFS website.
 **docker-compose --profile zammad-form up** - Starts Zammad Form Frontend Application
 
 
-## 3. Running multiple profiles at once
+## 4. Running multiple profiles at once
 Ex: docker-compose --profile chat --profile voicechat up
 
+## 5. Setup Virtual Hosts :
 
+    127.0.0.1 kba.mbaza.local
+    127.0.0.1 ussd.mbaza.local
+    127.0.0.1 zammad.mbaza.local
+    127.0.0.1 zammad-ws.mbaza.local
+    127.0.0.1 zammad_sync_cron.mbaza.local
+    127.0.0.1 knowledge-ui.mbaza.local
+    127.0.0.1 widget.mbaza.local
+    127.0.0.1 rasa.mbaza.local
+    127.0.0.1 rasa-actions.mbaza.local
+    127.0.0.1 zammad-form.mbaza.local
+    127.0.0.1 rasa-widget.mbaza.local
+    127.0.0.1 ussd-custom.mbaza.local
+    127.0.0.1 deepspeech-tts.mbaza.local
+    127.0.0.1 deepspeech-stt.mbaza.local
+    127.0.0.1 bakame-widget.mbaza.local
 
-## 4. Resources Usage on Local
+## 6. Resources Usage on Local
 
 ### USSD
 Container CPU usage
