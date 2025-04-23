@@ -20,7 +20,38 @@ On Windows: Download from Git LFS website.
     docker volume create kibanadata
     docker volume create kibanaconfig
 
-## 3. Run docker-compose up with profiles for specific services
+## 3. Setup environment variables for each project
+    cp <root>/.env.example <root>/.env
+    cp <root>/infrastructure/rabbitmq/.env.example <root>/infrastructure/rabbitmq/.env
+    cp <root>/apps/zammad/.env.example <root>/apps/zammad/.env
+    cp <root>/apps/ussd-custom/.env.example <root>/apps/ussd-custom/.env
+    cp <root>/apps/ussd-custom/middleware/.env.example <root>/apps/ussd-custom/middleware/.env
+    cp <root>/apps/ussd/.env.example <root>/apps/ussd/.env
+    cp <root>/apps/ussd/middleware/.env.example <root>/apps/ussd/middleware/.env
+    cp <root>/apps/tts/.env.example <root>/apps/tts/.env
+    cp <root>/apps/kba/.env.example <root>/apps/kba/.env
+    cp <root>/apps/deepspeech/.env.example <root>/apps/deepspeech/.env
+    cp <root>/frontend/knowledge-base/.env.example <root>/frontend/knowledge-base/.env.local
+
+## 4. Setup Virtual Hosts on your local machine:
+
+    127.0.0.1 kba.mbaza.local
+    127.0.0.1 ussd.mbaza.local
+    127.0.0.1 zammad.mbaza.local
+    127.0.0.1 zammad-ws.mbaza.local
+    127.0.0.1 zammad_sync_cron.mbaza.local
+    127.0.0.1 knowledge-ui.mbaza.local
+    127.0.0.1 widget.mbaza.local
+    127.0.0.1 rasa.mbaza.local
+    127.0.0.1 rasa-actions.mbaza.local
+    127.0.0.1 zammad-form.mbaza.local
+    127.0.0.1 rasa-widget.mbaza.local
+    127.0.0.1 ussd-custom.mbaza.local
+    127.0.0.1 deepspeech-tts.mbaza.local
+    127.0.0.1 deepspeech-stt.mbaza.local
+    127.0.0.1 bakame-widget.mbaza.local
+
+## 5. Run docker-compose up with profiles for specific services
 
 ### Profiles based on relevant application and functionality.
 **docker-compose --profile ussd up**  - Starts all necessary services for running ussd application
@@ -47,28 +78,38 @@ On Windows: Download from Git LFS website.
 **docker-compose --profile zammad-form up** - Starts Zammad Form Frontend Application
 
 
-## 4. Running multiple profiles at once
+## 6. Running multiple profiles at once
 Ex: docker-compose --profile chat --profile voicechat up
 
-## 5. Setup Virtual Hosts :
+## 7. How to use
 
-    127.0.0.1 kba.mbaza.local
-    127.0.0.1 ussd.mbaza.local
-    127.0.0.1 zammad.mbaza.local
-    127.0.0.1 zammad-ws.mbaza.local
-    127.0.0.1 zammad_sync_cron.mbaza.local
-    127.0.0.1 knowledge-ui.mbaza.local
-    127.0.0.1 widget.mbaza.local
-    127.0.0.1 rasa.mbaza.local
-    127.0.0.1 rasa-actions.mbaza.local
-    127.0.0.1 zammad-form.mbaza.local
-    127.0.0.1 rasa-widget.mbaza.local
-    127.0.0.1 ussd-custom.mbaza.local
-    127.0.0.1 deepspeech-tts.mbaza.local
-    127.0.0.1 deepspeech-stt.mbaza.local
-    127.0.0.1 bakame-widget.mbaza.local
+### Access zammad and setup you data
+You can access zammad interface at [http://zammad.mbaza.local(http://zammad.mbaza.local)
 
-## 6. Resources Usage on Local
+You will be prompted to create the admin user.
+
+### Accessing the chat
+You can access the chat bot frontend by going to [http://widget.mbaza.local/](http://widget.mbaza.local/)
+
+This is the default frontend widget that starts up for chat and voicechat.
+
+You can change the configuration of your chatbot inside frontend/mbaza-widget/index.html
+
+In case you want to test the other 2 frontend widgets you can do so by running any of the following commands:
+
+**docker-compose --profile bakame-widget up** - Application will be accesible at [http://bakame-widget.mbaza.local/](http://bakame-widget.mbaza.local/)
+
+**docker-compose --profile rasa-widget up**- Application will be accesible at [http://rasa-widget.mbaza.local/](http://rasa-widget.mbaza.local/)
+
+### For ussd and ivr 
+1. You will need a soft phone application in order to test it. I recomend MicroSip and you can download from [here](https://www.microsip.org/)
+2. Once you download an install microsip you need to edit account information in order to connect to you aplication like so:
+![Sip configuration](docs/sip_config.png)
+
+### Url - Service mapping
+To access other services via URL, refer to <root>/docker-compose.override.yml. In this file, you'll find entries like Host('<subdomain>.mbaza.local'), which indicate the corresponding service each subdomain is mapped to.
+
+## 8. Resources Usage on Local
 
 ### USSD
 Container CPU usage
