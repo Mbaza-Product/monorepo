@@ -89,22 +89,25 @@ You can access zammad interface at [http://zammad.mbaza.local(http://zammad.mbaz
 You will be prompted to create the admin user.
 
 ### Accessing the chat
-You can access the chat bot frontend by going to [http://widget.mbaza.local/](http://widget.mbaza.local/)
+You can access the chatbot frontend by visiting [http://widget.mbaza.local/](http://widget.mbaza.local/).  
+This is the default frontend widget that supports both chat and voice chat.
 
-This is the default frontend widget that starts up for chat and voicechat.
+To customize your chatbot configuration, edit the file at:  
+`frontend/mbaza-widget/index.html`
 
-You can change the configuration of your chatbot inside frontend/mbaza-widget/index.html
+If you want to test the other two frontend widgets, you can run one of the following commands:
 
-In case you want to test the other 2 frontend widgets you can do so by running any of the following commands:
 
 **docker-compose --profile bakame-widget up** - Application will be accesible at [http://bakame-widget.mbaza.local/](http://bakame-widget.mbaza.local/)
 
 **docker-compose --profile rasa-widget up**- Application will be accesible at [http://rasa-widget.mbaza.local/](http://rasa-widget.mbaza.local/)
 
-### For ussd and ivr 
-1. You will need a soft phone application in order to test it. I recomend MicroSip and you can download from [here](https://www.microsip.org/)
-2. Once you download an install microsip you need to edit account information in order to connect to you aplication like so:
-![Sip configuration](docs/sip_config.png)
+### USSD and IVR Setup
+
+1. To test USSD and IVR functionality, you’ll need a softphone application. I recommend [MicroSIP](https://www.microsip.org/), which you can download from their official website.
+2. After installing MicroSIP, configure your account settings to connect to your application. Use the following example as a reference:
+
+![SIP Configuration](docs/sip_config.png)
 
 ### Url - Service mapping
 To access other services via URL, refer to <root>/docker-compose.override.yml. In this file, you'll find entries like Host('<subdomain>.mbaza.local'), which indicate the corresponding service each subdomain is mapped to.
