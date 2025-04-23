@@ -15,12 +15,20 @@ services:
       - APP_LOG_LEVEL=debug
       - SRV_PORT=4573
       - SRV_HOST=0.0.0.0
-      - TTS_API_URL=http://tts:6901
-      - TTS_API_URL_KIN=http://tts:6904
       - RASA_API_URL=http://rasa-server:5005/webhooks/rest/webhook
       - RASA_API_URL_KIN=http://rasa-server:5005/webhooks/rest/webhook
+      # DEMO
+      - USE_DEEPSPEECH=False
+      - TTS_API_URL=http://tts:6901
+      - TTS_API_URL_KIN=http://tts:6904
       - STT_API_URL=http://stt:6910/listen-eng
       - STT_API_URL_KIN=http://stt:6910/listen-kin
+      # DEEPSPEECH
+      # - USE_DEEPSPEECH=True
+      # - TTS_API_URL_KIN=http://deepspeech-tts:8000/generate
+      # - TTS_API_URL=http://deepspeech-tts:8000/generate
+      # - STT_API_URL=http://deepspeech-stt:8000/transcribe
+      # - STT_API_URL_KIN=http://deepspeech-stt:8000/transcribe
     networks:
       - infrastructure_default
     profiles:
