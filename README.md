@@ -34,6 +34,7 @@ On Windows: Download from Git LFS website.
     cp <root>/frontend/knowledge-base/.env.example <root>/frontend/knowledge-base/.env.local
 
 ## 4. Setup Virtual Hosts on your local machine:
+[How to configure virtual hosts](docs/setup-virtualhosts.md)
 
     127.0.0.1 kba.mbaza.local
     127.0.0.1 ussd.mbaza.local
